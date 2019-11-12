@@ -1,0 +1,681 @@
+<template>
+  <div class="container">
+    <HamburgerMenu />
+    <div class="site-wrap">
+        <div class="panel-wrap animate--shrink">
+            <!-- Center Center -->
+            <div class="panel intro" data-x-pos="0" data-y-pos="0">
+                <header class="main-header">
+                    <div class="block">
+                        <div class="logo">
+                            <span>Rob!</span>
+                        </div>
+                    </div>
+                </header>
+                <section class="intro intro-design">
+                    <canvas class="intro-canvas" width="960" height="960"></canvas>
+                    <span class="copy">
+                        <h1 class="heading">Hey there,</h1>
+                        <p>I'm a creative designer and developer obsessed with solving complex problems</p>
+                        <p><a href="#" class="button tertiary js-zoom">Learn more</a></p>
+                    </span>
+                    <div class="code">
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <span class="disclaimer">*I do have hair. Too hard to draw tho.</span>
+                    </div>
+                    <div class="design">
+                        <div class="window"><div></div></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Top Center -->
+            <div class="panel has-content" data-x-pos="0" data-y-pos="1">
+                <h2 class="heading">XXX</h2>
+                <div class="block">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+            <!-- Top Left -->
+            <div class="panel" data-x-pos="-1" data-y-pos="1">
+                <h2 class="heading">About Rob</h2>
+            </div>
+
+            <!-- Top Right -->
+            <div class="panel has-content" data-x-pos="1" data-y-pos="1">
+                <!--  -->
+                <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
+                <section class="block copy">
+                    <h4>I'm currently working at Hill Holliday as VP, Lead Creative Technologist.</h4>
+                    <p>I head up our creative technology practice for our Healthcare and Retail teams, working for brands like Novartis, Party City, and Frontier.</p>
+                </section>
+                <section class="buffer"></section>
+                <section class="buffer"></section>
+                <section class="buffer"></section>
+                <section class="buffer"></section>
+                <section class="buffer"></section>
+            </div>
+
+            <!-- Center Left -->
+            <div class="panel has-content" data-x-pos="-1" data-y-pos="0">
+                <section class="intro section-intro blog">
+                    <h2 class="heading" data-title="Writing"><span>Writing</span></h2>
+                    <canvas class="blog-canvas" width="960" height="960"></canvas>
+                    <section class="block copy">
+                      <blog-item post-title="test">
+                    </section>
+                </section>
+            </div>
+
+            <!-- Bottom Left -->
+            <div class="panel has-content" data-x-pos="-1" data-y-pos="-1">
+                <section class="intro section-intro contact">
+                    <h2 class="heading" data-title="Contact"><span>Contact</span></h2>
+                    <canvas class="contact-canvas" width="960" height="960"></canvas>
+                </section>
+            </div>
+
+            <!-- Center Right -->
+            <div class="panel" data-x-pos="1" data-y-pos="0">
+                <h2 class="heading">Non-Profit Work</h2>
+            </div>
+
+            <!-- Bottom Center -->
+            <div class="panel" data-x-pos="0" data-y-pos="-1">
+                <h2 class="heading">XXX</h2>
+            </div>
+
+            <!-- Bottom Right -->
+            <div class="panel has-content" data-x-pos="1" data-y-pos="-1">
+                <section class="intro section-intro for-fun">
+                    <h2 class="heading" data-title="For-Fun Work"><span>For-Fun Work</span></h2>
+                    <canvas class="baebot-canvas" width="960" height="960"></canvas>
+                </section>
+            </div>
+        </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Logo from '~/components/Logo.vue'
+import sectionHeader from '~/components/sectionHeader.vue'
+import heading2 from '~/components/headings/heading2.vue'
+import HamburgerMenu from '~/components/HamburgerMenu.vue'
+
+export default {
+  components: {
+    Logo,
+    HamburgerMenu,
+    sectionHeader,
+    heading2
+  }
+}
+</script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap');
+
+h1,h2,h3,h4,h5,h6, p, span{
+   font-family: $font;
+}
+
+html,body{
+   margin:0px;
+   width:100%;
+   overflow-x:hidden;
+}
+
+body{
+   background-color:darken($light,10%);
+}
+
+@media (prefers-color-scheme: dark) {
+   body{
+      background-color: lighten($dark,10%);
+   }
+}
+
+::selection{
+   background: $primary;
+   text-shadow: $secondary;
+}
+
+@keyframes digits{
+   0%{
+      transform:translateX(-50%);
+   }
+   50%{
+      transform:translateX(0%);
+   }
+   100%{
+      transform:translateX(-50%);
+   }
+}
+
+@keyframes digitsReverse{
+   0%{
+      transform:translateX(0%);
+   }
+   50%{
+      transform:translateX(-50%);
+   }
+   100%{
+      transform:translateX(0%);
+   }
+}
+
+@keyframes window1{
+   0%{
+      top:0%;
+      left:0%;
+   }
+   12.5%{
+      top:calc(50% - 17vw);
+      left:calc(100% - 27vw);
+   }
+   25%{
+      top:calc(100% - 17vw);
+      left: calc(80% - 27vw);
+   }
+   37.5%{
+      top:calc(66% - 17vw);
+      left:0px;
+   }
+   49.5%{
+      top:0%;
+      left:calc(100% - 27vw);
+   }
+   62.5%{
+      top:calc(50% - 17vw);
+      left:0px;
+   }
+   74.5%{
+      top:calc(100% - 17vw);
+      left:calc(100% - 27vw);
+   }
+   86.5%{
+      top:calc(66% - 17vw);
+      left:calc(80% - 27vw);
+   }
+   100%{
+      top:0%;
+      left:0%;
+   }
+}
+
+div.logo{
+   transform:translateX(5%) rotate($rotate);
+   font-weight:700;
+   position:absolute;
+   top:3%;
+   left:0%;
+   font-size:12vw;
+   margin-left:0.239em;
+   z-index:2;
+   color:$light;
+   &:after{
+      content:'Rob!';
+      font-family:$font;
+      font-size:inherit;
+      position:absolute;
+      top:0.33vw;
+      left:0.5vw;
+      z-index:-1;
+      color:black;
+   }
+   &.gradient-bg:after{
+      background: -webkit-linear-gradient(45deg, $secondary, $primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size:100%;
+   }
+}
+
+@media all and (min-width: 800px){
+   div.logo{
+      transform:translateX(-50%) rotate($rotate);
+      left:50%;
+      font-size:8vw;
+   }
+}
+
+a.button,
+button.button{
+   display:inline-block;
+   color:$light;
+   text-decoration:none;
+   font-size:1.2em;
+   padding:0.4em 1em 0.5em;
+   border-radius:1em;
+   margin:1em;
+   box-shadow:0.33vw 0.5vw 0vw #000;
+   outline:none;
+   cursor:pointer;
+   position:relative;
+   &.tertiary{
+      background-color:#ff4d74;
+   }
+   &:active{
+      top:0.23vw;
+      left:0.4vw;
+   }
+}
+
+@media all and (min-width: 700px){
+   a.button,
+   button.button{
+      font-size:0.75em;
+   }
+}
+
+section.buffer{
+   height:600px;
+}
+
+.heading{
+   text-shadow: 0.5vw 0.5vw 0vw #000;
+   margin-bottom:0.66em;
+   letter-spacing:-0.01em;
+   color:$light;
+   transition:all 0.3s ease-in-out;
+   position:relative;
+   &::selection{
+      text-shadow: 0.5vw 0.5vw 0vw $secondary;
+      z-index:-1;
+   }
+}
+
+h2.heading{
+   text-shadow:none;
+   position:absolute;
+   bottom:-1.5em;
+   left:50%;
+   transform:translate(-50%, -50%) rotate($rotate);
+   font-size:12vw;
+   transition:all 0.5s ease-in-out;
+   transform-origin:top left;
+   width:100%;
+   text-align:center;
+   margin:0px;
+   span{
+      position:relative;
+      z-index:2;
+   }
+   &:after{
+      content:attr(data-title);
+      background: -webkit-linear-gradient(45deg, $primary, $secondary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position:absolute;
+      top:0.1em;
+      left:0.1em;
+      z-index:-1;
+      width:100%;
+   }
+}
+
+@media all and (min-width: 700px){
+   h2.heading{
+      font-size:6vw;
+   }
+}
+
+section.intro{
+   //height:100%;
+   position:relative;
+   display:flex;
+   width:100%;
+   //overflow:hidden;
+   background-color:#222;
+   canvas{
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:100%;
+      height:100%;
+      z-index:8;
+      transform:translateX(-50%) translateY(-50%);
+   }
+   span.copy{
+      width:90%;
+      display:block;
+      text-align:center;
+      position:absolute;
+      z-index:9;
+      top:70%;
+      left:50%;
+      transform:translateX(-50%) translateY(-50%) rotate($rotate);
+      margin:0px;
+      padding:1em;
+      color:#fff;
+      h1{
+         font-size:8vw;
+         line-height:0;
+      }
+      p{
+         font-size:16px;
+         display:block;
+         margin:0 auto;
+         text-shadow: 0.25vw 0.25vw 0vw #000;
+         font-weight:700;
+         transition:all 0.3s ease-in-out;
+         &::selection{
+            text-shadow: 0.25vw 0.25vw 0vw $secondary;
+         }
+      }
+   }
+   & > div{
+      height:100%;
+      display:block;
+      width:50%;
+   }
+}
+
+section.intro.for-fun{
+   background-color:#FF4D74;
+}
+
+section.intro.contact{
+   background-color:#9ac1f5;
+}
+
+section.intro.blog{
+   background-color:#F5F5F5;
+   background-image: repeating-linear-gradient(0deg, transparent, transparent 70px, #B3E5FC 70px, #B3E5FC 72px);
+   position:relative;
+   &:before{
+      content:"";
+      display:block;
+      width:2px;
+      height:100%;
+      position:absolute;
+      top:0px;
+      left:72px;
+      bottom:0px;
+      background-color:red;
+   }
+}
+
+section.intro.section-intro{
+   canvas{
+      height:100% !important;
+      width:auto !important;
+      margin:0 auto;
+   }
+}
+
+.panel.has-content{
+   section.intro.section-intro{
+      &:after{
+         content:"";
+         width:100%;
+         padding-top:100%;
+      }
+   }
+}
+
+@media all and (min-width:600px){
+   .panel.has-content{
+      section.intro.section-intro{
+         &:after{
+            padding-top:35%;
+         }
+      }
+   }
+}
+
+@media all and (min-width: 700px){
+   section.intro{
+      span.copy{
+         p{
+            font-size:3.5vw;
+            max-width:80vw;
+         }
+      }
+   }
+}
+
+section.buffer{
+   height:100vh;
+}
+
+// intro design
+.intro-design{
+   div.code{
+      background-color:$primaryDark;
+      position:relative;
+      span.disclaimer{
+         position:absolute;
+         bottom:0.5em;
+         left:0.5em;
+         color:$light;
+         font-size:1em;
+      }
+      div.row{
+         display:block;
+         flex-wrap:wrap;
+         margin-bottom:0px;
+         line-height:1;
+         overflow:hidden;
+         &:before{
+            margin-bottom:-0.1em;
+         }
+         &:after,
+         &:before{
+            display:block;
+            width:100vw;
+            line-height:1;
+            // what does this translate to lmao
+            content:"01100100 01100101 01100001 01110100 01101000 00100000 01101001 01110011 00100000 01100011 01100101 01110010 01110100 01100001 01101001 01101110";
+            font-family:monospace;
+            white-space:nowrap;
+            font-size:5vh;
+            font-weight:700;
+            color:$primaryLight;
+            animation:digits 10s linear infinite;
+         }
+         &:after{
+            margin-bottom:1vh;
+            animation:digitsReverse 10s linear infinite;
+         }
+         &.entertained{
+            &:before,
+            &:after{
+               content:"01100001 01110010 01100101 00100000 01110101 00100000 01101110 01101111 01110100 00100000 01100101 01101110 01110100 01100101 01110010 01110100 01100001 01101001 01101110 01100101 01100100";
+            }
+         }
+      }
+   }
+   div.design{
+      background-color:$secondary;
+      position:relative;
+      div.window{
+         width:27vw;
+         height:17vw;
+         background-color:#FFF8E1;
+         border-radius:1.5vw;
+         position:relative;
+         animation:window1 15s linear infinite;
+         box-shadow:0 1vw 1vw darken($secondary,8%);
+         overflow:hidden;
+         &:before{
+            content:"";
+            display:block;
+            height:4vw;
+            width:100%;
+            background-color:lighten($secondary,20%);
+            position:absolute;
+            top:0px;
+            left:0px;
+         }
+         div{
+            background-color:#FFAB91;
+            display:block;
+            height:1.5vw;
+            width:1.5vw;
+            position:absolute;
+            top:1.25vw;
+            left:1.25vw;
+            border-radius:50%;
+            cursor:pointer;
+         }
+      }
+   }
+}
+
+// panel work
+body{
+   overflow: hidden;
+   perspective: 1000px;
+}
+
+.site-wrap {
+   transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+   width: 100vw;
+   height:100vh;
+   overflow:hidden;
+   transform:translateZ(0);
+}
+.site-wrap.show-all {
+   transform: rotateY(0deg) rotateX(0deg) scale(0.25) translateX(12vw) translateZ(0);
+   overflow:visible;
+   transition:all 0.3s linear;
+   .panel-wrap{
+      transform: translateX(0%) translateY(0%) !important;
+   }
+   .panel{
+      cursor:pointer;
+      transform:scale(0.975, 0.95);
+   }
+   h2.heading{
+      transform:scale(1.5) translate(-50%, -50%) rotate($rotate);
+   }
+}
+
+.panel-wrap {
+   height: 100vh;
+   width: 100vw;
+}
+
+.panel-wrap {
+   perspective: 2000px;
+   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.panel-wrap.animate--shrink,
+.panel-wrap.animate--tilt,
+.panel-wrap.animate--tilt2 {
+   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1) 0.3s;
+}
+.panel {
+   height: 100vh;
+   position: absolute;
+   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+   width: 100vw;
+   will-change: transform;
+   background-color:$light;
+   overflow-y:scroll;
+   overflow-x:hidden;
+}
+
+.panel.intro{
+   overflow-y:hidden;
+   section.intro{
+      height:100%;
+   }
+}
+
+.panel:before {
+   background-color: transparent;
+   bottom: 0;
+   content: "";
+   left: 0;
+   pointer-events: none;
+   position: absolute;
+   right: 0;
+   top: 0;
+   transition: background-color 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+   z-index: 2;
+}
+.show-all .panel{
+   overflow:hidden;
+}
+.show-all .panel:before {
+   pointer-events: all;
+}
+.show-all .panel:hover {
+   transform:scale(1.05);
+   z-index:2;
+   box-shadow:0px 0px 4vw 4vh rgba(#000,0.2);
+}
+.animate--shrink.animate .panel {
+   transform: scale(0.9);
+}
+.animate--tilt.animate .panel {
+   transform: scale(0.6) rotateY(-25deg);
+}
+.animate--tilt2.animate .panel {
+   transform: scale(0.8) rotateX(25deg);
+}
+
+.panel[data-x-pos="-2"] {
+   left: -200%;
+}
+.panel[data-x-pos="-1"] {
+   left: -100%;
+}
+.panel[data-x-pos="1"] {
+   left: 100%;
+}
+.panel[data-x-pos="2"] {
+   left: 200%;
+}
+.panel[data-y-pos="-2"] {
+   top: 200%;
+}
+.panel[data-y-pos="-1"] {
+   top: 100%;
+}
+.panel[data-y-pos="1"] {
+   top: -100%;
+}
+.panel[data-y-pos="2"] {
+   top: -200%;
+}
+.panel__zoom {
+   user-select: none;
+}
+.panel__zoom:hover {
+   opacity: 1;
+}
+.show-all .panel__zoom {
+   pointer-events: none;
+}
+
+section.block{
+   max-width:800px;
+   padding:2em;
+   margin:0 auto;
+}
+
+section.intro + section{
+   padding-top:4em;
+}
+</style>
