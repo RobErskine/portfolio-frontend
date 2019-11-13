@@ -1,117 +1,107 @@
 <template>
-  <div class="container">
-    <HamburgerMenu />
-    <div class="site-wrap">
-        <div class="panel-wrap animate--shrink">
+   <div class="container">
+      <HamburgerMenu />
+      <div class="site-wrap">
+         <div class="panel-wrap animate--shrink">
             <!-- Center Center -->
             <div class="panel intro" data-x-pos="0" data-y-pos="0">
-                <header class="main-header">
-                    <div class="block">
-                        <div class="logo">
-                            <span>Rob!</span>
-                        </div>
-                    </div>
-                </header>
-                <section class="intro intro-design">
-                    <canvas class="intro-canvas" width="960" height="960"></canvas>
-                    <span class="copy">
-                        <h1 class="heading">Hey there,</h1>
-                        <p>I'm a creative designer and developer obsessed with solving complex problems</p>
-                        <p><a href="#" class="button tertiary js-zoom">Learn more</a></p>
-                    </span>
-                    <div class="code">
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                        <span class="disclaimer">*I do have hair. Too hard to draw tho.</span>
-                    </div>
-                    <div class="design">
-                        <div class="window"><div></div></div>
-                    </div>
-                </section>
+               <header class="main-header">
+                  <div class="block">
+                     <div class="logo">
+                        <span>Rob!</span>
+                     </div>
+                  </div>
+               </header>
+               <section class="intro intro-design">
+                  <canvas class="intro-canvas" width="960" height="960"></canvas>
+                  <span class="copy">
+                     <h1 class="heading">Hey there,</h1>
+                     <p>I'm a creative designer and developer obsessed with solving complex problems</p>
+                     <p><a href="#" class="button tertiary js-zoom">Learn more</a></p>
+                  </span>
+                  <div class="code">
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <div class="row"></div>
+                     <span class="disclaimer">*I do have hair. Too hard to draw tho.</span>
+                  </div>
+                  <div class="design">
+                     <div class="window"><div></div></div>
+                  </div>
+               </section>
             </div>
 
             <!-- Top Center -->
             <div class="panel has-content" data-x-pos="0" data-y-pos="1">
-                <h2 class="heading">XXX</h2>
-                <div class="block">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+               <h2 class="heading">Resume</h2>
+               <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               </div>
             </div>
 
             <!-- Top Left -->
             <div class="panel" data-x-pos="-1" data-y-pos="1">
-                <h2 class="heading">About Rob</h2>
+               <h2 class="heading">About Rob</h2>
             </div>
 
             <!-- Top Right -->
             <div class="panel has-content" data-x-pos="1" data-y-pos="1">
-                <!--  -->
-                <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
-                <section class="block copy">
-                    <h4>I'm currently working at Hill Holliday as VP, Lead Creative Technologist.</h4>
-                    <p>I head up our creative technology practice for our Healthcare and Retail teams, working for brands like Novartis, Party City, and Frontier.</p>
-                </section>
-                <section class="buffer"></section>
-                <section class="buffer"></section>
-                <section class="buffer"></section>
-                <section class="buffer"></section>
-                <section class="buffer"></section>
+               <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
+               <section class="block copy">
+                  <h4>I'm currently working at Hill Holliday as VP, Lead Creative Technologist.</h4>
+                  <p>I head up our creative technology practice for our Healthcare and Retail teams, working for brands like Novartis, Party City, and Frontier.</p>
+               </section>
+               <section class="buffer"></section>
+               <section class="buffer"></section>
+               <section class="buffer"></section>
+               <section class="buffer"></section>
+               <section class="buffer"></section>
             </div>
 
             <!-- Center Left -->
             <div class="panel has-content" data-x-pos="-1" data-y-pos="0">
-                <section class="intro section-intro blog">
-                    <h2 class="heading" data-title="Writing"><span>Writing</span></h2>
-                    <canvas class="blog-canvas" width="960" height="960"></canvas>
-                    <section class="block copy">
-                      <blog-item post-title="test">
-                    </section>
-                </section>
+               <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
+               <section class="block copy">
+                  <!-- <blog-item post-title="test"> -->
+               </section>
             </div>
 
             <!-- Bottom Left -->
             <div class="panel has-content" data-x-pos="-1" data-y-pos="-1">
-                <section class="intro section-intro contact">
-                    <h2 class="heading" data-title="Contact"><span>Contact</span></h2>
-                    <canvas class="contact-canvas" width="960" height="960"></canvas>
-                </section>
+               <sectionHeader post-title="Contact" class-name="contact" canvas="./animations/contactcanvas"></sectionHeader>
             </div>
 
             <!-- Center Right -->
             <div class="panel" data-x-pos="1" data-y-pos="0">
-                <h2 class="heading">Non-Profit Work</h2>
+               <h2 class="heading">Non-Profit Work</h2>
             </div>
 
             <!-- Bottom Center -->
             <div class="panel" data-x-pos="0" data-y-pos="-1">
-                <h2 class="heading">XXX</h2>
+               <h2 class="heading">XXX</h2>
             </div>
 
             <!-- Bottom Right -->
             <div class="panel has-content" data-x-pos="1" data-y-pos="-1">
-                <section class="intro section-intro for-fun">
-                    <h2 class="heading" data-title="For-Fun Work"><span>For-Fun Work</span></h2>
-                    <canvas class="baebot-canvas" width="960" height="960"></canvas>
-                </section>
+               <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
             </div>
-        </div>
-    </div>
-  </div>
+         </div>
+   </div>
+</div>
 </template>
 
 <script>
@@ -121,13 +111,203 @@ import heading2 from '~/components/headings/heading2.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 
 export default {
-  components: {
-    Logo,
-    HamburgerMenu,
-    sectionHeader,
-    heading2
-  }
+   components: {
+      Logo,
+      HamburgerMenu,
+      sectionHeader,
+      heading2
+   }
 }
+
+if(process.client){
+const TAU = Zdog.TAU;
+
+const offWhite = '#FED';
+const gold = '#F29B9B';
+const garnet = '#22B7F2';
+const eggplant = '#0476D9';
+
+var illo = new Zdog.Illustration({
+    element: '.intro-canvas',
+    zoom: 15,
+    //rotate: { y: -TAU/8 },
+    dragRotate: true,
+});
+
+// ----- model ----- //
+
+var hipX = 3;
+// hips
+var hips = new Zdog.Shape({
+    addTo: illo,
+    path: [ { x: -hipX }, { x: hipX } ],
+    translate: { y: 2 },
+    stroke: 4,
+    color: eggplant,
+});
+
+// ----- legs ----- //
+
+var leg = new Zdog.Shape({
+    addTo: hips,
+    path: [ { y: 0 }, { y: 12 } ],
+    translate: { x: -hipX },
+    rotate: { x: TAU/4 },
+    color: eggplant,
+    stroke: 4,
+});
+
+// foot
+var foot = new Zdog.RoundedRect({
+    addTo: leg,
+    width: 2,
+    height: 4,
+    cornerRadius: 1,
+    translate: { y: 14, z: 2 },
+    rotate: { x: TAU/4 },
+    color: garnet,
+    fill: true,
+    stroke: 4,
+});
+
+var standLeg = leg.copy({
+    translate: { x: hipX },
+    rotate: { x: -TAU/8 },
+});
+
+foot.copy({
+    addTo: standLeg,
+    rotate: { x: -TAU/8 },
+});
+
+// ----- upper body ----- //
+
+var spine = new Zdog.Anchor({
+    addTo: hips,
+    rotate: { x: TAU/8 },
+});
+
+var chest = new Zdog.Shape({
+    addTo: spine,
+    path: [ { x: -1.5 }, { x: 1.5 } ],
+    translate: { y: -6.5 },
+    stroke: 9,
+    color: garnet,
+});
+
+var head = new Zdog.Shape({
+    addTo: chest,
+    stroke: 12,
+    translate: { y: -9.5 },
+    color: gold,
+});
+
+var eye = new Zdog.Ellipse({
+    addTo: head,
+    diameter: 2,
+    quarters: 2,
+    translate: { x: -2, y: 1, z: 4.5 },
+    rotate: { z: -TAU/4 },
+    color: eggplant,
+    stroke: 0.5,
+    backface: false,
+});
+
+eye.copy({
+    translate: { x: 2, y: 1, z: 4.5 },
+});
+
+// right eye glass
+eye.copy({
+    diameter: 3,
+    quarters: 4,
+    translate: {x:-2, y:1, z:6},
+    color: '#fff'
+});
+
+eye.copy({
+    diameter: 3,
+    quarters: 4,
+    translate: {x:2, y:1, z:6},
+    color: '#fff'
+});
+
+eye.copy({
+    diameter: 2,
+    quarters: 2,
+    translate: {x:0, y:1, z:6},
+    color: '#fff',
+    scale: {x:1, y: 0.5}
+})
+
+// smile
+var smile = new Zdog.Ellipse({
+    addTo: head,
+    diameter: 3,
+    quarters: 2,
+    translate: { y: 3.5, z: 4.5 },
+    rotate: { z: TAU/4 },
+    closed: true,
+    color: '#FED',
+    stroke: 0.5,
+    fill: true,
+    backface: false,
+});
+
+//---- mustache hehe ---- //
+smile.copy({
+    translate: { y: 2.75, z: 4.7 },
+    rotate: {z: -33},
+    diameter: 5,
+    scale: { x: 0.5, y: 1.2 },
+    color: '#F2AE30'
+});
+
+// ----- arms ----- //
+
+var armSize = 6;
+
+// arm on left
+var upperArm = new Zdog.Shape({
+    addTo: chest,
+    path: [ { y: 0 }, { y: armSize } ],
+    translate: { x: -5, y: -2 },
+    rotate: { x: -TAU/4 },
+    color: eggplant,
+    stroke: 4,
+});
+
+var forearm = new Zdog.Shape({
+    addTo: upperArm,
+    path: [ { y: 0 }, { y: armSize } ],
+    translate: { y: armSize },
+    rotate: { x: TAU/8 },
+    color: gold,
+    stroke: 4,
+});
+
+// hand
+new Zdog.Shape({
+    addTo: forearm,
+    translate: { z: 1, y: armSize },
+    stroke: 6,
+    color: gold,
+});
+
+// arm on right
+upperArm.copyGraph({
+    translate: { x: 5, y: -2 },
+    rotate: { x: TAU/4 },
+});
+
+function animate() {
+    illo.rotate.y += 0.03;
+    illo.updateRenderGraph();
+    requestAnimationFrame( animate );
+}
+animate();
+}
+
 </script>
 
 <style lang="scss">
