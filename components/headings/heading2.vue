@@ -6,13 +6,13 @@
 h2.heading{
     text-shadow:none;
     position:absolute;
-    bottom:-1.5em;
+    bottom:-1em;
     left:50%;
     transform:translate(-50%, -50%) rotate($rotate);
     font-size:12vw;
     transition:all 0.5s ease-in-out;
     transform-origin:top left;
-    width:100%;
+    width:auto;
     text-align:center;
     margin:0px;
     color:$light;

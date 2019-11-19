@@ -1,0 +1,11 @@
+query($section:[String], $orderBy:String) {
+  entries(section: $section, orderBy: $orderBy) {
+    title,
+    uri,
+    postDate,
+    ... on blog_blog_Entry{
+      fontColor,
+      backgroundColor 
+    }
+  }
+}

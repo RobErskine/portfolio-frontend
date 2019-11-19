@@ -63,7 +63,7 @@ module.exports = {
   clientConfigs: {
     default: {
       // required  
-      httpEndpoint: 'http://portfolio.test/api'
+      httpEndpoint: 'https://portfolio-staging.roberskine.com/api'
     },
   }
 },
