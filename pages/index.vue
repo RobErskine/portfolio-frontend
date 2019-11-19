@@ -128,10 +128,10 @@ const garnet = '#22B7F2';
 const eggplant = '#0476D9';
 
 var illo = new Zdog.Illustration({
-    element: '.intro-canvas',
-    zoom: 15,
-    //rotate: { y: -TAU/8 },
-    dragRotate: true,
+   element: '.intro-canvas',
+   zoom: 15,
+   //rotate: { y: -TAU/8 },
+   dragRotate: true,
 });
 
 // ----- model ----- //
@@ -139,128 +139,138 @@ var illo = new Zdog.Illustration({
 var hipX = 3;
 // hips
 var hips = new Zdog.Shape({
-    addTo: illo,
-    path: [ { x: -hipX }, { x: hipX } ],
-    translate: { y: 2 },
-    stroke: 4,
-    color: eggplant,
+   addTo: illo,
+   path: [ { x: -hipX }, { x: hipX } ],
+   translate: { y: 2 },
+   stroke: 4,
+   color: eggplant,
 });
 
 // ----- legs ----- //
 
 var leg = new Zdog.Shape({
-    addTo: hips,
-    path: [ { y: 0 }, { y: 12 } ],
-    translate: { x: -hipX },
-    rotate: { x: TAU/4 },
-    color: eggplant,
-    stroke: 4,
+   addTo: hips,
+   path: [ { y: 0 }, { y: 12 } ],
+   translate: { x: -hipX },
+   rotate: { x: TAU/4 },
+   color: eggplant,
+   stroke: 4,
 });
 
 // foot
 var foot = new Zdog.RoundedRect({
-    addTo: leg,
-    width: 2,
-    height: 4,
-    cornerRadius: 1,
-    translate: { y: 14, z: 2 },
-    rotate: { x: TAU/4 },
-    color: garnet,
-    fill: true,
-    stroke: 4,
+   addTo: leg,
+   width: 2,
+   height: 4,
+   cornerRadius: 1,
+   translate: { y: 14, z: 2 },
+   rotate: { x: TAU/4 },
+   color: garnet,
+   fill: true,
+   stroke: 4,
 });
 
 var standLeg = leg.copy({
-    translate: { x: hipX },
-    rotate: { x: -TAU/8 },
+   translate: { x: hipX },
+   rotate: { x: -TAU/8 },
 });
 
 foot.copy({
-    addTo: standLeg,
-    rotate: { x: -TAU/8 },
+   addTo: standLeg,
+   rotate: { x: -TAU/8 },
 });
 
 // ----- upper body ----- //
 
 var spine = new Zdog.Anchor({
-    addTo: hips,
-    rotate: { x: TAU/8 },
+   addTo: hips,
+   rotate: { x: TAU/8 },
 });
 
 var chest = new Zdog.Shape({
-    addTo: spine,
-    path: [ { x: -1.5 }, { x: 1.5 } ],
-    translate: { y: -6.5 },
-    stroke: 9,
-    color: garnet,
+   addTo: spine,
+   path: [ { x: -1.5 }, { x: 1.5 } ],
+   translate: { y: -6.5 },
+   stroke: 9,
+   color: garnet,
 });
 
 var head = new Zdog.Shape({
-    addTo: chest,
-    stroke: 12,
-    translate: { y: -9.5 },
-    color: gold,
+   addTo: chest,
+   stroke: 12,
+   translate: { y: -9.5 },
+   color: gold,
 });
 
+// var hat = new Zdog.Hemisphere({
+//    addTo: illo,
+//    diameter: 12,
+//    stroke: false,
+//    color: eggplant,
+//    backface: garnet,
+//    translate: { y: -10, z: -13},
+//    rotate: {x:2.8}
+// });
+
 var eye = new Zdog.Ellipse({
-    addTo: head,
-    diameter: 2,
-    quarters: 2,
-    translate: { x: -2, y: 1, z: 4.5 },
-    rotate: { z: -TAU/4 },
-    color: eggplant,
-    stroke: 0.5,
-    backface: false,
+   addTo: head,
+   diameter: 2,
+   quarters: 2,
+   translate: { x: -2, y: 1, z: 4.5 },
+   rotate: { z: -TAU/4 },
+   color: eggplant,
+   stroke: 0.5,
+   backface: false,
 });
 
 eye.copy({
-    translate: { x: 2, y: 1, z: 4.5 },
+   translate: { x: 2, y: 1, z: 4.5 },
 });
 
 // right eye glass
 eye.copy({
-    diameter: 3,
-    quarters: 4,
-    translate: {x:-2, y:1, z:6},
-    color: '#fff'
+   diameter: 3,
+   quarters: 4,
+   translate: {x:-2, y:1, z:6},
+   color: '#fff'
 });
 
 eye.copy({
-    diameter: 3,
-    quarters: 4,
-    translate: {x:2, y:1, z:6},
-    color: '#fff'
+   diameter: 3,
+   quarters: 4,
+   translate: {x:2, y:1, z:6},
+   color: '#fff'
 });
 
 eye.copy({
-    diameter: 2,
-    quarters: 2,
-    translate: {x:0, y:1, z:6},
-    color: '#fff',
-    scale: {x:1, y: 0.5}
+   diameter: 2,
+   quarters: 2,
+   translate: {x:0, y:1, z:6},
+   color: '#fff',
+   scale: {x:1, y: 0.5}
 })
 
 // smile
 var smile = new Zdog.Ellipse({
-    addTo: head,
-    diameter: 3,
-    quarters: 2,
-    translate: { y: 3.5, z: 4.5 },
-    rotate: { z: TAU/4 },
-    closed: true,
-    color: '#FED',
-    stroke: 0.5,
-    fill: true,
-    backface: false,
+   addTo: head,
+   diameter: 3,
+   quarters: 2,
+   translate: { y: 3.5, z: 4.5 },
+   rotate: { z: TAU/4 },
+   closed: true,
+   color: '#FED',
+   stroke: 0.5,
+   fill: true,
+   backface: false,
 });
 
 //---- mustache hehe ---- //
 smile.copy({
-    translate: { y: 2.75, z: 4.7 },
-    rotate: {z: -33},
-    diameter: 5,
-    scale: { x: 0.5, y: 1.2 },
-    color: '#F2AE30'
+   translate: { y: 2.75, z: 4.7 },
+   rotate: {z: -33},
+   diameter: 5,
+   scale: { x: 0.5, y: 1.2 },
+   color: '#F2AE30'
 });
 
 // ----- arms ----- //
@@ -269,41 +279,41 @@ var armSize = 6;
 
 // arm on left
 var upperArm = new Zdog.Shape({
-    addTo: chest,
-    path: [ { y: 0 }, { y: armSize } ],
-    translate: { x: -5, y: -2 },
-    rotate: { x: -TAU/4 },
-    color: eggplant,
-    stroke: 4,
+   addTo: chest,
+   path: [ { y: 0 }, { y: armSize } ],
+   translate: { x: -5, y: -2 },
+   rotate: { x: -TAU/4 },
+   color: eggplant,
+   stroke: 4,
 });
 
 var forearm = new Zdog.Shape({
-    addTo: upperArm,
-    path: [ { y: 0 }, { y: armSize } ],
-    translate: { y: armSize },
-    rotate: { x: TAU/8 },
-    color: gold,
-    stroke: 4,
+   addTo: upperArm,
+   path: [ { y: 0 }, { y: armSize } ],
+   translate: { y: armSize },
+   rotate: { x: TAU/8 },
+   color: gold,
+   stroke: 4,
 });
 
 // hand
 new Zdog.Shape({
-    addTo: forearm,
-    translate: { z: 1, y: armSize },
-    stroke: 6,
-    color: gold,
+   addTo: forearm,
+   translate: { z: 1, y: armSize },
+   stroke: 6,
+   color: gold,
 });
 
 // arm on right
 upperArm.copyGraph({
-    translate: { x: 5, y: -2 },
-    rotate: { x: TAU/4 },
+   translate: { x: 5, y: -2 },
+   rotate: { x: TAU/4 },
 });
 
 function animate() {
-    illo.rotate.y += 0.03;
-    illo.updateRenderGraph();
-    requestAnimationFrame( animate );
+   illo.rotate.y += 0.03;
+   illo.updateRenderGraph();
+   requestAnimationFrame( animate );
 }
 animate();
 }
@@ -312,31 +322,6 @@ animate();
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap');
-
-h1,h2,h3,h4,h5,h6, p, span{
-   font-family: $font;
-}
-
-html,body{
-   margin:0px;
-   width:100%;
-   overflow-x:hidden;
-}
-
-body{
-   background-color:darken($light,10%);
-}
-
-@media (prefers-color-scheme: dark) {
-   body{
-      background-color: lighten($dark,10%);
-   }
-}
-
-::selection{
-   background: $primary;
-   text-shadow: $secondary;
-}
 
 @keyframes digits{
    0%{
@@ -401,6 +386,13 @@ body{
    }
 }
 
+canvas{
+   cursor:grab;
+   &:active:hover{
+      cursor:grabbing;
+   }
+}
+
 div.logo{
    transform:translateX(5%) rotate($rotate);
    font-weight:700;
@@ -416,7 +408,7 @@ div.logo{
       font-family:$font;
       font-size:inherit;
       position:absolute;
-      top:0.33vw;
+      top:1vw;
       left:0.5vw;
       z-index:-1;
       color:black;
@@ -480,156 +472,6 @@ section.buffer{
    &::selection{
       text-shadow: 0.5vw 0.5vw 0vw $secondary;
       z-index:-1;
-   }
-}
-
-h2.heading{
-   text-shadow:none;
-   position:absolute;
-   bottom:-1.5em;
-   left:50%;
-   transform:translate(-50%, -50%) rotate($rotate);
-   font-size:12vw;
-   transition:all 0.5s ease-in-out;
-   transform-origin:top left;
-   width:100%;
-   text-align:center;
-   margin:0px;
-   span{
-      position:relative;
-      z-index:2;
-   }
-   &:after{
-      content:attr(data-title);
-      background: -webkit-linear-gradient(45deg, $primary, $secondary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position:absolute;
-      top:0.1em;
-      left:0.1em;
-      z-index:-1;
-      width:100%;
-   }
-}
-
-@media all and (min-width: 700px){
-   h2.heading{
-      font-size:6vw;
-   }
-}
-
-section.intro{
-   //height:100%;
-   position:relative;
-   display:flex;
-   width:100%;
-   //overflow:hidden;
-   background-color:#222;
-   canvas{
-      position:absolute;
-      top:50%;
-      left:50%;
-      width:100%;
-      height:100%;
-      z-index:8;
-      transform:translateX(-50%) translateY(-50%);
-   }
-   span.copy{
-      width:90%;
-      display:block;
-      text-align:center;
-      position:absolute;
-      z-index:9;
-      top:70%;
-      left:50%;
-      transform:translateX(-50%) translateY(-50%) rotate($rotate);
-      margin:0px;
-      padding:1em;
-      color:#fff;
-      h1{
-         font-size:8vw;
-         line-height:0;
-      }
-      p{
-         font-size:16px;
-         display:block;
-         margin:0 auto;
-         text-shadow: 0.25vw 0.25vw 0vw #000;
-         font-weight:700;
-         transition:all 0.3s ease-in-out;
-         &::selection{
-            text-shadow: 0.25vw 0.25vw 0vw $secondary;
-         }
-      }
-   }
-   & > div{
-      height:100%;
-      display:block;
-      width:50%;
-   }
-}
-
-section.intro.for-fun{
-   background-color:#FF4D74;
-}
-
-section.intro.contact{
-   background-color:#9ac1f5;
-}
-
-section.intro.blog{
-   background-color:#F5F5F5;
-   background-image: repeating-linear-gradient(0deg, transparent, transparent 70px, #B3E5FC 70px, #B3E5FC 72px);
-   position:relative;
-   &:before{
-      content:"";
-      display:block;
-      width:2px;
-      height:100%;
-      position:absolute;
-      top:0px;
-      left:72px;
-      bottom:0px;
-      background-color:red;
-   }
-}
-
-section.intro.section-intro{
-   canvas{
-      height:100% !important;
-      width:auto !important;
-      margin:0 auto;
-   }
-}
-
-.panel.has-content{
-   section.intro.section-intro{
-      &:after{
-         content:"";
-         width:100%;
-         padding-top:100%;
-      }
-   }
-}
-
-@media all and (min-width:600px){
-   .panel.has-content{
-      section.intro.section-intro{
-         &:after{
-            padding-top:35%;
-         }
-      }
-   }
-}
-
-@media all and (min-width: 700px){
-   section.intro{
-      span.copy{
-         p{
-            font-size:3.5vw;
-            max-width:80vw;
-         }
-      }
    }
 }
 

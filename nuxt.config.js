@@ -53,8 +53,20 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/apollo'
   ],
+  /*
+  ** Apollo graphql wrapper
+  */
+ apollo: {
+  clientConfigs: {
+    default: {
+      // required  
+      httpEndpoint: 'http://portfolio.test/api'
+    },
+  }
+},
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

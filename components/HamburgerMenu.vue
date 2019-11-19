@@ -24,9 +24,11 @@ nav.main-nav{
         color:$light;
         font-weight:700;
         transform:rotate($rotate);
-        padding-left:2em;
         overflow:hidden;
         transition:all 0.3s ease-in-out;
+        padding:0.4em 1em 0.5em 2em;
+        border-radius: 1em;
+        cursor:pointer;
         span.copy{
             position:relative;
             left:0em;
