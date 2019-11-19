@@ -106,7 +106,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import sectionHeader from '~/components/sectionHeader.vue'
+import sectionHeader from '~/components/SectionHeader.vue'
 import heading2 from '~/components/headings/heading2.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 

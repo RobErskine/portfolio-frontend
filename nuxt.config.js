@@ -64,6 +64,7 @@ module.exports = {
     default: {
       // required  
       httpEndpoint: 'https://portfolio-staging.roberskine.com/api'
+      //httpEndpoint: 'http://portfolio.test/api'
     },
   }
 },

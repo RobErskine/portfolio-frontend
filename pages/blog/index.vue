@@ -45,7 +45,7 @@ section.block{
 
 <script>
 // components
-import sectionHeader from '~/components/sectionHeader.vue'
+import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import blogItem from '~/components/blog/listItem.vue'
 
