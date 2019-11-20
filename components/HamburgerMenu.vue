@@ -101,6 +101,10 @@ nav.main-nav{
 </style>
 
 <script>
+export default {
+
+}
+
 if(process.client){
     const $body = $('body');
     var doc = document;
@@ -159,7 +163,7 @@ if(process.client){
     
     $zoom.on('click', function(event){
         setTimeout(function(){
-            $site.toggleClass('show-all');
+            $site.toggleClass('show-all').toggleClass('animating');
             $body.toggleClass('menu-open');
             $site.attr('style','transform: rotateY(deg) rotateX(0deg) scale(1) translateX(12vw) translateZ(0)');
         },100);
@@ -169,6 +173,10 @@ if(process.client){
                 scrollTop: 0
             }, 600)
         });
+
+        setTimeout(function(){
+            $site.removeClass('animating');
+        },700);
     });
 
     $(window).on('keyup', function(event){
@@ -181,20 +189,25 @@ if(process.client){
     var tiltPos = {x : 0, y: 0};
     var half = {x : 0, y: 0};
 
+    var hover = function($el){
+        half.x = $(window).width() / 2;
+        half.y = $(window).height() / 2;
+        
+        tiltPos.x = Math.floor((currentMousePos.x - half.x) / 30);
+        tiltPos.y = Math.floor((currentMousePos.y - half.y) / 30);
+
+        $el.attr('style','transform: rotateY('+tiltPos.x+'deg) rotateX('+tiltPos.y+'deg) scale(0.25) translateX(12vw) translateZ(0)');
+    }
+
     $(document).mousemove(function(event) {
         currentMousePos.x = event.pageX;
         currentMousePos.y = event.pageY;
 
         if($body.hasClass('menu-open')){
-            half.x = $(window).width() / 2;
-            half.y = $(window).height() / 2;
-            
-            tiltPos.x = Math.floor((currentMousePos.x - half.x) / 30);
-            tiltPos.y = Math.floor((currentMousePos.y - half.y) / 30);
-
-            $site.attr('style','transform: rotateY('+tiltPos.x+'deg) rotateX('+tiltPos.y+'deg) scale(0.25) translateX(12vw) translateZ(0)');
+            hover($site);
         }
     });
+
 
     // zoom in to selected position
     function setPanelAndZoom(x,y){

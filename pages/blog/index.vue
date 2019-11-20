@@ -23,6 +23,7 @@ section.block{
         display:flex;
         justify-content:space-between;
         flex-wrap:wrap;
+        align-items:center;
         margin:0px;
         padding:0px;
         li{

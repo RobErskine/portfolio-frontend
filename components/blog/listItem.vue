@@ -2,30 +2,46 @@
     <div class="m_blog-list-item" v-bind:style="{ backgroundColor: post.backgroundColor }">
         <nuxt-link :to="post.uri">
             <h4 v-bind:style="{ color: post.fontColor }">{{post.title}}</h4>
+            <time v-bind:style="{ color: post.fontColor, borderTopColor: post.fontColor }">{{$moment(post.postDate).format("MMMM Do YYYY")}}</time>
         </nuxt-link>
-        <time v-bind:style="{ color: post.fontColor, borderTopColor: post.fontColor }">{{post.postDate}}</time>
     </div>
 </template>
 
 <style lang="scss">
     div.m_blog-list-item{
-        padding:1.5em 2em;
         border-radius:1em 2em;
-        overflow:hidden;
+        position:relative;
+        display:block;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        transform: perspective(300px); 
+        box-shadow:0 0 3vw rgba(0,0,0,0.1);
+        -webkit-perspective: 300;
+        &:hover{
+            box-shadow:0 0 3vw rgba(0,0,0,0.2);
+            h4{
+                text-shadow: 0 0 1vw rgba(0,0,0,0.25);
+            }
+        }
         a{
+            display:block;
             text-decoration: none;
             opacity:1;
+            padding:1.5em 2em;
+            transition:all 0.3s ease-in-out;
             &:hover{
                 text-decoration: none;
-                opacity:0.8;
+                //transform: translateZ(100px) scale(1);
             }
         }
         h4{
             font-size:2.5vw;
             line-height:1.1;
+            transition:all 0.3s ease-in-out;
+            transform: translateZ(66px) translateY(10px) scale(0.565);
         }
         time{
-            display:block;
+            display:inline-block;
             font-size:1.5vw;
             padding-top:0.5em;
             margin-top:0.5em;
@@ -41,5 +57,13 @@ export default {
             type: Object
         }
     }
+}
+
+if(process.client){
+    $('div.m_blog-list-item').each(function(){
+        $(this).tilt({
+            maxTilt: 10
+        });
+    });
 }
 </script>

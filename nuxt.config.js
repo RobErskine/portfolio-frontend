@@ -24,6 +24,11 @@ module.exports = {
         src: "https://unpkg.com/zdog@1/dist/zdog.dist.js",
         type: "text/javascript",
         body: true
+      },
+      {
+        src: "https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js",
+        type: "text/javascript",
+        body: true
       }
     ],
   },
@@ -45,6 +50,7 @@ module.exports = {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/moment',
   ],
   /*
   ** Nuxt.js modules
@@ -54,20 +60,20 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
   ],
   /*
   ** Apollo graphql wrapper
   */
- apollo: {
-  clientConfigs: {
-    default: {
-      // required  
-      httpEndpoint: 'https://portfolio-staging.roberskine.com/api'
-      //httpEndpoint: 'http://portfolio.test/api'
-    },
-  }
-},
+  apollo: {
+    clientConfigs: {
+      default: {
+        // required  
+        httpEndpoint: 'https://portfolio-staging.roberskine.com/api'
+        //httpEndpoint: 'http://portfolio.test/api'
+      },
+    }
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

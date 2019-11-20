@@ -403,6 +403,8 @@ div.logo{
    margin-left:0.239em;
    z-index:2;
    color:$light;
+   width:auto;
+   text-align:center;
    &:after{
       content:'Rob!';
       font-family:$font;
@@ -412,6 +414,7 @@ div.logo{
       left:0.5vw;
       z-index:-1;
       color:black;
+      text-align:center;
    }
    &.gradient-bg:after{
       background: -webkit-linear-gradient(45deg, $secondary, $primary);
