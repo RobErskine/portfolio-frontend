@@ -18,7 +18,7 @@ body{
     overflow-x:hidden;
 }
 section.block{
-    padding:8vh 1em;
+    padding:8vw 1em;
     ul{
         display:flex;
         justify-content:space-between;
@@ -27,8 +27,8 @@ section.block{
         margin:0px;
         padding:0px;
         li{
-            width:48%;
-            margin:0px;
+            width:100%;
+            margin:0px 0px 1em;
             padding:0px;
             list-style-type:none;
         }

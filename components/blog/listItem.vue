@@ -35,17 +35,25 @@
             }
         }
         h4{
-            font-size:2.5vw;
+            font-size:1.6em;
             line-height:1.1;
             transition:all 0.3s ease-in-out;
             transform: translateZ(66px) translateY(10px) scale(0.565);
         }
         time{
             display:inline-block;
-            font-size:1.5vw;
+            font-size:1.4em;
             padding-top:0.5em;
             margin-top:0.5em;
             border-top:1px solid;
+        }
+    }
+
+    @media all and (min-width:700px){
+        div.m_blog-list-item{
+            h4{
+                font-size:2.5vw;
+            }
         }
     }
 </style>

@@ -1,0 +1,17 @@
+query($section:[String], $orderBy:String, $relatedTo:[Int]) {
+    entries(section: $section, orderBy: $orderBy, relatedTo: $relatedTo) {
+        title,
+        uri,
+        postDate,
+        ... on work_work_Entry{
+            fontColor,
+            backgroundColor,
+            logo {
+                url
+            },
+            thumbnail{
+                url
+            }
+        }
+    }
+}
