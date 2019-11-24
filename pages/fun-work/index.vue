@@ -2,11 +2,11 @@
     <div class="panel has-content" data-x-pos="-1" data-y-pos="0">
         <HamburgerMenu />
 
-        <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
+        <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
         <section class="block copy">
             <ul>
                 <li v-for="post in entries">
-                    <blogItem :post="post"></blogItem>
+                    <workItem :post="post"></workItem>
                 </li>
             </ul>
         </section>
@@ -18,10 +18,10 @@ body{
     overflow-x:hidden;
 }
 section.block{
-    padding:4vw 1em;
+    padding:2em 1em;
     ul{
         display:flex;
-        justify-content:space-around;
+        justify-content:space-between;
         flex-wrap:wrap;
         align-items:center;
         margin:0px;
@@ -37,8 +37,9 @@ section.block{
 
 @media all and (min-width:600px){
     section.block{
+        padding:4vw 1em;
         ul li{
-            width:32%;
+            width:46vw;
         }
     }
 }
@@ -48,23 +49,24 @@ section.block{
 // components
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
-import blogItem from '~/components/blog/listItem.vue'
+import workItem from '~/components/work/workItem.vue'
 
 // query
-import posts from '~/queries/blog/getArticles.gql';
+import posts from '~/queries/work/getWork.gql';
 
 export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        blogItem
+        workItem
     },
     apollo: {
         entries: {
             query: posts,
             variables: {
-                "section": "blog",
+                "section": "work",
                 "orderBy": "postdate Desc",
+                "relatedTo": 25
             }
         }
     }

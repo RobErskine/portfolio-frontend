@@ -11,7 +11,8 @@
     div.m_blog-list-item{
         border-radius:1em 2em;
         position:relative;
-        display:block;
+        display:flex;
+        flex-wrap:wrap;
         transform-style: preserve-3d;
         -webkit-transform-style: preserve-3d;
         transform: perspective(300px); 
@@ -24,14 +25,15 @@
             }
         }
         a{
-            display:block;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:flex-end;
             text-decoration: none;
             opacity:1;
             padding:1.5em 2em;
             transition:all 0.3s ease-in-out;
             &:hover{
                 text-decoration: none;
-                //transform: translateZ(100px) scale(1);
             }
         }
         h4{
