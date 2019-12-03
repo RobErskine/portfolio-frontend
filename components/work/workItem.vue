@@ -32,7 +32,6 @@
             border-radius: 1em 2em;
             padding-top:0.5em;
             width:100%;
-            transform:translateZ(8vw) scale(0.2) translateY(18vw);
         }
         img.logo{
             max-width:80px;
@@ -64,7 +63,7 @@
         }
         time{
             display:inline-block;
-            font-size:1.4em;
+            font-size:1.2em;
             padding: 0.5em 1em 0.5em;
             margin-top:0.5em;
             border-top:1px solid;
@@ -84,10 +83,23 @@
                 transform: translateZ(120px) translateY(-123px) scale(0.25);
             }
             img.thumbnail{
-                transform:translateZ(30%) translateY(2vw) scale(0.6);
+                transform:translateZ(4vw) translateY(2vw) scale(0.4);
             }
             img.logo{
-                transform: translateZ(90px) translateY(-50px) scale(0.33);
+                max-width:10vw;
+                transform-origin:center;
+                transform:translateZ(5vw) scale(0.2);
+            }
+            div{
+                display:flex;
+                align-items:flex-end;
+                justify-content: flex-end;
+            }
+            time{
+                text-align:right;
+                padding-left:0px;
+                width:auto;
+                font-size:1.4em;
             }
         }
     }
@@ -105,7 +117,7 @@ export default {
 if(process.client){
     $('div.m_work-list-item').each(function(){
         $(this).tilt({
-            maxTilt: 7
+            maxTilt: 5
         });
     });
 }

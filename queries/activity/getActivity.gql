@@ -1,0 +1,12 @@
+query($section:[String], $orderBy:String) {
+    entries(section: $section, orderBy: $orderBy) {
+        title,
+        uri,
+        postDate,
+        ... on activity_Activity_Entry{
+            fontColor,
+            backgroundColor,
+            richText
+        }
+    }
+}

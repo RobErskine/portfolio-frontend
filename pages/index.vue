@@ -16,7 +16,7 @@
                   <canvas class="intro-canvas" width="960" height="960"></canvas>
                   <span class="copy">
                      <h1 class="heading">Hey there,</h1>
-                     <p>I'm a creative designer and developer obsessed with solving complex problems</p>
+                     <p>I’m a creative designer and developer obsessed with solving complex problems</p>
                      <p><a href="#" class="button tertiary js-zoom">Learn more</a></p>
                   </span>
                   <div class="code">
@@ -41,21 +41,12 @@
 
             <!-- Top Center -->
             <div class="panel has-content" data-x-pos="0" data-y-pos="1">
-               <h2 class="heading">Resume</h2>
-               <div class="block">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-               </div>
+               <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
             </div>
 
             <!-- Top Left -->
-            <div class="panel" data-x-pos="-1" data-y-pos="1">
-               <h2 class="heading">About Rob</h2>
+            <div class="panel has-content" data-x-pos="-1" data-y-pos="1">
+               <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
             </div>
 
             <!-- Top Right -->
@@ -86,13 +77,13 @@
             </div>
 
             <!-- Center Right -->
-            <div class="panel" data-x-pos="1" data-y-pos="0">
-               <h2 class="heading">Non-Profit Work</h2>
+            <div class="panel has-content" data-x-pos="1" data-y-pos="0">
+               <sectionHeader post-title="Non-Profit Work" class-name="nonprofit" canvas="./animations/nonprofitcanvas"></sectionHeader>
             </div>
 
             <!-- Bottom Center -->
-            <div class="panel" data-x-pos="0" data-y-pos="-1">
-               <h2 class="heading">XXX</h2>
+            <div class="panel has-content" data-x-pos="0" data-y-pos="-1">
+               <sectionHeader post-title="Activity" class-name="activity" canvas="./animations/activitycanvas"></sectionHeader>
             </div>
 
             <!-- Bottom Right -->
@@ -509,22 +500,23 @@ section.buffer{
             width:100vw;
             line-height:1;
             // what does this translate to lmao
-            content:"01100100 01100101 01100001 01110100 01101000 00100000 01101001 01110011 00100000 01100011 01100101 01110010 01110100 01100001 01101001 01101110";
+            content:"01100100 01100101 01100001 01110100 01101000 01101001 01110011 01100011 01100101 01110010 01110100 01100001 01101001 01101110";
             font-family:monospace;
             white-space:nowrap;
             font-size:5vh;
             font-weight:700;
             color:$primaryLight;
-            animation:digits 10s linear infinite;
+            animation:digits 30s linear infinite;
          }
          &:after{
-            margin-bottom:1vh;
-            animation:digitsReverse 10s linear infinite;
+            position:relative;
+            top:0.5vh;
+            animation:digitsReverse 30s linear infinite;
          }
          &.entertained{
             &:before,
             &:after{
-               content:"01100001 01110010 01100101 00100000 01110101 00100000 01101110 01101111 01110100 00100000 01100101 01101110 01110100 01100101 01110010 01110100 01100001 01101001 01101110 01100101 01100100";
+               content:"01101100 01101001 01100110 01100101 01101001 01110011 01101110 01101111 01110100";
             }
          }
       }

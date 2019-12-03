@@ -2,11 +2,11 @@
     <div class="panel has-content" data-x-pos="-1" data-y-pos="0">
         <HamburgerMenu />
 
-        <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
+        <sectionHeader post-title="Activity" class-name="activity" canvas="./animations/activitycanvas"></sectionHeader>
         <section class="block copy">
             <ul>
                 <li v-for="post in entries">
-                    <workItem :post="post"></workItem>
+                    <activityItem :post="post"></activityItem>
                 </li>
             </ul>
         </section>
@@ -18,10 +18,10 @@ body{
     overflow-x:hidden;
 }
 section.block{
-    padding:2em 1em;
+    padding:4vw 1em;
     ul{
         display:flex;
-        justify-content:space-between;
+        justify-content:space-around;
         flex-wrap:wrap;
         align-items:center;
         margin:0px;
@@ -35,46 +35,29 @@ section.block{
     }
 }
 
-@media all and (min-width:600px){
-    section.block{
-        padding:4vw 1em;
-        ul li{
-            width:46vw;
-        }
-    }
-}
-
-@media all and (min-width:1200px){
-    section.block{
-        ul li{
-            width:32%;
-        }
-    }
-}
 </style>
 
 <script>
 // components
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
-import workItem from '~/components/work/workItem.vue'
+import activityItem from '~/components/activity/activityItem.vue'
 
 // query
-import posts from '~/queries/work/getWork.gql';
+import posts from '~/queries/activity/getActivity.gql';
 
 export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        workItem
+        activityItem
     },
     apollo: {
         entries: {
             query: posts,
             variables: {
-                "section": "work",
+                "section": "activity",
                 "orderBy": "postdate Desc",
-                "relatedTo": 25
             }
         }
     }
