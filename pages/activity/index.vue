@@ -35,6 +35,12 @@ section.block{
     }
 }
 
+@media all and (min-width: 700px){
+    section.block ul li{
+        width:47.5%;
+    }
+}
+
 </style>
 
 <script>
