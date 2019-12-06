@@ -12,7 +12,7 @@ h2.heading{
     font-size:12vw;
     transition:all 0.5s ease-in-out;
     transform-origin:top left;
-    width:auto;
+    width:80%;
     text-align:center;
     margin:0px;
     color:$light;
@@ -36,6 +36,7 @@ h2.heading{
 @media all and (min-width: 700px){
     h2.heading{
         font-size:6vw;
+        width:auto;
     }
 }
 </style>

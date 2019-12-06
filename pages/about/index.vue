@@ -4,14 +4,13 @@
 
         <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
         <div class="about-page">
-            <section class="block copy">
-                <div class="block block-width">
+            <section class="block">
+                <div class="block block-width copy">
                     <p>Rob forced a bot to analyze over 100,000 lines of <a href="https://github.com/roberskine">his code on Github</a>, as well as all of his <a href="https://twitter.com/erskinerob" target="_blank" rel="noreferrer noopener">tweets on Twitter</a>, and this is what it came up with:</p>
-                    <p>Rob forced a bot to analyze over 100,000 lines of his code on Github, as well as all of his tweets on Twitter, and this is what it came up with:</p>
                     <pre>
                     <span class="noun">ROB</span> is a <span class="noun">HUMAN CREATIVE TECHNOLOGIST</span> who comes up with creative in HTML, CSS, JAVASCRIPT, PHP and NODE. <span class="noun">ROB</span> has worked on campaigns for the <a href="https://www.hhcc.com/work/american-lung-association-ad-council/saved-by-the-scan">AMERICAN LUNG ASSOCIATION</a>, <a href="https://www.hhcc.com/work/bank-of-america">BANK OF AMERICA</a>, BRIGHAM AND WOMEN’S HOSPITAL, DUNKIN DONUTS, FRONTIER COMMUNICATIONS, <a href="https://www.hhcc.com/work/johnson-johnson">JOHNSON & JOHNSON</a>, LIBERTY MUTUAL, <a href="https://www.hhcc.com/work/novartis">NOVARTIS</a>, <a href="https://www.hhcc.com/work/party-city">PARTY CITY</a>,  <a href="https://www.hhcc.com/work/planet-fitness">PLANET FITNESS</a>, and <a href="https://www.hhcc.com/work/tempur-sealy">TEMPUR+SEALY</a>. <br/>
                     He also deeply <span class="verb">CARES</span> about <a href="https://www.hhcc.com/accessibility">ACCESSIBILITY</a>, <a href="https://codepen.io/hhcc/post/better-search">PERFORMANCE</a>, <a href="https://www.hhcc.com/performance-optimization-schedule">ANALYTICS</a>, <a href="https://www.instagram.com/p/BOa7-VPAIA4/">SHIBA INU PUPPIES</a>, and <a href="https://twitter.com/ErskineRob/status/1093284461851095041">BRANDS PRETENDING TO EXHIBIT HUMAN EMOTIONS ON SOCIAL MEDIA</a>.
-                    <span class="noun">ROB</span>’s skills INCLUDE CREATIVE DESIGN and DEVELOPMENT, USER INTERFACE/EXPERIENCE, MEASUREMENT, <a href="https://www.americaninno.com/boston/how-to-get-out-of-a-bad-date-baebot-automated-text-response/">HAPHAZARDLY CREATING MY EXISTENCE</a>, and what I would call “<a href="http://lmgtfy.com/?q=rob+erskine+is+super+cool">BEING REALLY GOOD AT USING GOOGLE</a>”. Based on <span class="noun">HIS</span> code <span class="noun">HIS</span> favorite <span class="noun">DEBUG</span> method is <span class="verb">console.log(‘why the f won’t tHIS WORK’);</span>. <span class="noun">HE</span> claims he can cook because he <span class="verb">STUDIED</span> at <a href="http://blogs.jwu.edu/engineering/insiders-tips-from-engineering-and-design-alums-">JOHNSON & WALES UNIVERSITY</a> but he really <a href="https://www.instagram.com/p/oeSWlHpWW4/">CAN NOT</a>, but he did learn all about ADVERTISING, DESIGN, and MARKETING while there though.
+                    <span class="noun">ROB</span>’s skills INCLUDE CREATIVE DESIGN and DEVELOPMENT, USER INTERFACE/EXPERIENCE, MEASUREMENT, <a href="https://www.americaninno.com/boston/how-to-get-out-of-a-bad-date-baebot-automated-text-response/">HAPHAZARDLY CREATING MY EXISTENCE</a>, and what I would call “<a href="http://lmgtfy.com/?q=rob+erskine+is+super+cool">BEING REALLY GOOD AT USING GOOGLE</a>”. Based on <span class="noun">HIS</span> code <span class="noun">HIS</span> favorite <span class="noun">DEBUG</span> method is <span class="verb">console.log(‘why the f won’t tHIS WORK’);</span>. <span class="noun">HE</span> claims he can cook because he <span class="verb">STUDIED</span> at <a href="http://blogs.jwu.edu/engineering/insiders-tips-from-engineering-and-design-alums-">JOHNSON & WALES UNIVERSITY</a> but he really <a href="https://www.instagram.com/p/oeSWlHpWW4/">CAN NOT</a>, but he did learn all about ADVERTISING, DESIGN, and MARKETING while there though.<br/>
                     <span class="noun">ROB</span> has also been <span class="verb">AWARDED</span> some <span class="adjective">SUPERFICIAL HUMAN “AWARDS”</span> including, a <span class="adjective">FEATURE</span> in <a href="https://www.commarts.com/project/24657/senator-for-the-day">COMMUNICATION ARTS for his work on SENATOR FOR A DAY</a>, as well as numerous <span class="noun">MITX INTERACTIVE</span> and <span class="noun">AD CLUB HATCH ADVERTISING BOWLS</span>.
                     While <span class="noun">ROB</span> is not <span class="verb">WORKING</span> at <span class="noun">HILL HOLLIDAY</span>, <span class="noun">HE</span> <span class="verb">SERVES</span> on the <a href="https://worldoceanschool.org">BOARD OF DIRECTORS for WORLD OCEAN SCHOOL</a>, a non-profit that supports at-risk youth aboard a 100yr <span class="adjective">OLD</span> schooner in Boston and St. Croix. <span class="noun">HE</span> also <span class="adjective">SUPPORTS</span> <a href="https://github.com/roberksine">MULTIPLE OPEN-SOURCE PROJECTS</a>, some of which have over <a href="https://packagist.org/packages/hillholliday/craft-user-manual">2,000 INSTALLS</a>. <span class="noun">ROB</span> wants to <span class="verb">PUSH</span> the <span class="noun">BOUNDARIES</span> of what <span class="noun">DIGITAL</span> & <span class="noun">CREATIVE</span> can do.
                     </pre>
@@ -38,7 +37,13 @@
 
 <style lang="scss">
 section.block{
-    padding:4vw 2em;
+    padding:2em 1em 1em;
+}
+
+@media all and (min-width: 700px){
+    section.block{
+        padding:4vw 2em;
+    }
 }
 
 div.block-width{
@@ -53,22 +58,41 @@ figure{
 
 pre{
     white-space:pre-line;
+    color:#fff;
+    background-color:#333;
+    padding:1em;
+    border-radius:1.5em 3em;
+    width:calc(100% + 2em);
+    margin-left:-1em;
+}
+
+@media all and (min-width:700px){
+    pre{
+        width:100%;
+        margin-left:auto;
+    }
 }
 
 p,pre{
     margin-bottom:1.2em;
-    font-size:1.5em;
+    font-size:1.2em;
     line-height:1.375;
+}
+
+@media all and (min-width: 700px){
+    p,pre{
+        font-size:1.5em;
+    }
 }
 
 p,pre{
     a{
         color:inherit;
         text-decoration:none;
-        background-size:  100% 15%;
+        background-size:  100% 10%;
         background-repeat: repeat-x;
         background-position: left 0% bottom 5%;
-        background-image: linear-gradient(90deg, $primary 0%, $secondary 50%);
+        background-image: linear-gradient(110deg, $primary 0%, $secondary 50%);
         transition:all 0.25s ease-in-out;
         overflow:visible;
         &:hover{
@@ -83,15 +107,14 @@ div.about-me{
     overflow:visible;
     padding:1.5em 3em;
     position:relative;
-    max-width:40%;
+    max-width:100%;
     width:100%;
-    float:right;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transform: perspective(300px); 
     -webkit-perspective: 300;
     border-radius:1.5em 3em;
-    &:after{
+    figure:before{
         content:"";
         display:block;
         padding-top:133.375%;
@@ -109,10 +132,39 @@ div.about-me{
         border-radius:1.5em 3em;
     }
     img.foreground{
-        width:90%;
+        width:80%;
         z-index:2;
-        transform: translateZ(80px) translateY(15px) translateX(-25px) scale(0.625);
+        transform: translateZ(80px) translateY(-15px) translateX(-50px) scale(0.625);
         border-radius:1.5em 3em;
+    }
+}
+
+@media all and (min-width: 900px){
+    div.about-page{
+        position:relative;
+        width:100%;
+        display:flex;
+        overflow-y:hidden;
+        section.block{
+            width:100%;
+            max-width:100%;
+            position:relative;
+            display:flex;
+        }
+        div.copy{
+            width:90%;
+            margin:0 auto;
+            padding-right:30%;
+            max-width:100%;
+        }
+        div.about-me{
+            flex: 0 1 0px;
+            float:right;
+            position:absolute;
+            top:11em;
+            right:0px;
+            width:30%;
+        }
     }
 }
 </style>
