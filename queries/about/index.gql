@@ -1,0 +1,23 @@
+query($section:[String]) {
+    entries(section: $section) {
+        title,
+        uri,
+		... on about_about_Entry{
+            biography{
+                __typename,
+                ... on biography_bio_BlockType{
+                    bioName,
+			        richText
+                }
+            }
+            contentEngine{
+          	    __typename,
+                ...on contentEngine_richText_BlockType{
+                    richText
+                    fontColor,
+                    backgroundColor
+                }
+            }
+        }
+    }
+}
