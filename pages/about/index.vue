@@ -8,14 +8,14 @@
                 <div class="block block-width copy">
                     <nav class="toggle-nav">
                         <ul>
-                            <li v-for="item in entries[0].biography">
-                                {{item.bioName}}
+                            <li v-for="item in entries[0].toggleList">
+                                <a href="#" class="button tertiary">{{item.toggleTitle}}</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="biographies">
                         <div v-for="item in entries[0].biography">
-                            <div style="display:none;" v-html="item.richText"></div>
+                            <div style="display:none;" v-html="item.toggleText"></div>
                         </div>
                     </div>
                 </div>

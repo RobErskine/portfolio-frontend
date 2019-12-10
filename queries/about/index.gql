@@ -3,11 +3,11 @@ query($section:[String]) {
         title,
         uri,
 		... on about_about_Entry{
-            biography{
+            toggleList{
                 __typename,
-                ... on biography_bio_BlockType{
-                    bioName,
-			        richText
+                ... on toggleList_toggle_BlockType{
+                    toggleTitle,
+                    toggleText
                 }
             }
             contentEngine{

@@ -17,7 +17,7 @@
                   <span class="copy">
                      <h1 class="heading">Hey there,</h1>
                      <p>I’m a creative designer and developer obsessed with solving complex problems</p>
-                     <p><a href="#" class="button tertiary js-zoom">Learn more</a></p>
+                     <p><customButton class="tertiary" destination="#" title="Check this nerd out"></customButton></p>
                   </span>
                   <div class="code">
                      <div class="row"></div>
@@ -100,13 +100,15 @@ import Logo from '~/components/Logo.vue'
 import sectionHeader from '~/components/SectionHeader.vue'
 import heading2 from '~/components/headings/heading2.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
+import customButton from '~/components/button.vue'
 
 export default {
    components: {
       Logo,
       HamburgerMenu,
       sectionHeader,
-      heading2
+      heading2,
+      customButton
    }
 }
 
@@ -420,35 +422,6 @@ div.logo{
       transform:translateX(-50%) rotate($rotate);
       left:50%;
       font-size:8vw;
-   }
-}
-
-a.button,
-button.button{
-   display:inline-block;
-   color:$light;
-   text-decoration:none;
-   font-size:1.2em;
-   padding:0.4em 1em 0.5em;
-   border-radius:1em;
-   margin:1em;
-   box-shadow:0.33vw 0.5vw 0vw #000;
-   outline:none;
-   cursor:pointer;
-   position:relative;
-   &.tertiary{
-      background-color:#ff4d74;
-   }
-   &:active{
-      top:0.23vw;
-      left:0.4vw;
-   }
-}
-
-@media all and (min-width: 700px){
-   a.button,
-   button.button{
-      font-size:0.75em;
    }
 }
 
