@@ -177,6 +177,11 @@ import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import page from '~/queries/about/index.gql';
 
 export default {
+    data(){
+        return {
+            entries:{}
+        }
+    },
     components: {
         HamburgerMenu,
         sectionHeader,
