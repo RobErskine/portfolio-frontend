@@ -14,9 +14,6 @@
 </template>
 
 <style lang="scss">
-body{
-    overflow-x:hidden;
-}
 section.block{
     padding:2em 1em;
     ul{
