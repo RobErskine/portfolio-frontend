@@ -17,7 +17,7 @@
                   <span class="copy">
                      <h1 class="heading">Hey there,</h1>
                      <p>I’m a creative designer and developer obsessed with solving complex problems</p>
-                     <!-- <customButton><customButton v-class="tertiary js-zoom" destination="#" title="Check this nerd out"></customButton></p> -->
+                     <p><customButton class-name="tertiary js-zoom large" destination="#" title="Check this Nerd Out!"></customButton></p>
                   </span>
                   <div class="code">
                      <div class="row"></div>

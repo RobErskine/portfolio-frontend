@@ -1,5 +1,5 @@
 <template>
-    <a v-ahref="destination" class="button" v-class="tertiary">{{title}}</a>
+    <span><a :href="destination" class="button" :class="className">{{title}}</a></span>
 </template>
 
 <style lang="scss">
@@ -35,9 +35,9 @@ button.button{
 
 <script>
 export default {
-    name: "button",
+    name: "customButton",
     props: [
-        'class', 'destination', 'title'
+        'className', 'destination', 'title'
     ],
     computed: {
         stepComponent() {
