@@ -17,7 +17,7 @@
                   <span class="copy">
                      <h1 class="heading">Hey there,</h1>
                      <p>I’m a creative designer and developer obsessed with solving complex problems</p>
-                     <p><customButton class="tertiary" destination="#" title="Check this nerd out"></customButton></p>
+                     <!-- <customButton><customButton v-class="tertiary js-zoom" destination="#" title="Check this nerd out"></customButton></p> -->
                   </span>
                   <div class="code">
                      <div class="row"></div>
@@ -46,6 +46,7 @@
 
             <!-- Top Left -->
             <div class="panel has-content" data-x-pos="-1" data-y-pos="1">
+               <nuxt-link to="/about"><span class="aria-hidden">Go to the About Page</span></nuxt-link>
                <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
             </div>
 
@@ -100,7 +101,7 @@ import Logo from '~/components/Logo.vue'
 import sectionHeader from '~/components/SectionHeader.vue'
 import heading2 from '~/components/headings/heading2.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
-import customButton from '~/components/button.vue'
+import customButton from '~/components/customButton.vue'
 
 export default {
    components: {
@@ -315,6 +316,10 @@ animate();
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap');
+
+.aria-hidden{
+   display:none;
+}
 
 @keyframes digits{
    0%{
@@ -554,6 +559,14 @@ body{
    .panel{
       cursor:pointer;
       transform:scale(0.975, 0.95);
+      & > a{
+         position:absolute;
+         top:0px;
+         right:0px;
+         bottom:0px;
+         left:0px;
+         z-index:9;
+      }
    }
    h2.heading{
       transform:scale(1.5) translate(-50%, -50%) rotate($rotate);

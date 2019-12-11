@@ -8,8 +8,9 @@
                 <div class="block block-width copy">
                     <nav class="toggle-nav">
                         <ul>
-                            <li v-for="item in entries[0].toggleList">
-                                <a href="#" class="button tertiary">{{item.toggleTitle}}</a>
+                            <li v-for="(item,index) in entries[0].toggleList">
+                                <!-- :class="{ 'activ' : letter == selectedLetter}" -->
+                                <a href="#" class="button tertiary">{{index}} - {{item.toggleTitle}}</a>
                             </li>
                         </ul>
                     </nav>
