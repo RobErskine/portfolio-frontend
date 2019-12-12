@@ -10,7 +10,7 @@
                         <ul>
                             <li v-for="(item,index) in entries[0].toggleList">
                                 <!-- :class="{ 'activ' : letter == selectedLetter}" -->
-                                <a href="#" class="button tertiary">{{index}} - {{item.toggleTitle}}</a>
+                                <a href="#" class="button tertiary">{{item.toggleTitle}}</a>
                             </li>
                         </ul>
                     </nav>
@@ -172,6 +172,7 @@ div.about-me{
 // components
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
+import customButton from '~/components/customButton.vue'
 
 // query
 import page from '~/queries/about/index.gql';
@@ -185,6 +186,7 @@ export default {
     components: {
         HamburgerMenu,
         sectionHeader,
+        customButton
     },
     apollo: {
         entries: {
