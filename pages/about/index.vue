@@ -5,7 +5,7 @@
         <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
         <div class="about-page">
             <section class="block">
-                <div class="block block-width copy">
+                <div class="block block-width copy" v-if="entries[0]">
                     <nav class="toggle-nav">
                         <ul>
                             <li v-for="(item,index) in entries[0].toggleList">
