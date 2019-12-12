@@ -15,7 +15,7 @@
                         </ul>
                     </nav>
                     <div class="biographies">
-                        <div v-for="item in entries[0].biography">
+                        <div v-for="item in entries[0].toggleList">
                             <div style="display:none;" v-html="item.toggleText"></div>
                         </div>
                     </div>

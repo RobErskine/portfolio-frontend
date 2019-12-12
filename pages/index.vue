@@ -538,7 +538,6 @@ section.buffer{
 
 // panel work
 body{
-   overflow: hidden;
    perspective: 1000px;
 }
 
