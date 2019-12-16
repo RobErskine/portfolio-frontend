@@ -195,6 +195,13 @@ export default {
                 "section": "about",
             }
         }
+    },
+    mounted: function(){
+        $('div.about-me').each(function(){
+            $(this).tilt({
+                maxTilt: 10
+            });
+        });
     }
 }
 

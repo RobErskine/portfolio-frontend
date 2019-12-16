@@ -41,6 +41,7 @@
 
             <!-- Top Center -->
             <div class="panel has-content" data-x-pos="0" data-y-pos="1">
+               <nuxt-link to="/resume"><span class="aria-hidden">Go to the Resume Page</span></nuxt-link>
                <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
             </div>
 
@@ -52,6 +53,7 @@
 
             <!-- Top Right -->
             <div class="panel has-content" data-x-pos="1" data-y-pos="1">
+               <nuxt-link to="/pro-work"><span class="aria-hidden">Go to the Professional Work Page</span></nuxt-link>
                <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
                <section class="block copy">
                   <h4>I'm currently working at Hill Holliday as VP, Lead Creative Technologist.</h4>
@@ -66,6 +68,7 @@
 
             <!-- Center Left -->
             <div class="panel has-content" data-x-pos="-1" data-y-pos="0">
+               <nuxt-link to="/blog"><span class="aria-hidden">Go to the Blog Page</span></nuxt-link>
                <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
                <section class="block copy">
                   <!-- <blog-item post-title="test"> -->
@@ -74,21 +77,25 @@
 
             <!-- Bottom Left -->
             <div class="panel has-content" data-x-pos="-1" data-y-pos="-1">
+               <nuxt-link to="/contact"><span class="aria-hidden">Go to the Contact Page</span></nuxt-link>
                <sectionHeader post-title="Contact" class-name="contact" canvas="./animations/contactcanvas"></sectionHeader>
             </div>
 
             <!-- Center Right -->
             <div class="panel has-content" data-x-pos="1" data-y-pos="0">
+               <nuxt-link to="/nonprofit-work"><span class="aria-hidden">Go to the Non-Profit Work Page</span></nuxt-link>
                <sectionHeader post-title="Non-Profit Work" class-name="nonprofit" canvas="./animations/nonprofitcanvas"></sectionHeader>
             </div>
 
             <!-- Bottom Center -->
             <div class="panel has-content" data-x-pos="0" data-y-pos="-1">
+               <nuxt-link to="/activity"><span class="aria-hidden">Go to the Activity Page</span></nuxt-link>
                <sectionHeader post-title="Activity" class-name="activity" canvas="./animations/activitycanvas"></sectionHeader>
             </div>
 
             <!-- Bottom Right -->
             <div class="panel has-content" data-x-pos="1" data-y-pos="-1">
+               <nuxt-link to="/fun-work"><span class="aria-hidden">Go to the For-Fun Page</span></nuxt-link>
                <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
             </div>
          </div>
@@ -672,7 +679,6 @@ body{
 }
 
 section.block{
-   max-width:800px;
    padding:2em;
    margin:0 auto;
 }
