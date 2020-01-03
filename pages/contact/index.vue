@@ -9,7 +9,7 @@
             <br/>
             <br/>
             <form name="contact" method="POST" data-netlify="true">
-                <div>
+                <div class="req">
                     <p>Feel free to send me a note below. <br/><br/>*All of these fields are required.</p>
                     <label>
                         <span>Your name*:</span>
@@ -35,7 +35,7 @@
                         <textarea name="message" rows="3"></textarea>
                     </label>
                 </div>
-                <div>
+                <div class="madlib">
                     <p>These are totally optional, but fill out the below to get a <em>100% free MadLib:</em></p>
                     <label>
                         <span>Random noun:</span>
@@ -147,10 +147,10 @@
             flex-wrap:wrap;
             align-items:space-between;
             justify-content:space-between;
-            & > div:first-child{
+            div.req{
                 width:60%;
             }
-            & > div:nth-child(2){
+            div.madlib{
                 width:35%;
             }
         }
