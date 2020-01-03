@@ -13,11 +13,11 @@
                     <p>Feel free to send me a note below. <br/><br/>*All of these fields are required.</p>
                     <label>
                         <span>Your name*:</span>
-                        <input required type="text" name="user name"/>
+                        <input type="text" name="user name"/>
                     </label>
                     <label>
                         <span>Your email*:</span>
-                        <input required type="email" name="user email"/>
+                        <input type="email" name="user email"/>
                     </label>
                     <label>
                         <span>Your interest*:</span>
