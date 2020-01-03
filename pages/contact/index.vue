@@ -13,11 +13,11 @@
                     <p>Feel free to send me a note below. <br/><br/>*All of these fields are required.</p>
                     <label>
                         <span>Your name*:</span>
-                        <input required type="text" name="name"/>
+                        <input required type="text" name="user name"/>
                     </label>
                     <label>
                         <span>Your email*:</span>
-                        <input required type="email" name="email"/>
+                        <input required type="email" name="user email"/>
                     </label>
                     <label>
                         <span>Your interest*:</span>
@@ -170,7 +170,7 @@ export default {
 if(process.client){
     $("a[href^='http']").each(function() {
         $(this).css({
-            background: "url(http://www.google.com/s2/favicons?domain=" + this.hostname + ") left center no-repeat",
+            background: "url(https://www.google.com/s2/favicons?domain=" + this.hostname + ") left center no-repeat",
             "padding-left": "20px"
         });    
     });
