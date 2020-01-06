@@ -7,50 +7,50 @@
             <p><strong>If you're interested in my code</strong>, you can find me on <a href="https://github.com/roberskine" target="_blank">GitHub</a>, <a href="https://codepen.io/roberskine" target="_blank">Codepen</a>, <a href="https://glitch.com/@RobErskine" target="_blank">Glitch</a>, and <a href="https://stackoverflow.com/users/1047958/rob-erskine" target="_blank">StackOverflow</a>.</p>
             <p><strong>If you're interested in me personally</strong>, you can connect with me on <a href="https://linkedin.com/in/roberskine" target="_blank">LinkedIn</a>, <a href="https://twitter.com/erskinerob">Twitter</a>, and <a href="https://open.spotify.com/user/roberskine" target="_blank">Spotify</a>.</p>
             <br/>
-            <br/>
             <form name="contact" method="POST" data-netlify="true">
                 <div class="req">
                     <p>Feel free to send me a note below. <br/><br/>*All of these fields are required.</p>
                     <label>
-                        <span>Your name*:</span>
+                        <span class="label">Your name*:</span>
                         <input type="text" name="user name"/>
                     </label>
                     <label>
-                        <span>Your email*:</span>
+                        <span class="label">Your email*:</span>
                         <input type="email" name="user email"/>
                     </label>
                     <label>
-                        <span>Your interest*:</span>
+                        <span class="label">Your interest*:</span>
                         <div class="select-wrapper">
                             <select name="interest">
                                 <option value="just sayin' hey">Just sayin’ hey</option>
                                 <option value="freelance work">Freelance work</option>
                                 <option value="new opportunities">New opportunities</option>
                                 <option value="friendship">Friendship :)</option>
+                                <option value="issue with your site">There's an issue with your site :(</option>
                             </select>
                         </div>
                     </label>
                     <label>
-                        <span>Your message*:</span>
+                        <span class="label">Your message*:</span>
                         <textarea name="message" rows="3"></textarea>
                     </label>
                 </div>
                 <div class="madlib">
                     <p>These are totally optional, but fill out the below to get a <em>100% free MadLib:</em></p>
                     <label>
-                        <span>Random noun:</span>
+                        <span class="label">Random noun:</span>
                         <input type="text" name="random noun" placeholder="cookie"/>
                     </label>
                     <label>
-                        <span>Random verb:</span>
+                        <span class="label">Random verb:</span>
                         <input type="text" name="random verb" placeholder="repair"/>
                     </label>
                     <label>
-                        <span>Random adjective 1:</span>
+                        <span class="label">Random adjective 1:</span>
                         <input type="text" name="random adjective 1" placeholder="alive"/>
                     </label>
                     <label>
-                        <span>Random adjective 2:</span>
+                        <span class="label">Random adjective 2:</span>
                         <input type="text" name="random adjective 2" placeholder="lazy"/>
                     </label>
                 </div>
@@ -62,7 +62,7 @@
 
 <style lang="scss">
     section.block{
-        padding:2em 1em;
+        padding:2em 0.5em;
         &.copy{
             max-width:800px;
             margin:0 auto;
@@ -79,11 +79,24 @@
         }
     }
 
+    span.name{
+        text-transform: capitalize;
+    }
+
     form{
+        &:before{
+            content:"";
+            display:block;
+            height:1px;
+            width:100%;
+            background-color:darken($light,10%);
+            transform:rotate($rotate) translateY(-3em);
+        }
+        padding-top:3em;
         div > p{
             font-size:1.2em;
         }
-        label,span{
+        label,span.label{
             display:block;
             margin-bottom:0.25em;
         }
@@ -94,7 +107,7 @@
             appearance:none;
             background-color:darken($light,10%);
             width:100%;
-            padding:0.5em 1em;
+            padding:0.5em 0.5em;
             font-size:1.1em;
             outline:none;
             border-radius:0px;
@@ -178,9 +191,12 @@ if(process.client){
     $("form").submit(function(e) {
         e.preventDefault();
 
-        var $form = $(this);
+        var $form = $(this),
+            name = $('input[name="user name"]').val(),
+            email = $('input[name="email"]').val(),
+            interest = $('select option:selected').text();
         $.post($form.attr("action"), $form.serialize()).then(function() {
-            alert("Thank you!");
+            $form.html('<div class="thanks"><h2>Thanks for hitting me up, <span class="name">'+ name +'</span>.<br/><br/></h2><p>I should be getting a note from your email ('+ email +') about the option you selected: '+ interest +'.</p><p>I usually get back to these messages within 24 hours. Looking forward to talking to ya soon!</p><p>Best,<br/> Rob</p></div>');
         });
     });
 }
