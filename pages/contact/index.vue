@@ -54,7 +54,7 @@
                         <input type="text" name="random adjective 2" placeholder="lazy"/>
                     </label>
                 </div>
-                <button type="submit">Fire away! <span><small>(to my inbox)</small></span></button>
+                <button type="submit">Fire away! <span class="label"><small>(to my inbox)</small></span></button>
             </form>
         </section>
     </div>
@@ -192,9 +192,9 @@ if(process.client){
         e.preventDefault();
 
         var $form = $(this),
-            name = $('input[name="user name"]').val(),
-            email = $('input[name="email"]').val(),
-            interest = $('select option:selected').text();
+            name = $form.find('input[name="user name"]').val(),
+            email = $form.find('input[type="email"]').val(),
+            interest = $form.find('select option:selected').text();
         $.post($form.attr("action"), $form.serialize()).then(function() {
             $form.html('<div class="thanks"><h2>Thanks for hitting me up, <span class="name">'+ name +'</span>.<br/><br/></h2><p>I should be getting a note from your email ('+ email +') about the option you selected: '+ interest +'.</p><p>I usually get back to these messages within 24 hours. Looking forward to talking to ya soon!</p><p>Best,<br/> Rob</p></div>');
         });
