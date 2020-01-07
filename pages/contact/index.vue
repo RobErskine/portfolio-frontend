@@ -21,13 +21,13 @@
                     <label>
                         <span class="label">Your interest*:</span>
                         <div class="select-wrapper">
-                            <select name="interest">
+                            <!-- <select name="interest">
                                 <option value="just sayin' hey">Just sayin’ hey</option>
                                 <option value="freelance work">Freelance work</option>
                                 <option value="new opportunities">New opportunities</option>
                                 <option value="friendship">Friendship :)</option>
                                 <option value="issue with your site">There's an issue with your site :(</option>
-                            </select>
+                            </select> -->
                         </div>
                     </label>
                     <label>
@@ -89,7 +89,7 @@
             display:block;
             height:1px;
             width:100%;
-            background-color:darken($light,10%);
+            background-color:darken($light,15%);
             transform:rotate($rotate) translateY(-3em);
         }
         padding-top:3em;
@@ -174,20 +174,19 @@
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 
+import everypage from '~/mixins/everypage'
+
 export default {
     components: {
         HamburgerMenu,
         sectionHeader
-    }    
+    },
+    mixins: [everypage],
+    mounted: function(){
+        everypage.externalLinks();
+    }
 }
 if(process.client){
-    $("a[href^='http']").each(function() {
-        $(this).css({
-            background: "url(https://www.google.com/s2/favicons?domain=" + this.hostname + ") left center no-repeat",
-            "padding-left": "20px"
-        });    
-    });
-
     $("form").submit(function(e) {
         e.preventDefault();
 

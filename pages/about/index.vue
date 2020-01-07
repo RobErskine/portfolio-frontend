@@ -45,60 +45,9 @@ section.block{
     }
 }
 
-div.block-width{
-    max-width: 1200px;
-    margin:0 auto;
-}
-
 figure{
     border-radius:1.5em 3em;
     overflow:hidden;
-}
-
-pre{
-    white-space:pre-line;
-    color:#fff;
-    background-color:#333;
-    padding:1em;
-    border-radius:1.5em 3em;
-    width:calc(100% + 2em);
-    margin-left:-1em;
-}
-
-@media all and (min-width:700px){
-    pre{
-        width:100%;
-        margin-left:auto;
-    }
-}
-
-p,pre{
-    margin-bottom:1.2em;
-    font-size:1.2em;
-    line-height:1.375;
-}
-
-@media all and (min-width: 700px){
-    p,pre{
-        font-size:1.5em;
-    }
-}
-
-p,pre{
-    a{
-        color:inherit;
-        text-decoration:none;
-        background-size:  100% 10%;
-        background-repeat: repeat-x;
-        background-position: left 0% bottom 5%;
-        background-image: linear-gradient(110deg, $primary 0%, $secondary 50%);
-        transition:all 0.25s ease-in-out;
-        overflow:visible;
-        &:hover{
-            background-size:  120% 100%;
-            color:#fff;
-        }
-    }
 }
 
 div.about-me{
