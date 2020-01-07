@@ -5,21 +5,23 @@
 </template>
 
 <script>
-if(process.client){
-const TAU = Zdog.TAU;
+    export default{
+        mounted: function(){
+            const TAU = Zdog.TAU;
 
-let nonprofitIllo = new Zdog.Illustration({
-    element: '.nonprofit-canvas',
-    dragRotate: true,
-    rotate: {y: -TAU/14, x: -TAU/30},
-    scale: 0.75
-});
+            let nonprofitIllo = new Zdog.Illustration({
+                element: '.nonprofit-canvas',
+                dragRotate: true,
+                rotate: {y: -TAU/14, x: -TAU/30},
+                scale: 0.75
+            });
 
-function animate() {
-    nonprofitIllo.updateRenderGraph();
-    requestAnimationFrame( animate );
-}
+            function animate() {
+                nonprofitIllo.updateRenderGraph();
+                requestAnimationFrame( animate );
+            }
 
-animate();
-}
+            animate();
+        }
+    }
 </script>

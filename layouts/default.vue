@@ -51,7 +51,7 @@ p,pre{
 }
 
 p,pre{
-  a{
+  a:not(.button){
     color:inherit;
     display:inline-block;
     text-decoration:none;

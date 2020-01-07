@@ -21,13 +21,13 @@
                     <label>
                         <span class="label">Your interest*:</span>
                         <div class="select-wrapper">
-                            <!-- <select name="interest">
+                            <select name="interest">
                                 <option value="just sayin' hey">Just sayin’ hey</option>
                                 <option value="freelance work">Freelance work</option>
                                 <option value="new opportunities">New opportunities</option>
                                 <option value="friendship">Friendship :)</option>
                                 <option value="issue with your site">There's an issue with your site :(</option>
-                            </select> -->
+                            </select>
                         </div>
                     </label>
                     <label>

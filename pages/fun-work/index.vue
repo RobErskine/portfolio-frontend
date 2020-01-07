@@ -1,5 +1,5 @@
 <template>
-    <div class="panel has-content" data-x-pos="-1" data-y-pos="0">
+    <div class="panel has-content" data-x-pos="0" data-y-pos="0">
         <HamburgerMenu />
 
         <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
