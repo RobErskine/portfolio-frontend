@@ -1,6 +1,5 @@
 <template>
-    <div class="panel has-content" data-x-pos="-1" data-y-pos="0">
-        <HamburgerMenu />
+    <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
 
         <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
         <section class="block copy">
@@ -14,31 +13,7 @@
 </template>
 
 <style lang="scss">
-section.block{
-    padding:4vw 1em;
-    ul{
-        display:flex;
-        justify-content:space-around;
-        flex-wrap:wrap;
-        align-items:center;
-        margin:0px;
-        padding:0px;
-        li{
-            width:100%;
-            margin:0px 0px 1em;
-            padding:0px;
-            list-style-type:none;
-        }
-    }
-}
 
-@media all and (min-width:600px){
-    section.block{
-        ul li{
-            width:32%;
-        }
-    }
-}
 </style>
 
 <script>

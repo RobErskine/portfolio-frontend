@@ -1,6 +1,5 @@
 <template>
-    <div class="panel has-content" data-x-pos="0" data-y-pos="0">
-        <HamburgerMenu />
+    <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <sectionHeader post-title="Contact" class-name="contact" canvas="./animations/contactcanvas"></sectionHeader>
         <section class="block copy">
             <p><strong>I'd love to hear from you!</strong> I'm interested in freelance work, new opportunities, and friendship.</p>
@@ -61,24 +60,6 @@
 </template>
 
 <style lang="scss">
-    section.block{
-        padding:2em 0.5em;
-        &.copy{
-            max-width:800px;
-            margin:0 auto;
-            p{
-                margin-bottom:1em;
-                line-height:1.375;
-            }
-        }
-    }
-
-    @media all and (min-width:600px){
-        section.block{
-            padding:4vw 1em;
-        }
-    }
-
     span.name{
         text-transform: capitalize;
     }

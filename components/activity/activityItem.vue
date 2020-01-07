@@ -68,14 +68,13 @@ export default {
         post: {
             type: Object
         }
-    }
-}
-
-if(process.client){
-    $('div.m_activity-list-item').each(function(){
-        $(this).tilt({
-            maxTilt: 10
+    },
+    mounted: function(){
+        $('div.m_activity-list-item').each(function(){
+            $(this).tilt({
+                maxTilt: 10
+            });
         });
-    });
+    }
 }
 </script>

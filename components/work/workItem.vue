@@ -111,14 +111,13 @@ export default {
         post: {
             type: Object
         }
-    }
-}
-
-if(process.client){
-    $('div.m_work-list-item').each(function(){
-        $(this).tilt({
-            maxTilt: 5
+    },
+    mounted: function(){
+        $('div.m_work-list-item').each(function(){
+            $(this).tilt({
+                maxTilt: 5
+            });
         });
-    });
+    }
 }
 </script>

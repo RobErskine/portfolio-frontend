@@ -1,7 +1,5 @@
 <template>
-    <div class="panel has-content" data-x-pos="0" data-y-pos="0">
-        <HamburgerMenu />
-
+    <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <sectionHeader post-title="Activity" class-name="activity" canvas="./animations/activitycanvas"></sectionHeader>
         <section class="block copy">
             <ul>
@@ -14,29 +12,6 @@
 </template>
 
 <style lang="scss">
-section.block{
-    padding:4vw 1em;
-    ul{
-        display:flex;
-        justify-content:space-around;
-        flex-wrap:wrap;
-        align-items:center;
-        margin:0px;
-        padding:0px;
-        li{
-            width:100%;
-            margin:0px 0px 1em;
-            padding:0px;
-            list-style-type:none;
-        }
-    }
-}
-
-@media all and (min-width: 700px){
-    section.block ul li{
-        width:47.5%;
-    }
-}
 
 </style>
 

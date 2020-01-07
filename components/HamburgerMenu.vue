@@ -129,10 +129,10 @@ if(process.client){
         y = 0;
 
     function setPos(x,y){
-        $wrap.css('transform','translateX(' + x + '00%) translateY(' + y + '00%)');
-        setTimeout( function(){
-            $wrap.removeClass('animate');
-        }, 600);
+        // $wrap.css('transform','translateX(' + x + '00%) translateY(' + y + '00%)');
+        // setTimeout( function(){
+        //     $wrap.removeClass('animate');
+        // }, 600);
     }
 
     setPos();
@@ -163,7 +163,8 @@ if(process.client){
     
     $zoom.on('click', function(event){
         setTimeout(function(){
-            $site.toggleClass('show-all').toggleClass('animating');
+            $('body').toggleClass('show-all');
+            $site.toggleClass('animating');
             $body.toggleClass('menu-open');
             $site.attr('style','transform: rotateY(deg) rotateX(0deg) scale(1) translateX(12vw) translateZ(0)');
         },100);
@@ -218,12 +219,13 @@ if(process.client){
     }
 
     function closeZoom(){
+        $('body').removeClass('show-all');
         $site.removeClass('show-all').attr('style','transform: rotateY(deg) rotateX(0deg) scale(1) translateX(12vw) translateZ(0)');
         $body.removeClass('menu-open');
     }
 
     // when a panel is clicked, do the thing
-    $('body').on('click', '.site-wrap.show-all .panel', function(event){
+    $('body').on('click', '.site-wrap .panel', function(event){
         event.preventDefault();
         var x = $(this).data('x-pos');
         var y = $(this).data('y-pos');

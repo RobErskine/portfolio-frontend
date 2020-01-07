@@ -66,14 +66,13 @@ export default {
         post: {
             type: Object
         }
-    }
-}
-
-if(process.client){
-    $('div.m_blog-list-item').each(function(){
-        $(this).tilt({
-            maxTilt: 10
+    },
+    mounted: function(){
+        $('div.m_blog-list-item').each(function(){
+            $(this).tilt({
+                maxTilt: 10
+            });
         });
-    });
+    }
 }
 </script>

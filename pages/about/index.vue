@@ -1,7 +1,5 @@
 <template>
-    <div class="panel has-content" data-x-pos="0" data-y-pos="0">
-        <HamburgerMenu />
-
+    <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
         <div class="about-page">
             <section class="block">
@@ -35,16 +33,6 @@
 </template>
 
 <style lang="scss">
-section.block{
-    padding:2em 1em 1em;
-}
-
-@media all and (min-width: 700px){
-    section.block{
-        padding:4vw 2em;
-    }
-}
-
 figure{
     border-radius:1.5em 3em;
     overflow:hidden;
