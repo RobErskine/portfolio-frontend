@@ -80,6 +80,13 @@
             <div class="panel has-content" data-x-pos="-1" data-y-pos="-1">
               <nuxt-link to="/contact"><span class="aria-hidden">Go to the Contact Page</span></nuxt-link>
               <sectionHeader post-title="Contact" class-name="contact" canvas="./animations/contactcanvas"></sectionHeader>
+              <section class="block copy" aria-hidden="true">
+                <div class="slim-block">
+                  <p><strong>I'd love to hear from you!</strong> I'm interested in freelance work, new opportunities, and friendship.</p>
+                  <p><strong>If you're interested in my code</strong>, you can find me on <a href="https://github.com/roberskine" target="_blank">GitHub</a>, <a href="https://codepen.io/roberskine" target="_blank">Codepen</a>, <a href="https://glitch.com/@RobErskine" target="_blank">Glitch</a>, and <a href="https://stackoverflow.com/users/1047958/rob-erskine" target="_blank">StackOverflow</a>.</p>
+                  <p><strong>If you're interested in me personally</strong>, you can connect with me on <a href="https://linkedin.com/in/roberskine" target="_blank">LinkedIn</a>, <a href="https://twitter.com/erskinerob">Twitter</a>, and <a href="https://open.spotify.com/user/roberskine" target="_blank">Spotify</a>.</p>
+                </div>
+              </section>
             </div>
 
             <!-- Center Right -->
@@ -118,11 +125,35 @@ html {
   box-sizing: border-box;
 }
 
+html,body{
+    margin:0px;
+    width:100%;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6, p, span, time, li{ 
+    font-family: $font;
+}
+
+body{
+    background-color:darken($light,5%);
+}
+
+// @media (prefers-color-scheme: dark) {
+//     body{
+//         background-color: lighten($dark,10%);
+//     }
+// }
+
+::selection{
+    background: $primary;
+    text-shadow: $secondary;
 }
 
 pre{
@@ -180,23 +211,44 @@ p,pre{
   }
 }
 
-div.block-width{
+ul,ol{
+  margin:0px;
+  padding:0px;
+  list-style-type:none;
+}
+
+div.block{
   max-width: 1200px;
   margin:0 auto;
 }
 
+div.slim-block{
+  max-width:800px;
+  margin:0 auto;
+}
+
 section.block{
-    padding:2em 1em 1em;
+  padding:2em 1em 1em;
 }
 
 @media all and (min-width: 700px){
-    section.block{
-        padding:4vw 2em;
-    }
+  section.block{
+      padding:4vw 2em;
+  }
 }
 
 .aria-hidden{
   display:none;
+}
+
+//////////////////
+// transition styles
+//////////////////
+.page-enter-active, .page-leave-active {
+  transition: opacity 1s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
 }
 
 //////////////////

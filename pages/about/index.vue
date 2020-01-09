@@ -117,7 +117,23 @@ import page from '~/queries/about/index.gql';
 export default {
     data(){
         return {
-            entries:{}
+            entries:{},
+            title: 'About | Rob Erskine - Creative Developer',
+            description: 'Rob Erskine is a creative designer and developer obsessed with solving complex problems in collaborative environments',
+            image: 'https://placehold.it/1200x630?text=TODO'
+        }
+    },
+    head (){
+        return {
+            title: this.title,
+            meta: [
+                { hid: 'og:title', name: 'og:title', content:this.title },
+                { hid: 'twitter:title', name: 'twitter:title', content:this.title },
+                { hid: 'description', name: 'description', content: this.description },
+                { hid: 'og:description', name: 'og:description', content: this.description },
+                { hid: 'og:image', name: 'og:image', content: this.image },
+                { hid: 'twitter:image', name: 'og:image', content: this.image }
+            ]
         }
     },
     components: {

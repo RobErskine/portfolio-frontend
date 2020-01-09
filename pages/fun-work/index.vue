@@ -25,6 +25,26 @@ import workItem from '~/components/work/workItem.vue'
 import posts from '~/queries/work/getWork.gql';
 
 export default {
+    data (){
+        return {
+            title: 'Fun Work | Rob Erskine - Creative Developer',
+            description: 'Fun personal design and development side projects from Rob Erskine. Chat and twitter bots, IoT, hacks, and more.',
+            image: 'https://placehold.it/1200x630?text=TODO'
+        }
+    },
+    head (){
+        return {
+            title: this.title,
+            meta: [
+                { hid: 'og:title', name: 'og:title', content:this.title },
+                { hid: 'twitter:title', name: 'twitter:title', content:this.title },
+                { hid: 'description', name: 'description', content: this.description },
+                { hid: 'og:description', name: 'og:description', content: this.description },
+                { hid: 'og:image', name: 'og:image', content: this.image },
+                { hid: 'twitter:image', name: 'og:image', content: this.image }
+            ]
+        }
+    },
     components: {
         HamburgerMenu,
         sectionHeader,

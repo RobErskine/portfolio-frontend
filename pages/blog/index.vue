@@ -26,6 +26,26 @@ import blogItem from '~/components/blog/listItem.vue'
 import posts from '~/queries/blog/getArticles.gql';
 
 export default {
+    data (){
+        return {
+            title: 'Blog | Rob Erskine - Creative Developer',
+            description: 'The latest writing from Rob Erskine about design, development, cooking, and other musings',
+            image: 'https://placehold.it/1200x630?text=TODO'
+        }
+    },
+    head (){
+        return {
+            title: this.title,
+            meta: [
+                { hid: 'og:title', name: 'og:title', content:this.title },
+                { hid: 'twitter:title', name: 'twitter:title', content:this.title },
+                { hid: 'description', name: 'description', content: this.description },
+                { hid: 'og:description', name: 'og:description', content: this.description },
+                { hid: 'og:image', name: 'og:image', content: this.image },
+                { hid: 'twitter:image', name: 'og:image', content: this.image }
+            ]
+        }
+    },
     components: {
         HamburgerMenu,
         sectionHeader,

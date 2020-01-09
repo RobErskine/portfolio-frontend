@@ -129,7 +129,7 @@ if(process.client){
         y = 0;
 
     function setPos(x,y){
-        // $wrap.css('transform','translateX(' + x + '00%) translateY(' + y + '00%)');
+        $wrap.css('transform','translateX(' + x + '00%) translateY(' + y + '00%)');
         // setTimeout( function(){
         //     $wrap.removeClass('animate');
         // }, 600);
