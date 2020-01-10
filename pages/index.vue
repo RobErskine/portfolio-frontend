@@ -8,9 +8,5 @@
 
 <script>
 export default {
-    components:[],
-    mounted: function(){
-
-    }
 }
 </script>
