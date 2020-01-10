@@ -61,7 +61,7 @@ nav.main-nav{
         margin-top:0.36em;
     }
     span.burger{
-        top:51%;
+        top:53%;
         left:0.5em;
     }
     span.copy{

@@ -1,6 +1,0 @@
-schema: https://portfolio-staging.roberskine.com/api
-overwrite: true
-generates:
-  ./fragmentTypes.json:
-    plugins:
-      - fragment-matcher
