@@ -245,7 +245,7 @@ section.block{
 // transition styles
 //////////////////
 .page-enter-active, .page-leave-active {
-  transition: opacity 1s;
+  transition: opacity 0.66s;
 }
 .page-enter, .page-leave-to {
   opacity: 0;

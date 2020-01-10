@@ -40,10 +40,6 @@ export default {
         'className', 'destination', 'title'
     ],
     computed: {
-        stepComponent() {
-            let data = this.canvas.split('/')[2];
-            return () => import(`./animations/${data}`);
-        }
     },
 }
 </script>
