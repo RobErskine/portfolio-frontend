@@ -65,12 +65,14 @@ module.exports = {
   ** Apollo graphql wrapper
   */
   apollo: {
+    includeNodeModules: true,
     clientConfigs: {
-      default: {
+      default: '@/apollo-config.js',
+      //default: {
         // required  
-        httpEndpoint: 'https://portfolio-staging.roberskine.com/api', // live,
+        //httpEndpoint: 'https://portfolio-staging.roberskine.com/api', // live,
         //httpEndpoint: 'http://portfolio.test/api' // dev
-      },
+      //},
     }
   },
   /*

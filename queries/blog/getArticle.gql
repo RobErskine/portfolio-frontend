@@ -6,33 +6,33 @@ query($section:[String], $slug:[String]) {
 		... on blog_blog_Entry{
             contentEngine{
                 __typename,
-                # ...on contentEngine_richText_BlockType{
-                #     __typename,
-                #     id,
-                    # richText
-                    # fontColor,
-                    # backgroundColor
-                #}
-                # ...on contentEngine_image_BlockType{
-                #     __typename,
-                #     id,
-                    # backgroundColor,
-                    # imageWidth,
-                    # image {
-                    #     id,
-                    #     url
-                    # }
-                #}
-                # ...on contentEngine_pullQuote_BlockType{
-                #     __typename,
-                #     id,
-                    # backgroundColor,
-                    # fontColor,
-                    # quote,
-                    # quoteSize,
-                    # attribution,
-                    # attributionLink
-                #}
+                ...on contentEngine_richText_BlockType{
+                    __typename,
+                    id,
+                    richText
+                    fontColor,
+                    backgroundColor
+                }
+                ...on contentEngine_image_BlockType{
+                    __typename,
+                    id,
+                    backgroundColor,
+                    imageWidth,
+                    image {
+                        id,
+                        url
+                    }
+                }
+                ...on contentEngine_pullQuote_BlockType{
+                    __typename,
+                    id,
+                    backgroundColor,
+                    fontColor,
+                    quote,
+                    quoteSize,
+                    attribution,
+                    attributionLink
+                }
             }
         }
     }

@@ -5,13 +5,13 @@
             <h1>{{entries[0].title}}</h1>
             <div v-for="block in entries[0].contentEngine">
                 <div v-if="block.__typename === 'contentEngine_richText_BlockType'">
-                rich text
+                    {{block.richText}}
                 </div>
                 <div v-else-if="block.__typename === 'contentEngine_pullQuote_BlockType'">
-                pull quote
+                    {{block.quote}}
                 </div>
                 <div v-else-if="block.__typename === 'contentEngine_image_BlockType'">
-                image
+                    {{block.image[0].url}}
                 </div>
                 <div v-else>
                 block does not exist
@@ -27,12 +27,18 @@
 <script>
 // query
 import posts from '~/queries/blog/getArticle.gql';
+// Only works in Apollo 3 [which as of 1/13/20 is in beta]
+// import { InMemoryCache } from 'apollo-cache-inmemory';
+// const cache = new InMemoryCache({
+//     possibleTypes: {
+//         contentEngine: ["contentEngine_richText_BlockType", "contentEngine_pullQuote_BlockType", "contentEngine_image_BlockType"],
+//     },
+// });
 
 export default {
     apollo: {
         entries: {
             query: posts,
-            //fetchPolicy: 'no-cache',
             variables (){
                 return{
                     section: "blog",
