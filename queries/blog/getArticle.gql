@@ -3,6 +3,8 @@ query($section:[String], $slug:[String]) {
         id,
         title,
         uri,
+        postDate,
+        dateUpdated,
 		... on blog_blog_Entry{
             contentEngine{
                 __typename,
@@ -17,6 +19,7 @@ query($section:[String], $slug:[String]) {
                     __typename,
                     id,
                     backgroundColor,
+                    fontColor,
                     imageWidth,
                     image {
                         id,

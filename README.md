@@ -6,7 +6,7 @@ Nuxtjs frontend portfolio
 
 ## URLs
 - Frontend Staging - [https://robsportfolio.netlify.com/](https://robsportfolio.netlify.com/)
-- Backend Staging - [https://portfolio-staging.roberskine.com/admin])(https://portfolio-staging.roberskine.com/admin)
+- Backend Staging - [https://portfolio-staging.roberskine.com/admin](https://portfolio-staging.roberskine.com/admin)
 
 ## Build Setup
 
