@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Logo size="size-small" position="position-left"/>
         <div class="panel detail">   
             <!-- {{entries[0].title}} -->
             <header class="engine-block o_article-header text-align-center" :data-color="entries[0].contentEngine[0].fontColor" :data-background="entries[0].contentEngine[0].backgroundColor">
@@ -17,6 +18,7 @@
                 <div class="engine-block o_pullquote" :class="`quote-size-`+block.quoteSize" v-else-if="block.__typename === 'contentEngine_pullQuote_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
                     <blockquote>
                         {{block.quote}}
+                        <span class="author" v-if="block.attribution">{{block.attribution}}</span>
                     </blockquote>
                 </div>
                 <div class="engine-block o_image" v-else-if="block.__typename === 'contentEngine_image_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
@@ -44,7 +46,7 @@
 
     .o_article-header{
         text-align:center;
-        padding:6em 1em 3em;
+        padding:10em 1em 3em;
         h1{
             font-size:3.5em;
         }
@@ -112,7 +114,7 @@
         }
     }
 
-    @media all and (min-width: 700px){
+    @media all and (min-width: 900px){
         .o_article-header{
             padding:6em 3em 5em;
         }
@@ -180,10 +182,16 @@
 </style>
 
 <script>
+// components
+import Logo from '~/components/Logo';
+
 // query
 import posts from '~/queries/blog/getArticle.gql';
 
 export default {
+    components: {
+        Logo
+    },
     mounted: function(){
         // add youtube video
         if($('iframe').length > 0){

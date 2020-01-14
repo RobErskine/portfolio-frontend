@@ -1,6 +1,6 @@
 <template>
-  <div class="logo">
-    <span>Rob!</span>
+  <div class="logo" :class="[position,size]">
+    <nuxt-link to="/"><span aria-hidden="true">Rob!</span><span class="aria-hidden">Return to home</span></nuxt-link>
   </div>
 </template>
 
@@ -17,12 +17,16 @@ div.logo{
   color:$light;
   width:auto;
   text-align:center;
+  a{
+    color:$light;
+    text-decoration:none;
+  }
   &:after{
     content:'Rob!';
     font-family:$font;
     font-size:inherit;
     position:absolute;
-    top:1vw;
+    top:0.5vw;
     left:0.5vw;
     z-index:-1;
     color:black;
@@ -34,6 +38,11 @@ div.logo{
     -webkit-text-fill-color: transparent;
     background-size:100%;
   }
+  &.position-left{
+    z-index:3;
+    left:0%;
+    transform:rotate($rotate);
+  }
 }
 
 @media all and (min-width: 800px){
@@ -42,5 +51,19 @@ div.logo{
     left:50%;
     font-size:8vw;
   }
+  div.logo.size-small{
+    font-size:5vw;
+  }
 }
 </style>
+
+<script>
+export default {
+    name: "Logo",
+    props: [
+        'position', 'size'
+    ],
+    computed: {
+    },
+}
+</script>
