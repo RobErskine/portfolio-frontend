@@ -157,12 +157,4 @@ export default {
         });
     }
 }
-
-if(process.client){
-    $('div.about-me').each(function(){
-        $(this).tilt({
-            maxTilt: 10
-        });
-    });
-}
 </script>

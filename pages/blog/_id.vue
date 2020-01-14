@@ -4,7 +4,11 @@
             <!-- {{entries[0].title}} -->
             <header class="engine-block o_article-header text-align-center" :data-color="entries[0].contentEngine[0].fontColor" :data-background="entries[0].contentEngine[0].backgroundColor">
                 <h1 class="m_headline">{{entries[0].title}}</h1>
-                <span>Posted: <time>{{$moment(entries[0].postDate).format("MMMM Do YYYY")}}</time></span>
+                <span>Posted: <time>{{$moment(entries[0].postDate).format("MMMM Do YYYY")}}</time> Reading Time: {{entries[0].readingTime}}</span>
+                <div v-if="entries[0].suggestedListeningEmbed">
+                    <button>Suggested Listening: {{entries[0].suggestListeningTitle}} by {{entries[0].suggestListeningArtist}}</button>
+                    <div class="m_video-frame"><iframe :data-id="entries[0].suggestedListeningEmbed" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                </div>
             </header>
             <div v-for="block in entries[0].contentEngine">
                 <div class="engine-block o_rich-text" v-if="block.__typename === 'contentEngine_richText_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
@@ -31,7 +35,7 @@
     .o_rich-text,
     .o_image,
     .o_blockquote{
-        padding:2em;
+        padding:2em 1em;
         & > div{
             display:block;
             margin:0 auto;
@@ -40,13 +44,77 @@
 
     .o_article-header{
         text-align:center;
-        padding:6em 3em 5em;
+        padding:6em 1em 3em;
         h1{
             font-size:3.5em;
         }
-        span{
-            display:block;
+        span,
+        button{
+            appearance:none;
+            display:inline-block;
             padding:1em;
+            background-color:transparent;
+            color:inherit;
+            border:none;
+            text-align:center;
+        }
+        button{
+            width:100%;
+            display:block;
+            cursor:pointer;
+            text-align:center;
+            font-size:1em;
+            padding:0.25em 0.5em;
+            margin-bottom:0.5em;
+            outline:none;
+            color:inherit;
+            &:after{
+                content:"⇣";
+                display:inline-block;
+                padding-left:0.5em;
+            }
+            &.active{
+                &:after{
+                    content:"⇡";
+                }
+                & + div{
+                    display:block;
+                }
+            }
+        }
+        time{
+            display:inline-block;
+            padding-right:1.25em;
+            margin-right:1em;
+            border-right:1px solid;
+        }
+    }
+
+    div.m_video-frame{
+        position:relative;
+        width:100%;
+        max-width:500px;
+        margin:0 auto;
+        display:none;
+        iframe{
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0px;
+            right:0px;
+            bottom:0px;
+            left:0px;
+        }
+        &:after{
+            content:"";
+            display:block;
+            padding-top:56.25%;
+        }
+    }
+
+    @media all and (min-width: 700px){
+        .o_article-header{
+            padding:6em 3em 5em;
         }
     }
     
@@ -79,7 +147,7 @@
         margin:0 auto;
         display:block;
         transform:rotate(-3deg);
-        padding:3em 1em;
+        padding:1.5em 1em;
         blockquote{
             font-style:italic;
             span.author{
@@ -100,6 +168,12 @@
         }
     }
 
+    @media all and (min-width: 700px){
+        .o_pullquote{
+            padding:3em 1em;
+        }
+    }
+
     div.panel.detail{
         transition:all 1s ease-in-out;
     }
@@ -111,6 +185,18 @@ import posts from '~/queries/blog/getArticle.gql';
 
 export default {
     mounted: function(){
+        // add youtube video
+        if($('iframe').length > 0){
+            var id = $('iframe').data('id');
+            $('iframe').attr('src','https://www.youtube.com/embed/'+id);
+        }
+
+        $('header.o_article-header button').on('click', function(){
+            $(this).toggleClass('active');
+        });
+
+
+        // on scroll change colors
         var blocks = document.querySelectorAll('.engine-block');
 
         if ('IntersectionObserver' in window) {

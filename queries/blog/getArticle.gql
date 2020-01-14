@@ -5,13 +5,18 @@ query($section:[String], $slug:[String]) {
         uri,
         postDate,
         dateUpdated,
-		... on blog_blog_Entry{
+				... on blog_blog_Entry{
+            readingTime,
+            suggestListeningTitle,
+            suggestListeningArtist,
+            suggestedListeningEmbed,
+            suggestedListeningRationale,
             contentEngine{
                 __typename,
                 ...on contentEngine_richText_BlockType{
                     __typename,
                     id,
-                    richText
+                    richText,
                     fontColor,
                     backgroundColor
                 }
