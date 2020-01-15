@@ -7,8 +7,8 @@
                 <p><strong>If you're interested in my code</strong>, you can find me on <a href="https://github.com/roberskine" target="_blank">GitHub</a>, <a href="https://codepen.io/roberskine" target="_blank">Codepen</a>, <a href="https://glitch.com/@RobErskine" target="_blank">Glitch</a>, and <a href="https://stackoverflow.com/users/1047958/rob-erskine" target="_blank">StackOverflow</a>.</p>
                 <p><strong>If you're interested in me personally</strong>, you can connect with me on <a href="https://linkedin.com/in/roberskine" target="_blank">LinkedIn</a>, <a href="https://twitter.com/erskinerob">Twitter</a>, and <a href="https://open.spotify.com/user/roberskine" target="_blank">Spotify</a>.</p>
                 <br/>
-                <!--
-                <form name="contact" method="POST" data-netlify="true">
+                
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                     <div class="req">
                         <p>Feel free to send me a note below. <br/><br/>*All of these fields are required.</p>
                         <label>
@@ -55,9 +55,10 @@
                             <input type="text" name="random adjective 2" placeholder="lazy"/>
                         </label>
                     </div>
+                    <input type="hidden" name="form-name" value="contact">
                     <button type="submit">Fire away! <span class="label"><small>(to my inbox)</small></span></button>
                 </form>
-                -->
+
             </div>
         </section>
         <Footer/>
