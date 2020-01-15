@@ -28,6 +28,7 @@
                     block does not exist
                 </div>
             </div>
+            <Footer/>
         </div>
     </div>
 </template>
@@ -49,6 +50,7 @@
         padding:10em 1em 3em;
         h1{
             font-size:3.5em;
+            line-height:1;
         }
         span,
         button{
@@ -85,10 +87,22 @@
             }
         }
         time{
-            display:inline-block;
-            padding-right:1.25em;
-            margin-right:1em;
-            border-right:1px solid;
+            display:block;
+            margin-bottom:0.5em;
+        }
+        span{
+            display:block;
+        }
+    }
+
+    @media all and (min-width:600px){
+        .o_article-header{
+            time{
+                display:inline-block;
+                padding-right:1.25em;
+                margin-right:1em;
+                border-right:1px solid;
+            }
         }
     }
 
@@ -148,7 +162,7 @@
         text-align:center;
         margin:0 auto;
         display:block;
-        transform:rotate(-3deg);
+        transform:rotate($rotate);
         padding:1.5em 1em;
         blockquote{
             font-style:italic;
@@ -157,7 +171,7 @@
             }
         }
         &.quote-size-small blockquote{
-            font-size:1.75em;
+            font-size:1.6em;
         }
         &.quote-size-medium blockquote{
             font-size:2em;
@@ -184,13 +198,15 @@
 <script>
 // components
 import Logo from '~/components/Logo';
+import Footer from '~/components/Footer';
 
 // query
 import posts from '~/queries/blog/getArticle.gql';
 
 export default {
     components: {
-        Logo
+        Logo,
+        Footer
     },
     mounted: function(){
         // add youtube video

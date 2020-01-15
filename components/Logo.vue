@@ -6,6 +6,8 @@
 
 <style lang="scss">
 div.logo{
+  display:none; // TODO: hide so i can work on this at work :eyes: 
+
   transform:translateX(5%) rotate($rotate);
   font-weight:700;
   position:absolute;
