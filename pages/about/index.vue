@@ -8,14 +8,12 @@
                         <ul>
                             <li v-for="(item,index) in entries[0].toggleList">
                                 <!-- :class="{ 'activ' : letter == selectedLetter}" -->
-                                <a href="#" class="button tertiary">{{item.toggleTitle}}</a>
+                                <button v-bind:class="{'active':(index===1)}" class="button tertiary">{{item.toggleTitle}}</button>
                             </li>
                         </ul>
                     </nav>
                     <div class="biographies">
-                        <div v-for="item in entries[0].toggleList">
-                            <div style="display:none;" v-html="item.toggleText"></div>
-                        </div>
+                        <div v-for="(item, index) in entries[0].toggleList" v-bind:class="{'active':(index===1)}" v-html="item.toggleText"></div>
                     </div>
                 </div>
             </section>
@@ -33,9 +31,39 @@
 </template>
 
 <style lang="scss">
+
+nav.toggle-nav{
+    margin-bottom:2em;
+    li{
+        display:inline-block;
+    }
+    button{
+        font-size:1em;
+        border:0px;
+        font-weight:700;
+        margin: 1em 2em 1em 0px;
+        transform:rotate(-($rotate));
+        &.active{
+            transform:rotate($rotate);
+            background-color:$primary;
+        }
+        &:hover{
+            background-color:$primary;
+        }
+    }
+}
+
+div.biographies{
+    div{
+        display:none;
+    }
+    div.active{
+        display:block;
+    }
+}
+
 figure{
     border-radius:1.5em 3em;
-    overflow:hidden;
 }
 
 div.about-me{
@@ -45,11 +73,14 @@ div.about-me{
     position:relative;
     max-width:100%;
     width:100%;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transform: perspective(300px); 
-    -webkit-perspective: 300;
     border-radius:1.5em 3em;
+    figure{
+        position:relative;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        transform: perspective(300px); 
+        -webkit-perspective: 300;
+    }
     figure:before{
         content:"";
         display:block;
@@ -70,17 +101,22 @@ div.about-me{
     img.foreground{
         width:80%;
         z-index:2;
-        transform: translateZ(80px) translateY(-15px) translateX(-50px) scale(0.625);
+        transform: translateZ(80px) translateY(-15px) translateX(-20px) scale(0.625);
         border-radius:1.5em 3em;
+    }
+    figcaption{
+        padding-top:5em;
     }
 }
 
 @media all and (min-width: 900px){
     div.about-page{
         position:relative;
-        width:100%;
         display:flex;
         overflow-y:hidden;
+        width:100%;
+        max-width:$max-width;
+        margin:0 auto;
         section.block{
             width:100%;
             max-width:100%;
@@ -88,18 +124,11 @@ div.about-me{
             display:flex;
         }
         div.copy{
-            width:90%;
-            margin:0 auto;
-            padding-right:30%;
-            max-width:100%;
+            width:100%;
         }
         div.about-me{
-            flex: 0 1 0px;
-            float:right;
-            position:absolute;
-            top:11em;
-            right:0px;
             width:30%;
+            padding:5em 0px 1em;
         }
     }
 }
@@ -150,10 +179,20 @@ export default {
         }
     },
     mounted: function(){
-        $('div.about-me').each(function(){
+        // about me tilt
+        $('div.about-me figure').each(function(){
             $(this).tilt({
                 maxTilt: 10
             });
+        });
+
+        // toggle for about lengths
+        $('nav.toggle-nav li').on('click', function(event){
+            var position = ($(this).index()) + 1;
+            $('nav.toggle-nav button').each( function(){ $(this).removeClass('active') });
+            $('div.biographies div').each( function(){ $(this).removeClass('active')});
+            $(this).find('button').addClass('active');
+            $('div.biographies div:nth-child('+position+')').addClass('active');
         });
     }
 }

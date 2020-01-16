@@ -16,12 +16,14 @@ button.button{
     outline:none;
     cursor:pointer;
     position:relative;
+    transition:background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0s ease-in-out;
     &.tertiary{
         background-color:#ff4d74;
     }
     &:active{
         top:0.23vw;
         left:0.4vw;
+        box-shadow:0.1vw 0.25vw 0vw #000;
     }
 }
 
