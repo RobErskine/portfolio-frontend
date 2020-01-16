@@ -27,6 +27,7 @@
                 </figcaption>
             </div>
         </div>
+        <Footer/>
     </div>
 </template>
 
@@ -139,6 +140,7 @@ div.about-me{
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import customButton from '~/components/customButton.vue'
+import Footer from '~/components/Footer.vue'
 
 // query
 import page from '~/queries/about/index.gql';
@@ -168,7 +170,8 @@ export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        customButton
+        customButton,
+        Footer
     },
     apollo: {
         entries: {
