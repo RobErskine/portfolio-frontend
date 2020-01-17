@@ -23,7 +23,7 @@
                     <img src="~/assets/images/fenway-park.jpg" alt="" class="background">
                 </figure>
                 <figcaption>
-                    <span>Me, having the best time, watching the Boston Red Sox lose. <em>(I am a hardcore Philadelhpia Phillies phan)</em></span>
+                    <span>Me, having the best time, watching the Boston Red Sox lose <em>(I am a hardcore  Phillies phan)</em>.</span>
                 </figcaption>
             </div>
         </div>
@@ -69,7 +69,6 @@ figure{
 
 div.about-me{
     background-size:cover;
-    overflow:visible;
     padding:1.5em 3em;
     position:relative;
     max-width:100%;
@@ -114,7 +113,7 @@ div.about-me{
     div.about-page{
         position:relative;
         display:flex;
-        overflow-y:hidden;
+        overflow:hidden;
         width:100%;
         max-width:$max-width;
         margin:0 auto;
@@ -190,7 +189,7 @@ export default {
         });
 
         // toggle for about lengths
-        $('nav.toggle-nav li').on('click', function(event){
+        $('body').on('click','nav.toggle-nav li', function(event){
             var position = ($(this).index()) + 1;
             $('nav.toggle-nav button').each( function(){ $(this).removeClass('active') });
             $('div.biographies div').each( function(){ $(this).removeClass('active')});

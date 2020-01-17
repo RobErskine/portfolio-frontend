@@ -6,6 +6,58 @@
 </template>
 
 <style lang="scss">
+    section.activity-list{
+        p{
+            margin-bottom:1em;
+            &:last-child{
+                margin-bottom:0px;
+            }
+            a{
+                display:inline;
+            }
+        }
+        li{
+            margin-bottom:1em;
+        }
+    }
+
+    @media all and (min-width: 600px){
+        section.activity-list{
+            ul{
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            li{
+                width:48%;
+            }
+        }
+    }
+
+    @media all and (min-width: 900px){
+        section.activity-list{
+            li{
+                width:31.5%;
+            }
+        }
+    }
+
+    @media all and (min-width: 1300px){
+        section.activity-list{
+            li{
+                width:23.5%;
+            }
+        }
+    }
+
+    @media all and (min-width: 1600px){
+        section.activity-list{
+            li{
+                width:18.75%;
+            }
+        }
+    }
+    
     div.m_activity-list-item{
         border-radius:1em 2em;
         position:relative;

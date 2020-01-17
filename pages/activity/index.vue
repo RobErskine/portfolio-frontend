@@ -1,7 +1,7 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <sectionHeader post-title="Activity" class-name="activity" canvas="./animations/activitycanvas"></sectionHeader>
-        <section class="block copy">
+        <section class="block activity-list">
             <ul>
                 <li v-for="post in entries">
                     <activityItem :post="post"></activityItem>
@@ -12,7 +12,7 @@
 </template>
 
 <style lang="scss">
-
+    
 </style>
 
 <script>
@@ -23,6 +23,9 @@ import activityItem from '~/components/activity/activityItem.vue'
 
 // query
 import posts from '~/queries/activity/getActivity.gql';
+
+//mixins
+import everypage from '~/mixins/everypage'
 
 export default {
     data (){
@@ -50,6 +53,7 @@ export default {
         sectionHeader,
         activityItem
     },
+    mixins: [everypage],
     apollo: {
         entries: {
             query: posts,
@@ -58,6 +62,9 @@ export default {
                 "orderBy": "postdate Desc",
             }
         }
+    },
+    mounted: function(){
+        everypage.externalLinks();
     }
 }
 </script>

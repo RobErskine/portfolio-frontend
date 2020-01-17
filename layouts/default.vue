@@ -191,18 +191,18 @@ p,pre{
     text-decoration:none;
     background-size:  100% 10%;
     background-repeat: repeat-x;
-    background-position: left 0% bottom 5%;
+    background-position: left 0% bottom 2px;
     background-image: linear-gradient(110deg, $primary 0%, $secondary 50%);
     transition:all 0.25s ease-in-out;
     overflow:visible;
+    padding-left:2px;
+    position:relative;
     span{
       display:inline-block;
-      height:1em;
-      width:1em;
+      height:16px;
+      width:16px;
       background-size:contain;
-      margin-right:0.25em;
-      position:relative;
-      top:0.15em;
+      margin-right:2px;
     }
     &:hover{
         background-size:  120% 100%;

@@ -42,6 +42,8 @@ footer.main-footer{
     div.block{
         display:flex;
         flex-direction: column;
+        max-width:$max-width;
+        margin:0 auto;
     }
     a{
         color:currentColor;
@@ -65,6 +67,8 @@ footer.main-footer{
         div.block{
             flex-direction: row;
             justify-content: space-between;
+            position:relative;
+            right:-1em;
         }
         ul{
             display:flex;
