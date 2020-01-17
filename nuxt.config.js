@@ -95,5 +95,10 @@ module.exports = {
     scss: [
       'src/scss/_variables.scss'
     ]
+  },
+  generate: {
+    routes: [
+      '/blog/searching-for-a-better-search'
+    ]
   }
 }

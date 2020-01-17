@@ -2,6 +2,7 @@ query($section:[String], $orderBy:String, $relatedTo:[Int]) {
     entries(section: $section, orderBy: $orderBy, relatedTo: $relatedTo) {
         title,
         uri,
+        slug,
         postDate,
         ... on work_work_Entry{
             fontColor,

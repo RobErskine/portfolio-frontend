@@ -3,15 +3,15 @@
         <Logo size="size-small" position="position-left"/>
         <div class="panel detail">   
             <!-- {{entries[0].title}} -->
-            <header class="engine-block o_article-header text-align-center" :data-color="entries[0].contentEngine[0].fontColor" :data-background="entries[0].contentEngine[0].backgroundColor">
-                <h1 class="m_headline">{{entries[0].title}}</h1>
-                <span>Posted: <time>{{$moment(entries[0].postDate).format("MMMM Do YYYY")}}</time> Reading Time: {{entries[0].readingTime}}</span>
-                <div v-if="entries[0].suggestedListeningEmbed">
-                    <button>Suggested Listening: {{entries[0].suggestListeningTitle}} by {{entries[0].suggestListeningArtist}}</button>
-                    <div class="m_video-frame"><iframe :data-id="entries[0].suggestedListeningEmbed" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <header class="engine-block o_article-header text-align-center" :data-color="entry.contentEngine[0].fontColor" :data-background="entry.contentEngine[0].backgroundColor">
+                <h1 class="m_headline">{{entry.title}}</h1>
+                <span>Posted: <time>{{$moment(entry.postDate).format("MMMM Do YYYY")}}</time> Reading Time: {{entry.readingTime}}</span>
+                <div v-if="entry.suggestedListeningEmbed">
+                    <button>Suggested Listening: {{entry.suggestListeningTitle}} by {{entry.suggestListeningArtist}}</button>
+                    <div class="m_video-frame"><iframe :data-id="entry.suggestedListeningEmbed" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 </div>
             </header>
-            <div v-for="block in entries[0].contentEngine">
+            <div v-for="block in entry.contentEngine">
                 <div class="engine-block o_rich-text" v-if="block.__typename === 'contentEngine_richText_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
                     <div v-html="block.richText" />
                 </div>
@@ -203,11 +203,15 @@ import Footer from '~/components/Footer';
 // query
 import posts from '~/queries/blog/getArticle.gql';
 
+//mixins
+import everypage from '~/mixins/everypage';
+
 export default {
     components: {
         Logo,
         Footer
     },
+    mixins: [everypage],
     mounted: function(){
         // add youtube video
         if($('iframe').length > 0){
@@ -218,7 +222,6 @@ export default {
         $('header.o_article-header button').on('click', function(){
             $(this).toggleClass('active');
         });
-
 
         // on scroll change colors
         var blocks = document.querySelectorAll('.engine-block');
@@ -268,18 +271,26 @@ export default {
             }
         }
     },
+    computed: {
+        entry (){
+            return this.entries[0];
+        }
+    },
+    mounted: function(){
+        everypage.externalLinks();
+    }
     // todo: get apollo data working in data for use in head
     // data(){
     //     return {
-    //         entries:{},
-    //         title: this.$route.params.id + ' | Rob Erskine - Creative Developer',
+    //         entry:{},
+    //         title: entry.title + ' | Rob Erskine - Creative Developer',
     //         description: 'Rob Erskine is a creative designer and developer obsessed with solving complex problems in collaborative environments',
     //         image: 'https://placehold.it/1200x630?text=TODO'
     //     }
     // },
     // head (){
     //     return {
-    //         title: this.title,
+    //         //title: entry.title,
     //         meta: [
     //             { hid: 'og:title', name: 'og:title', content:this.title },
     //             { hid: 'twitter:title', name: 'twitter:title', content:this.title },

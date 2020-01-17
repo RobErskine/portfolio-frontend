@@ -2,7 +2,7 @@
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
         <section class="block copy">
-            <ul>
+            <ul class="work-list">
                 <li v-for="post in entries">
                     <workItem :post="post"></workItem>
                 </li>

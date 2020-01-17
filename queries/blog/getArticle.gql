@@ -5,7 +5,7 @@ query($section:[String], $slug:[String]) {
         uri,
         postDate,
         dateUpdated,
-				... on blog_blog_Entry{
+		... on blog_blog_Entry{
             readingTime,
             suggestListeningTitle,
             suggestListeningArtist,

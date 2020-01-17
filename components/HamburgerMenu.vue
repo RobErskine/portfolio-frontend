@@ -33,6 +33,9 @@ nav.main-nav{
             position:relative;
             left:0em;
         }
+        &:active{
+            box-shadow:0.15vw 0.25vw 0vw $primaryLight;
+        }
     }
     span.burger,
     span.burger:before,

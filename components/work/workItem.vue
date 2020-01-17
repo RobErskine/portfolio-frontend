@@ -1,10 +1,10 @@
 <template>
     <div class="m_work-list-item" v-bind:style="{ backgroundColor: post.backgroundColor }">
         <nuxt-link :to="post.uri">
-            <img class="thumbnail" v-bind:src="post.thumbnail[0].url" alt="">
+            <img lazy class="thumbnail" v-bind:src="post.thumbnail[0].url" alt="">
             <h4 v-bind:style="{ color: post.fontColor }">{{post.title}}</h4>
             <div>
-                <img class="logo" v-bind:src="post.logo[0].url" alt="">
+                <img lazy class="logo" v-bind:src="post.logo[0].url" alt="">
                 <time v-bind:style="{ color: post.fontColor, borderTopColor: post.fontColor }">{{$moment(post.postDate).format("MMMM Do YYYY")}}</time>
             </div>
         </nuxt-link>
@@ -12,6 +12,24 @@
 </template>
 
 <style lang="scss">
+    ul.work-list{
+        max-width:$max-width;
+        margin:0 auto;
+        li{
+            margin-bottom:1em;
+        }
+    }
+
+    @media all and (min-width: 700px){
+        ul.work-list{
+            display:flex;
+            justify-content: space-between;
+            li{
+                width:48%;
+            }
+        }
+    }
+
     div.m_work-list-item{
         border-radius:1em 2em;
         position:relative;
@@ -22,21 +40,29 @@
         box-shadow:0 0 3vw rgba(0,0,0,0.1);
         -webkit-perspective: 300;
         position:relative;
+        img{
+            transition:all 0.3s ease-in-out;
+        }
         &:hover{
             box-shadow:0 0 3vw rgba(0,0,0,0.2);
             h4{
-                text-shadow: 0 0 1vw rgba(0,0,0,0.25);
+                text-shadow: 0 0 3vw rgba(0,0,0,0.4);
+            }
+            img.thumbnail{
+                box-shadow:0 1vw 2vw rgba(0,0,0,0.3)
+            }
+            img.logo{
+                box-shadow:0 0 1vw rgba(0,0,0,0.2)
             }
         }
         img.thumbnail{
             border-radius: 1em 2em;
-            padding-top:0.5em;
+            margin-top:0.25em;
             width:100%;
         }
         img.logo{
             max-width:80px;
             border-radius:50%;
-            //transform:translateZ(60px) scale(0.55);
             position:absolute;  
             bottom:1em;
             left:-1em;
@@ -49,14 +75,12 @@
             transition:all 0.3s ease-in-out;
             &:hover{
                 text-decoration: none;
-                //transform: translateZ(100px) scale(1);
             }
         }
         h4{
-            font-size:2em;
+            font-size:1.8em;
             line-height:1.1;
             transition:all 0.3s ease-in-out;
-            //transform: translateZ(66px) scale(0.565);
             width:100%;
             text-align:center;
             padding:0.3em 0.5em 0.25em;
@@ -74,21 +98,22 @@
 
     @media all and (min-width:1000px){
         div.m_work-list-item{
-            h4,img{
-                transform-origin:center;
-            }
             h4{
-                font-size:3em;
+                font-size:2.8em;
                 padding:0.3em 0.5em 0.25em;
-                transform: translateZ(120px) translateY(-123px) scale(0.25);
+                transform: translateZ(140px) translateY(-151.5px) scale(0.075);
+                transform-origin:bottom;
             }
             img.thumbnail{
-                transform:translateZ(4vw) translateY(2vw) scale(0.4);
+                transform:translateZ(119px) translateY(57px) scale(0.2);
+                transform-origin:center;
             }
             img.logo{
                 max-width:10vw;
                 transform-origin:center;
-                transform:translateZ(5vw) scale(0.2);
+                transform:translateZ(30px) scale(0.7);
+                bottom:1em;
+                left:1em;
             }
             div{
                 display:flex;

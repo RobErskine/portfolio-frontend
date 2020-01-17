@@ -105,6 +105,34 @@
             <div class="panel has-content" data-x-pos="1" data-y-pos="-1">
               <nuxt-link to="/fun-work"><span class="aria-hidden">Go to the For-Fun Page</span></nuxt-link>
               <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
+              <section class="block copy">
+                <ul class="work-list">
+                  <li>
+                    <div class="m_work-list-item">
+                      <a href="/fun-work/death-is-certain-bot" class="">
+                        <img src="https://storage.googleapis.com/robs_portfolio/certaindeathbot.jpg" alt="" class="thumbnail"> 
+                        <h4 style="color:#ffffff;">Death is Certain Bot</h4> 
+                        <div>
+                          <img src="https://storage.googleapis.com/robs_portfolio/logos/certain-death-icon.jpg" alt="" class="logo"> 
+                          <time style="color:#ffffff;border-top-color:#ffffff;">January 17th 2020</time>
+                        </div>
+                      </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="m_work-list-item">
+                        <a href="/fun-work/baebot-biz" class="">
+                          <img src="https://storage.googleapis.com/robs_portfolio/baebot.jpg" alt="" class="thumbnail"> 
+                          <h4 style="color:#ffffff;">Baebot.biz</h4> 
+                          <div>
+                            <img src="https://storage.googleapis.com/robs_portfolio/logos/baebot-logo.jpg" alt="" class="logo"> 
+                            <time style="color:#ffffff;border-top-color:#ffffff;">November 21st 2019</time>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
             </div>
         </div>
       </div>

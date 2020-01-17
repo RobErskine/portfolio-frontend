@@ -1,0 +1,9 @@
+query($section:[String], $slug:[String]) {
+    entries(section: $section, slug: $slug) {
+        id,
+        title,
+        uri,
+        postDate,
+        dateUpdated,
+    }
+}
