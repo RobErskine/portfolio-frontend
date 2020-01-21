@@ -8,9 +8,10 @@ fetch(`https://portfolio-staging.roberskine.com/api`, {
     variables: {},
     query: `
         {
-            entries(section: ['blog,work']) {
+            entries(section: ["blog","work"]) {
                 id,
                 title,
+                slug,
                 uri
             }
         }
@@ -19,16 +20,16 @@ fetch(`https://portfolio-staging.roberskine.com/api`, {
 })
 .then(result => result.json())
     .then(result => {
-    // here we're filtering out any type information unrelated to unions or interfaces
-    const filteredData = result.data.__schema.types.filter(
-        type => type.possibleTypes !== null,
-    );
-    result.data.__schema.types = filteredData;
-    fs.writeFile('./fragmentTypes.json', JSON.stringify(result.data), err => {
+    var entries = [];
+    for(i = 0; i < result.data.entries.length; i++ ){
+        entries.push(result.data.entries[i].uri);
+    }
+    console.log(entries);
+    fs.writeFile('./dynamicPages.json', JSON.stringify(entries), err => {
         if (err) {
-            console.error('Error writing fragmentTypes file', err);
+            console.error('Error writing dynamic pages file', err);
         } else {
-            console.log('Fragment types successfully extracted!');
+            console.log('Dynamic pages successfully written!');
         }
     });
 });

@@ -26,6 +26,9 @@ $ npm run generate
 
 # generate schema for apollo so it can cache everything
 $ npm run schema 
+
+# generate dynamic routes for nuxt
+$ npm run pages
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

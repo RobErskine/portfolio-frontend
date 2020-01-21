@@ -1,3 +1,4 @@
+var pages = require('./dynamicPages.json')
 
 module.exports = {
   mode: 'universal',
@@ -35,7 +36,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#F29B9B' },
 
   /*
   ** Global CSS
@@ -97,8 +98,6 @@ module.exports = {
     ]
   },
   generate: {
-    routes: [
-      '/blog/searching-for-a-better-search'
-    ]
+    routes: pages
   }
 }

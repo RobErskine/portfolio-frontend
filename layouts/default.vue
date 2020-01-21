@@ -188,7 +188,7 @@ pre{
   white-space:pre-line;
   color:#fff;
   background-color:#333;
-  padding:1em;
+  padding:1em 2em;
   border-radius:1.5em 3em;
   width:calc(100% + 2em);
   margin-left:-1em;
