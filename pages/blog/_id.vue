@@ -247,9 +247,9 @@ export default {
         everypage.externalLinks();
 
         // add youtube video
-        if($('iframe').length > 0){
-            var id = $('iframe').data('id');
-            $('iframe').attr('src','https://www.youtube.com/embed/'+id);
+        if($('body').find('.o_article-header iframe').length > 0){
+            var id = $('body').find('.o_article-header iframe').data('id');
+            $('body').find('.o_article-header iframe').attr('src','https://www.youtube.com/embed/'+id);
         }
 
         $('body').on('click', 'header.o_article-header button', function(){
