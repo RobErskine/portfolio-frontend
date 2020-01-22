@@ -239,7 +239,7 @@ export default {
             }
         }
     },
-    mounted (){
+    updated (){
         // testing
         console.log('Mounted!');
 
