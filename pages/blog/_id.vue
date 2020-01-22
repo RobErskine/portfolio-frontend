@@ -1,34 +1,36 @@
 <template>
     <div>
         <Logo size="size-small" position="position-left"/>
-        <div class="panel detail">   
-            <!-- {{entries[0].title}} -->
-            <header class="engine-block o_article-header text-align-center" :data-color="entry.contentEngine[0].fontColor" :data-background="entry.contentEngine[0].backgroundColor">
-                <h1 class="m_headline">{{entry.title}}</h1>
-                <span>Posted: <time>{{$moment(entry.postDate).format("MMMM Do YYYY")}}</time> Reading Time: {{entry.readingTime}}</span>
-                <div v-if="entry.suggestedListeningEmbed">
-                    <button>Suggested Listening: {{entry.suggestListeningTitle}} by {{entry.suggestListeningArtist}}</button>
-                    <div class="m_video-frame"><iframe :data-id="entry.suggestedListeningEmbed" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div v-if="entries">
+            <div class="panel detail">   
+                <!-- {{entries[0].title}} -->
+                <header class="engine-block o_article-header text-align-center" :data-color="entry.contentEngine[0].fontColor" :data-background="entry.contentEngine[0].backgroundColor">
+                    <h1 class="m_headline">{{entry.title}}</h1>
+                    <span>Posted: <time>{{$moment(entry.postDate).format("MMMM Do YYYY")}}</time> Reading Time: {{entry.readingTime}}</span>
+                    <div v-if="entry.suggestedListeningEmbed">
+                        <button>Suggested Listening: {{entry.suggestListeningTitle}} by {{entry.suggestListeningArtist}}</button>
+                        <div class="m_video-frame"><iframe :data-id="entry.suggestedListeningEmbed" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    </div>
+                </header>
+                <div v-for="block in entry.contentEngine">
+                    <div class="engine-block o_rich-text" v-if="block.__typename === 'contentEngine_richText_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+                        <div v-html="block.richText" />
+                    </div>
+                    <div class="engine-block o_pullquote" :class="`quote-size-`+block.quoteSize" v-else-if="block.__typename === 'contentEngine_pullQuote_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+                        <blockquote>
+                            {{block.quote}}
+                            <span class="author" v-if="block.attribution">{{block.attribution}}</span>
+                        </blockquote>
+                    </div>
+                    <div class="engine-block o_image" v-else-if="block.__typename === 'contentEngine_image_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+                        <img :src="block.image[0].url" alt="">
+                    </div>
+                    <div v-else>
+                        block does not exist
+                    </div>
                 </div>
-            </header>
-            <div v-for="block in entry.contentEngine">
-                <div class="engine-block o_rich-text" v-if="block.__typename === 'contentEngine_richText_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
-                    <div v-html="block.richText" />
-                </div>
-                <div class="engine-block o_pullquote" :class="`quote-size-`+block.quoteSize" v-else-if="block.__typename === 'contentEngine_pullQuote_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
-                    <blockquote>
-                        {{block.quote}}
-                        <span class="author" v-if="block.attribution">{{block.attribution}}</span>
-                    </blockquote>
-                </div>
-                <div class="engine-block o_image" v-else-if="block.__typename === 'contentEngine_image_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
-                    <img :src="block.image[0].url" alt="">
-                </div>
-                <div v-else>
-                    block does not exist
-                </div>
+                <Footer/>
             </div>
-            <Footer/>
         </div>
     </div>
 </template>
