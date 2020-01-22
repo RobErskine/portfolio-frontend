@@ -1,6 +1,6 @@
 <template>
     <div class="m_blog-list-item" v-bind:style="{ backgroundColor: post.backgroundColor }">
-        <nuxt-link :to="`/`+post.uri">
+        <nuxt-link :to="`/`+post.uri+`/`">
             <h4 v-bind:style="{ color: post.fontColor }">{{post.title}}</h4>
             <time v-bind:style="{ color: post.fontColor, borderTopColor: post.fontColor }">{{$moment(post.postDate).format("MMMM Do YYYY")}}</time>
         </nuxt-link>
