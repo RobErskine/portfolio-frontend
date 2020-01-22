@@ -49,7 +49,7 @@
         text-align:center;
         padding:10em 1em 3em;
         h1{
-            font-size:3.5em;
+            font-size:2.25em;
             line-height:1;
         }
         span,
@@ -92,6 +92,14 @@
         }
         span{
             display:block;
+        }
+    }
+
+    @media all and (min-width: 600px){
+        .o_article-header{
+            h1{
+                font-size:3.5em;
+            }
         }
     }
 
@@ -222,6 +230,7 @@ export default {
     apollo: {
         entries: {
             query: posts,
+            prefetch: true,
             variables (){
                 return{
                     section: "blog",
