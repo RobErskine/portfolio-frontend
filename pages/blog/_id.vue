@@ -241,12 +241,8 @@ export default {
             }
         }
     },
-    computed: {
-        entry (){
-            return this.entries[0];
-        }
-    },
     mounted: function(){
+
         everypage.externalLinks();
 
         // add youtube video
@@ -294,6 +290,11 @@ export default {
                 'color': color,
                 'backgroundColor': background
             });
+        }
+    },
+    computed: {
+        entry (){
+            return this.entries[0];
         }
     }
     // todo: get apollo data working in data for use in head
