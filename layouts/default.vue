@@ -212,7 +212,7 @@ p,pre{
   }
 }
 
-p,pre{
+p,pre,blockquote{
   a:not(.button){
     color:inherit;
     display:inline-block;

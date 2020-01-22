@@ -144,6 +144,13 @@
         p:last-child{
             margin-bottom:0px;
         }
+        blockquote{
+            opacity:0.75;
+            border-left:3px solid;
+            margin-bottom:1em;
+            font-size:1.2em;
+            padding-left:0.5em;
+        }
     }
 
     .o_image img{
@@ -212,7 +219,25 @@ export default {
         Footer
     },
     mixins: [everypage],
+    apollo: {
+        entries: {
+            query: posts,
+            variables (){
+                return{
+                    section: "blog",
+                    slug: this.$route.params.id
+                }
+            }
+        }
+    },
+    computed: {
+        entry (){
+            return this.entries[0];
+        }
+    },
     mounted: function(){
+        everypage.externalLinks();
+
         // add youtube video
         if($('iframe').length > 0){
             var id = $('iframe').data('id');
@@ -231,7 +256,7 @@ export default {
                 changes.forEach(function (change) {
                 if (change.intersectionRatio > 0) {
                     // Stop watching and load the image
-                    loadImage(change.target);
+                    colors(change.target);
                     //observer.unobserve(change.target);
                 }
                 });
@@ -251,7 +276,7 @@ export default {
             // observer doesn't work in this browser
         }
 
-        function loadImage(block) {
+        function colors(block) {
             var color = $(block).data('color');
             var background = $(block).data('background');
             $('div.panel.detail').css({
@@ -259,25 +284,6 @@ export default {
                 'backgroundColor': background
             });
         }
-    },
-    apollo: {
-        entries: {
-            query: posts,
-            variables (){
-                return{
-                    section: "blog",
-                    slug: this.$route.params.id
-                }
-            }
-        }
-    },
-    computed: {
-        entry (){
-            return this.entries[0];
-        }
-    },
-    mounted: function(){
-        everypage.externalLinks();
     }
     // todo: get apollo data working in data for use in head
     // data(){
