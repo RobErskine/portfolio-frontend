@@ -28,6 +28,10 @@
                     block does not exist
                 </div>
             </div>
+            <nav class="m_end-article">
+                <button class="button inline top primary">Back to top ⇡</button>
+                <nuxt-link to="/blog">Back to Writing</nuxt-link>
+            </nav>
             <Footer/>
         </div>
     </div>
@@ -240,58 +244,71 @@ export default {
         }
     },
     mounted (){
+        // testing
+        console.log('Mounted!');
 
-        $(function(){
-            // testing
-            console.log('Mounted!');
+        // function for every page
+        everypage.externalLinks();
 
-            // function for every page
-            everypage.externalLinks();
+        $('body').on('click', 'button.top', function(event){
+            console.log('scroll clicked');
+            $('div.panel.detail').animate({scrollTop:0},2000);
+        });
 
-            $('body').on('click', 'header.o_article-header button', function(){
-                var id = $('body').find('.o_article-header iframe').data('id');
-                $('body').find('.o_article-header iframe').attr('src','https://www.youtube.com/embed/'+id);
-            
-                $(this).toggleClass('active');
-            });
-
-            // on scroll change colors
-            var blocks = document.querySelectorAll('.engine-block');
-
-            if ('IntersectionObserver' in window) {
-                var onChange = function onChange(changes, observer) {
-                    changes.forEach(function (change) {
-                    if (change.intersectionRatio > 0) {
-                        // Stop watching and load the image
-                        colors(change.target);
-                        //observer.unobserve(change.target);
-                    }
-                    });
-                };
-
-                // IntersectionObserver Supported
-                var config = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.5
-                };
-                var observer = new IntersectionObserver(onChange, config);
-                blocks.forEach(function (block) {
-                    return observer.observe(block);
-                });
+        $('body').on('click', 'header.o_article-header button', function(){
+            var id = $('.o_article-header iframe').data('id');
+            $('.o_article-header iframe').attr('src','https://www.youtube.com/embed/'+id);
+        
+            if (! $('header.o_article-header button').hasClass('active')){
+                $('header.o_article-header button').addClass('active');
+                console.log('video on');
             } else {
-                // observer doesn't work in this browser
-            }
-
-            function colors(block) {
-                var color = $(block).data('color');
-                var background = $(block).data('background');
-                $('div.panel.detail').css({
-                    'color': color,
-                    'backgroundColor': background
-                });
+                $('header.o_article-header button').removeClass('active');
+                console.log('video off');
             }
         });
+
+        // on scroll change colors
+        var blocks = document.querySelectorAll('.engine-block');
+
+        if ('IntersectionObserver' in window) {
+            var onChange = function onChange(changes, observer) {
+                changes.forEach(function (change) {
+                if (change.intersectionRatio > 0) {
+                    // Stop watching and load the image
+                    colors(change.target);
+                    //observer.unobserve(change.target);
+                }
+                });
+            };
+
+            // IntersectionObserver Supported
+            var config = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+            var observer = new IntersectionObserver(onChange, config);
+            blocks.forEach(function (block) {
+                return observer.observe(block);
+            });
+        } else {
+            // observer doesn't work in this browser
+        }
+
+        function colors(block) {
+            var color = $(block).data('color');
+            var background = $(block).data('background');
+            $('div.panel.detail').css({
+                'color': color,
+                'backgroundColor': background
+            });
+        }
+    },
+    destroyed (){
+        console.log('destroyed!');
+        $('body').off('click', 'header.o_article-header button');
+        this.$destroy();
     },
     computed: {
         entry (){

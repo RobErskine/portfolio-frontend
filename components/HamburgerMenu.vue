@@ -58,13 +58,13 @@ nav.main-nav{
         height:0.16em;
     }
     span.burger:before{
-        margin-top:-0.33em;
+        margin-top:-0.36em;
     }
     span.burger:after{
         margin-top:0.36em;
     }
     span.burger{
-        top:53%;
+        top:53.33%;
         left:0.5em;
     }
     span.copy{

@@ -68,10 +68,8 @@ export default {
         }
     },
     mounted: function(){
-        $('div.m_blog-list-item').each(function(){
-            $(this).tilt({
-                maxTilt: 10
-            });
+        $('div.m_blog-list-item').tilt({
+            maxTilt: 10
         });
     }
 }
