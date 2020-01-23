@@ -239,59 +239,59 @@ export default {
             }
         }
     },
-    updated (){
-        // testing
-        console.log('Mounted!');
+    mounted (){
 
-        // function for every page
-        everypage.externalLinks();
+        $(function(){
+            // testing
+            console.log('Mounted!');
 
-        // add youtube video
-        if($('body').find('.o_article-header iframe').length > 0){
-            var id = $('body').find('.o_article-header iframe').data('id');
-            $('body').find('.o_article-header iframe').attr('src','https://www.youtube.com/embed/'+id);
-        }
+            // function for every page
+            everypage.externalLinks();
 
-        $('body').on('click', 'header.o_article-header button', function(){
-            $(this).toggleClass('active');
-        });
+            $('body').on('click', 'header.o_article-header button', function(){
+                var id = $('body').find('.o_article-header iframe').data('id');
+                $('body').find('.o_article-header iframe').attr('src','https://www.youtube.com/embed/'+id);
+            
+                $(this).toggleClass('active');
+            });
 
-        // on scroll change colors
-        var blocks = document.querySelectorAll('.engine-block');
+            // on scroll change colors
+            var blocks = document.querySelectorAll('.engine-block');
 
-        if ('IntersectionObserver' in window) {
-            var onChange = function onChange(changes, observer) {
-                changes.forEach(function (change) {
-                if (change.intersectionRatio > 0) {
-                    // Stop watching and load the image
-                    colors(change.target);
-                    //observer.unobserve(change.target);
-                }
+            if ('IntersectionObserver' in window) {
+                var onChange = function onChange(changes, observer) {
+                    changes.forEach(function (change) {
+                    if (change.intersectionRatio > 0) {
+                        // Stop watching and load the image
+                        colors(change.target);
+                        //observer.unobserve(change.target);
+                    }
+                    });
+                };
+
+                // IntersectionObserver Supported
+                var config = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.5
+                };
+                var observer = new IntersectionObserver(onChange, config);
+                blocks.forEach(function (block) {
+                    return observer.observe(block);
                 });
-            };
+            } else {
+                // observer doesn't work in this browser
+            }
 
-            // IntersectionObserver Supported
-            var config = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5
-            };
-            var observer = new IntersectionObserver(onChange, config);
-            blocks.forEach(function (block) {
-                return observer.observe(block);
-            });
-        } else {
-            // observer doesn't work in this browser
-        }
-
-        function colors(block) {
-            var color = $(block).data('color');
-            var background = $(block).data('background');
-            $('div.panel.detail').css({
-                'color': color,
-                'backgroundColor': background
-            });
-        }
+            function colors(block) {
+                var color = $(block).data('color');
+                var background = $(block).data('background');
+                $('div.panel.detail').css({
+                    'color': color,
+                    'backgroundColor': background
+                });
+            }
+        });
     },
     computed: {
         entry (){
