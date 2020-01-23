@@ -28,10 +28,7 @@
                     block does not exist
                 </div>
             </div>
-            <nav class="m_end-article">
-                <button class="button inline top primary">Back to top ⇡</button>
-                <nuxt-link to="/blog">Back to Writing</nuxt-link>
-            </nav>
+            <EndPage destination="blog" label="Writing ✏️"/>
             <Footer/>
         </div>
     </div>
@@ -218,6 +215,7 @@
 // components
 import Logo from '~/components/Logo';
 import Footer from '~/components/Footer';
+import EndPage from '~/components/work/endPage';
 
 // query
 import posts from '~/queries/blog/getArticle.gql';
@@ -228,7 +226,8 @@ import everypage from '~/mixins/everypage';
 export default {
     components: {
         Logo,
-        Footer
+        Footer,
+        EndPage
     },
     mixins: [everypage],
     apollo: {
@@ -249,11 +248,6 @@ export default {
 
         // function for every page
         everypage.externalLinks();
-
-        $('body').on('click', 'button.top', function(event){
-            console.log('scroll clicked');
-            $('div.panel.detail').animate({scrollTop:0},2000);
-        });
 
         $('body').on('click', 'header.o_article-header button', function(){
             var id = $('.o_article-header iframe').data('id');

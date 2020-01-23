@@ -16,7 +16,11 @@ button.button{
     outline:none;
     cursor:pointer;
     position:relative;
+    font-family:$font;
     transition:background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0s ease-in-out;
+    appearance:none;
+    background-color:transparent;
+    border:0px;
     &.tertiary{
         background-color:#ff4d74;
     }
