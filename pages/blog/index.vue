@@ -3,7 +3,7 @@
         <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
         <section class="block copy">
-            <ul>
+            <ul class="blog-list">
                 <li v-for="post in entries">
                     <blogItem :post="post"></blogItem>
                 </li>

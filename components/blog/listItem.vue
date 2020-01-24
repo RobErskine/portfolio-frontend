@@ -8,6 +8,7 @@
 </template>
 
 <style lang="scss">
+
     div.m_blog-list-item{
         border-radius:1em 2em;
         position:relative;
@@ -37,6 +38,7 @@
             }
         }
         h4{
+            width:100%;
             font-size:1.6em;
             line-height:1.1;
             transition:all 0.3s ease-in-out;
@@ -55,6 +57,34 @@
         div.m_blog-list-item{
             h4{
                 font-size:2.5vw;
+            }
+        }
+    }
+
+    ul.blog-list li{
+        margin-bottom:2em;
+    }
+
+    @media all and (min-width: 600px){
+        ul.blog-list{
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            li{
+                width:48.5%;
+            }
+        }
+    }
+
+    @media all and (min-width: 1450px){
+        ul.blog-list{
+            li{
+                width:31.5%;
+            }
+        }
+        div.m_blog-list-item{
+            h4{
+                font-size:1.5vw;
             }
         }
     }
