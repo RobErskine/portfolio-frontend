@@ -1,5 +1,6 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
+        <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
         <section class="block copy">
             <ul class="work-list">
@@ -20,6 +21,7 @@
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import workItem from '~/components/work/workItem.vue'
+import Logo from '~/components/Logo.vue'
 
 // query
 import posts from '~/queries/work/getWork.gql';

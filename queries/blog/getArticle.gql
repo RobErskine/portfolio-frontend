@@ -11,6 +11,11 @@ query($section:[String], $slug:[String]) {
             suggestListeningArtist,
             suggestedListeningEmbed,
             suggestedListeningRationale,
+            seoDescription,
+            seoImage{
+                id,
+                url
+            },
             contentEngine{
                 __typename,
                 ...on contentEngine_richText_BlockType{

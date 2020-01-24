@@ -1,5 +1,6 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
+        <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
         <section class="block copy">
             <h4>I'm currently working at Hill Holliday as VP, Lead Creative Technologist.</h4>
@@ -17,6 +18,7 @@
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import workItem from '~/components/work/workItem.vue'
+import Logo from '~/components/Logo.vue'
 
 // query
 import posts from '~/queries/work/getWork.gql';
@@ -45,7 +47,8 @@ export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        workItem
+        workItem,
+        Logo
     },
     apollo: {
         entries: {

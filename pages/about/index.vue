@@ -1,5 +1,6 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
+        <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
         <div class="about-page">
             <section class="block">
@@ -140,6 +141,7 @@ import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import customButton from '~/components/customButton.vue'
 import Footer from '~/components/Footer.vue'
+import Logo from '~/components/Logo.vue'
 
 // query
 import page from '~/queries/about/index.gql';
@@ -170,7 +172,8 @@ export default {
         HamburgerMenu,
         sectionHeader,
         customButton,
-        Footer
+        Footer,
+        Logo
     },
     apollo: {
         entries: {

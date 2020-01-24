@@ -1,5 +1,6 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
+        <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Contact" class-name="contact" canvas="./animations/contactcanvas"></sectionHeader>
         <section class="block copy">
             <div class="slim-block">
@@ -161,6 +162,7 @@
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import Footer from '~/components/Footer.vue'
+import Logo from '~/components/Logo.vue'
 
 import everypage from '~/mixins/everypage'
 
@@ -188,7 +190,8 @@ export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        Footer
+        Footer,
+        Logo
     },
     mixins: [everypage],
     mounted: function(){

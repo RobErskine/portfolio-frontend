@@ -42,7 +42,7 @@
         }
     }
 
-    @media all and (min-width: 1300px){
+    @media all and (min-width: 1450px){
         section.activity-list{
             li{
                 width:23.5%;
@@ -50,7 +50,7 @@
         }
     }
 
-    @media all and (min-width: 1600px){
+    @media all and (min-width: 1800px){
         section.activity-list{
             li{
                 width:18.75%;

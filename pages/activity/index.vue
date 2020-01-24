@@ -1,5 +1,6 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
+        <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Activity" class-name="activity" canvas="./animations/activitycanvas"></sectionHeader>
         <section class="block activity-list">
             <ul>
@@ -20,6 +21,7 @@
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import activityItem from '~/components/activity/activityItem.vue'
+import Logo from '~/components/Logo.vue'
 
 // query
 import posts from '~/queries/activity/getActivity.gql';
@@ -51,7 +53,8 @@ export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        activityItem
+        activityItem,
+        Logo
     },
     mixins: [everypage],
     apollo: {

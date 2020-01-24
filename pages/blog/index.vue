@@ -1,6 +1,6 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
-
+        <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
         <section class="block copy">
             <ul>
@@ -21,6 +21,7 @@
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import blogItem from '~/components/blog/listItem.vue'
+import Logo from '~/components/Logo.vue'
 
 // query
 import posts from '~/queries/blog/getArticles.gql';
@@ -49,7 +50,8 @@ export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        blogItem
+        blogItem,
+        Logo
     },
     apollo: {
         entries: {

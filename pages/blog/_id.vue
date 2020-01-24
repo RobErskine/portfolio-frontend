@@ -1,9 +1,9 @@
 <template>
     <div v-if="entries">
         <Logo size="size-small" position="position-left"/>
-        <div class="panel detail">   
+        <div class="panel detail" :style="`color:`+entry.contentEngine[0].fontColor+`; background-color:`+entry.contentEngine[0].backgroundColor">   
             <!-- {{entries[0].title}} -->
-            <header class="engine-block o_article-header text-align-center" :data-color="entry.contentEngine[0].fontColor" :data-background="entry.contentEngine[0].backgroundColor">
+            <header class="o_article-header text-align-center">
                 <h1 class="m_headline">{{entry.title}}</h1>
                 <span>Posted: <time>{{$moment(entry.postDate).format("MMMM Do YYYY")}}</time> Reading Time: {{entry.readingTime}}</span>
                 <div v-if="entry.suggestedListeningEmbed">
@@ -96,22 +96,23 @@
         }
     }
 
-    @media all and (min-width: 600px){
+    @media all and (min-width:600px){
         .o_article-header{
             h1{
                 font-size:3.5em;
             }
-        }
-    }
-
-    @media all and (min-width:600px){
-        .o_article-header{
             time{
                 display:inline-block;
                 padding-right:1.25em;
                 margin-right:1em;
                 border-right:1px solid;
             }
+        }
+    }
+
+    @media all and (min-width: 900px){
+        .o_article-header{
+            padding:9em 3em 2em;
         }
     }
 
@@ -134,12 +135,6 @@
             content:"";
             display:block;
             padding-top:56.25%;
-        }
-    }
-
-    @media all and (min-width: 900px){
-        .o_article-header{
-            padding:6em 3em 5em;
         }
     }
     
@@ -265,30 +260,17 @@ export default {
         // on scroll change colors
         var blocks = document.querySelectorAll('.engine-block');
 
-        if ('IntersectionObserver' in window) {
-            var onChange = function onChange(changes, observer) {
-                changes.forEach(function (change) {
-                if (change.intersectionRatio > 0) {
-                    // Stop watching and load the image
-                    colors(change.target);
-                    //observer.unobserve(change.target);
-                }
+        setTimeout(function(){
+            $('div.panel.detail').on('scroll', function(event){
+                console.log('scrolling');
+                $('.engine-block').each(function() {
+                    var $el = $(this);
+                    if ($el.visible(false)) {
+                        colors($el);
+                    }
                 });
-            };
-
-            // IntersectionObserver Supported
-            var config = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5
-            };
-            var observer = new IntersectionObserver(onChange, config);
-            blocks.forEach(function (block) {
-                return observer.observe(block);
             });
-        } else {
-            // observer doesn't work in this browser
-        }
+        },1000);
 
         function colors(block) {
             var color = $(block).data('color');
@@ -297,11 +279,18 @@ export default {
                 'color': color,
                 'backgroundColor': background
             });
+            document.documentElement.style.setProperty('--color', background);
+            document.documentElement.style.setProperty('--tint-color', color);
         }
+
+        colors($('div.panel.detail header + div > div'));
     },
     destroyed (){
         console.log('destroyed!');
         $('body').off('click', 'header.o_article-header button');
+        $('div.panel.detail').off('scroll');
+        document.documentElement.style.setProperty('--color', '#fff');
+        document.documentElement.style.setProperty('--tint-color', '#000');
         this.$destroy();
     },
     computed: {
@@ -311,30 +300,16 @@ export default {
     },
     head (){
         return {
-            title: (this.entries ? `${this.entries[0].title}` : 'Loading...')
+            title: (this.entries ? `${this.entries[0].title}` + ' | Rob Erskine - Creative Developer' : 'Loading...'),
+            meta: [
+                {hid: 'og:title', name: 'og:title', content:(this.entries ? `${this.entries[0].title}` : 'Loading...')},
+                {hid: 'twitter:title', name: 'twitter:title', content:(this.entries ? `${this.entries[0].title}` : 'Loading...')},
+                {hid: 'description', name: 'description', content:(this.entries ? `${this.entries[0].seoDescription}` : 'Loading...')},
+                {hid: 'og:description', name: 'og:description', content:(this.entries ? `${this.entries[0].seoDescription}` : 'Loading...')},
+                {hid: 'og:image', name: 'og:image', content: (this.entries ? `${this.entries[0].seoImage[0].url}` : '')},
+                {hid: 'twitter:image', name: 'og:image', content: (this.entries ? `${this.entries[0].seoImage[0].url}` : '') }
+            ]
         }
     }
-    // todo: get apollo data working in data for use in head
-    // data(){
-    //     return {
-    //         entry:{},
-    //         title: entry.title + ' | Rob Erskine - Creative Developer',
-    //         description: 'Rob Erskine is a creative designer and developer obsessed with solving complex problems in collaborative environments',
-    //         image: 'https://placehold.it/1200x630?text=TODO'
-    //     }
-    // },
-    // head (){
-    //     return {
-    //         //title: entry.title,
-    //         meta: [
-    //             { hid: 'og:title', name: 'og:title', content:this.title },
-    //             { hid: 'twitter:title', name: 'twitter:title', content:this.title },
-    //             { hid: 'description', name: 'description', content: this.description },
-    //             { hid: 'og:description', name: 'og:description', content: this.description },
-    //             { hid: 'og:image', name: 'og:image', content: this.image },
-    //             { hid: 'twitter:image', name: 'og:image', content: this.image }
-    //         ]
-    //     }
-    // },
 }
 </script>

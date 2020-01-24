@@ -6,7 +6,7 @@
 
 <style lang="scss">
 div.logo{
-  display:none; // TODO: hide so i can work on this at work :eyes: 
+  //display:none; // TODO: hide so i can work on this at work :eyes: 
 
   transform:translateX(5%) rotate($rotate);
   font-weight:700;
@@ -16,12 +16,14 @@ div.logo{
   font-size:12vw;
   margin-left:0.239em;
   z-index:2;
-  color:$light;
+  //color:var(--color);
   width:auto;
   text-align:center;
   a{
     color:$light;
     text-decoration:none;
+    transition:all 0.3s ease-in-out;
+    //-webkit-text-stroke: 0.1vw var(--color); TODO: never make copy white
   }
   &:after{
     content:'Rob!';
@@ -31,8 +33,9 @@ div.logo{
     top:0.5vw;
     left:0.5vw;
     z-index:-1;
-    color:black;
+    color:var(--tint-color);
     text-align:center;
+    transition:all 0.3s ease-in-out;
   }
   &.gradient-bg:after{
     background: -webkit-linear-gradient(45deg, $secondary, $primary);
