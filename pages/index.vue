@@ -19,8 +19,8 @@ export default {
                 { hid: 'twitter:title', name: 'twitter:title', content: 'Rob Erskine - Creative Developer' },
                 { hid: 'description', name: 'description', content: 'Creative designer and developer obsessed with solving complex digital problems' },
                 { hid: 'og:description', name: 'og:description', content: 'Creative designer and developer obsessed with solving complex digital problems' },
-                { hid: 'og:image', name: 'og:image', content: '/assets/images/homepage-share.png' },
-                { hid: 'twitter:image', name: 'og:image', content: '/assets/images/homepage-share.png' }
+                { hid: 'og:image', name: 'og:image', content: '/images/homepage-share.png' },
+                { hid: 'twitter:image', name: 'og:image', content: '/images/homepage-share.png' }
             ]
         }
     },
