@@ -8,7 +8,6 @@
 </template>
 
 <style lang="scss">
-
     div.m_blog-list-item{
         border-radius:1em 2em;
         position:relative;
