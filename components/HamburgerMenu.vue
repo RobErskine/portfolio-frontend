@@ -102,7 +102,7 @@ nav.main-nav{
     }
 }
 </style>
-w
+
 <script>
 export default {
 

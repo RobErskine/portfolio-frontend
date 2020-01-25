@@ -1,7 +1,7 @@
 <template>
   <div>
     <HamburgerMenu />
-    <nuxt />
+    <nuxt></nuxt>
     <div class="container">
       <div class="site-wrap">
         <div class="panel-wrap animate--shrink">
@@ -32,7 +32,6 @@
                   <div class="row"></div>
                   <div class="row"></div>
                   <div class="row"></div>
-                  <!-- <span class="disclaimer">*I do have hair. Too hard to draw tho.</span> -->
                 </div>
                 <div class="design">
                   <div class="window"><div></div></div>
@@ -296,25 +295,25 @@ section.block{
 //////////////////
 @keyframes digits{
   0%{
-    transform:translateX(-50%);
+    transform:translateX(-50%) translate3d(0,0,0);
   }
   50%{
-    transform:translateX(0%);
+    transform:translateX(0%) translate3d(0,0,0);
   }
   100%{
-    transform:translateX(-50%);
+    transform:translateX(-50%) translate3d(0,0,0);
   }
 }
 
 @keyframes digitsReverse{
   0%{
-    transform:translateX(0%);
+    transform:translateX(0%) translate3d(0,0,0);
   }
   50%{
-    transform:translateX(-50%);
+    transform:translateX(-50%) translate3d(0,0,0);
   }
   100%{
-    transform:translateX(0%);
+    transform:translateX(0%) translate3d(0,0,0);
   }
 }
 
@@ -849,6 +848,7 @@ export default {
 
     function animate() {
       illo.rotate.y += 0.03;
+      illo.rotate.x -= 0.0005;
       illo.updateRenderGraph();
       requestAnimationFrame( animate );
     }
