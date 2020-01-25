@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import { storiesOf } from '@storybook/vue'
-//import '../src/scss/_variables.scss';
 import Menu from './HamburgerMenu'
+import '@/src/scss/_variables.scss'
 storiesOf('Hamburger Menu', module)
-    .add('As a component', () => ({
+    .add('Main Component', () => ({
         components: { Menu },
         template: '<Menu />'
     }))
-    .add('I don\'t work', () => '<List />')

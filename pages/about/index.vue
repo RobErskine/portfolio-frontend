@@ -146,6 +146,9 @@ import Logo from '~/components/Logo.vue'
 // query
 import page from '~/queries/about/index.gql';
 
+//mixins
+import everypage from '~/mixins/everypage';
+
 export default {
     data(){
         return {
@@ -168,6 +171,7 @@ export default {
             ]
         }
     },
+    mixins: [everypage],
     components: {
         HamburgerMenu,
         sectionHeader,
@@ -184,6 +188,8 @@ export default {
         }
     },
     mounted: function(){
+        everypage.externalLinks();
+
         // about me tilt
         $('div.about-me figure').each(function(){
             $(this).tilt({

@@ -4,7 +4,11 @@ module.exports = {
         rules: [
             {
                 test: /\.s?css$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader'],
+                loaders: [
+                    'style-loader', 
+                    'css-loader', 
+                    'sass-loader'
+                ],
                 include: path.resolve(__dirname, '../'),
                 // options: {
                 //     data: `@import '@/src/scss/_variables.scss';`
