@@ -200,7 +200,8 @@ if(process.client){
         tiltPos.x = Math.floor((currentMousePos.x - half.x) / 30);
         tiltPos.y = Math.floor((currentMousePos.y - half.y) / 30);
 
-        $el.attr('style','transform: rotateY('+tiltPos.x+'deg) rotateX('+tiltPos.y+'deg) scale(0.25) translateX(12vw) translateZ(0)');
+        //$el.attr('style','transform: rotateY('+tiltPos.x+'deg) rotateX('+tiltPos.y+'deg) scale(0.25) translateX(12vw) translateZ(0)');
+        $el.attr('style', 'transform: rotateY('+tiltPos.x+'deg) rotateX('+tiltPos.y+'deg) scale(0.25) translate3d(12vw,0,0)');
     }
 
     $(document).mousemove(function(event) {

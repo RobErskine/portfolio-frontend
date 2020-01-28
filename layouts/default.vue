@@ -657,7 +657,7 @@ export default {
     var illo = new Zdog.Illustration({
       element: '.intro-canvas',
       zoom: 15,
-      //rotate: { y: -TAU/8 },
+      rotate: { y: -TAU/8 },
       dragRotate: true,
     });
 

@@ -107,6 +107,7 @@ div.about-me{
     }
     figcaption{
         padding-top:5em;
+        font-size:0.9em;
     }
 }
 

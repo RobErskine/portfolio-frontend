@@ -6,7 +6,7 @@
 
 <style lang="scss">
 section.section-intro.activity{
-    background-color: #CECECE;
+    background-color: #e3e2e2;
 }
 </style>
 
