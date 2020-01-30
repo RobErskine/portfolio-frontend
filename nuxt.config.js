@@ -13,21 +13,22 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      { rel: 'stylesheet', href: 'https://use.typekit.net/xbq1sji.css'}
     ],
     script: [
       {
-        src: "https://code.jquery.com/jquery-3.4.1.min.js",
+        src: "/js/jquery.min.js",
         type: "text/javascript",
         body: true
       },
       {
-        src: "https://unpkg.com/zdog@1/dist/zdog.dist.js",
+        src: "/js/zdog.min.js",
         type: "text/javascript",
         body: true
       },
       {
-        src: "https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js",
+        src: "/js/tilt.min.js",
         type: "text/javascript",
         body: true
       }

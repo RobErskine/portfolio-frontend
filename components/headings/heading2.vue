@@ -6,7 +6,7 @@
 h2.heading{
     text-shadow:none;
     position:absolute;
-    bottom:-1em;
+    bottom:-1.25em;
     left:50%;
     transform:translate(-50%, -50%) rotate($rotate);
     font-size:12vw;
