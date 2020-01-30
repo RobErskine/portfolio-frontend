@@ -246,7 +246,7 @@ export default {
 
         $('body').on('click', 'header.o_article-header button', function(){
             var id = $('.o_article-header iframe').data('id');
-            $('.o_article-header iframe').attr('src','https://www.youtube.com/embed/'+id);
+            $('.o_article-header iframe').attr('src','https://www.youtube.com/embed/'+id+'?playsinline=1');
         
             if (! $('header.o_article-header button').hasClass('active')){
                 $('header.o_article-header button').addClass('active');
