@@ -614,7 +614,7 @@ body{
 }
 
 section.intro + section{
-  padding-top:4em;
+  padding-top:6em;
 }
 </style>
 
@@ -847,8 +847,8 @@ export default {
     });
 
     function animate() {
-      //illo.rotate.y += 0.03;
-      //illo.rotate.x -= 0.0005;
+      illo.rotate.y += 0.03;
+      illo.rotate.x -= 0.0005;
       illo.updateRenderGraph();
       requestAnimationFrame( animate );
     }

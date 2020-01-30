@@ -16,6 +16,7 @@ h2.heading{
     text-align:center;
     margin:0px;
     color:$light;
+    font-weight:900;
     span{
         position:relative;
         z-index:2;

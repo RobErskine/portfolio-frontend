@@ -22,7 +22,7 @@ nav.main-nav{
         margin:0.5em;
         letter-spacing:0px;
         color:$light;
-        font-weight:700;
+        font-weight:800;
         transform:rotate($rotate);
         overflow:hidden;
         transition:all 0.3s ease-in-out;

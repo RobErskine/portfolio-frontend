@@ -9,8 +9,8 @@ div.logo{
   //display:none; // TODO: hide so i can work on this at work :eyes: 
 
   transform:translateX(5%) rotate($rotate);
-  font-weight:700;
-  position:absolute;
+  font-weight:900;
+  position:fixed;
   top:3%;
   left:0%;
   font-size:12vw;
@@ -36,6 +36,7 @@ div.logo{
     color:var(--tint-color);
     text-align:center;
     transition:all 0.3s ease-in-out;
+    transform:scale(1.025);
   }
   &.gradient-bg:after{
     background: -webkit-linear-gradient(45deg, $secondary, $primary);
