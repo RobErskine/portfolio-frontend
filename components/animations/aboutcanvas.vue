@@ -11,6 +11,7 @@ section.section-intro.about{
 </style>
 
 <script>
+
 export default{
     mounted: function(){
         // Made with Zdog
@@ -97,14 +98,9 @@ export default{
             aboutIllo.rotate.x += isSpinning ? 0.045 : 0;
             //aboutIllo.rotate.y += isSpinning ? 0.01 : 0;
             aboutIllo.updateRenderGraph();
-        requestAnimationFrame( animate );
+            requestAnimationFrame( animate );
         }
         animate();
-
-        document.documentElement.style.setProperty('--color', '#b181ea');
-        document.documentElement.style.setProperty('--tint-color', '#b181ea');
-
-        //TODO. add destroy method to restart css vars
     }
 }
 </script>

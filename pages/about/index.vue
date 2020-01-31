@@ -206,6 +206,11 @@ export default {
             $(this).find('button').addClass('active');
             $('div.biographies div:nth-child('+position+')').addClass('active');
         });
+
+        everypage.setColors('#b181ea', '#b181ea');
+    },
+    destroyed (){
+        everypage.setColors('#fff', '#333');
     }
 }
 </script>

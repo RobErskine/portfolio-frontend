@@ -150,6 +150,7 @@
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track-piece  { 
   background-color:transparent;
+  width:0.75em;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -502,7 +503,7 @@ body{
   transform:translateZ(0);
 }
 .show-all .site-wrap {
-  transform: rotateY(0deg) rotateX(0deg) scale(0.25) translateX(12vw) translateZ(0);
+  transform: rotateY(0deg) rotateX(0deg) scale(0.25) translateX(8vw) translateZ(0);
   overflow:visible;
   transition:all 0.3s linear;
   .panel-wrap{
@@ -636,6 +637,9 @@ import heading2 from '~/components/headings/heading2.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import customButton from '~/components/customButton.vue'
 
+//mixins
+import everypage from '~/mixins/everypage';
+
 export default {
   components: {
       Logo,
@@ -644,6 +648,7 @@ export default {
       heading2,
       customButton
   },
+  mixins: [everypage],
   mounted: function(){
     $.fn.visible = function(partial) {
       var $t = $('body').find($(this)),

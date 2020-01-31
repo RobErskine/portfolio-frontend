@@ -26,6 +26,9 @@ import Logo from '~/components/Logo.vue'
 // query
 import posts from '~/queries/blog/getArticles.gql';
 
+//mixins
+import everypage from '~/mixins/everypage';
+
 export default {
     data (){
         return {
@@ -47,6 +50,7 @@ export default {
             ]
         }
     },
+    mixins: [everypage],
     components: {
         HamburgerMenu,
         sectionHeader,
@@ -61,6 +65,12 @@ export default {
                 "orderBy": "postdate Desc",
             }
         }
+    },
+    mounted (){
+        everypage.setColors('#fff', '#ff364e');
+    },
+    destroyed (){
+        everypage.setColors('#fff', '#333');
     }
 }
 </script>

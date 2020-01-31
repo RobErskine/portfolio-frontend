@@ -23,6 +23,9 @@ import Logo from '~/components/Logo.vue'
 // query
 import posts from '~/queries/work/getWork.gql';
 
+// mixins
+import everypage from '~/mixins/everypage';
+
 export default {
     data (){
         return {
@@ -59,6 +62,12 @@ export default {
                 "relatedTo": 25
             }
         }
+    },
+    mounted () {
+        everypage.setColors('#fff', '#007862');
+    },
+    destroyed (){
+        everypage.setColors('#fff', '#333');
     }
 }
 </script>

@@ -196,6 +196,7 @@ export default {
     mixins: [everypage],
     mounted: function(){
         everypage.externalLinks();
+        everypage.setColors('#fff','#007bb9');
     
         $("form").submit(function(e) {
             e.preventDefault();
@@ -208,6 +209,9 @@ export default {
                 $form.html('<div class="thanks"><h2>Thanks for hitting me up, <span class="name">'+ name +'</span>.<br/><br/></h2><p>I should be getting a note from your email ('+ email +') about the option you selected: '+ interest +'.</p><p>I usually get back to these messages within 24 hours. Looking forward to talking to ya soon!</p><p>Best,<br/> Rob</p></div>');
             });
         });
+    },
+    destroyed(){
+        everypage.setColors('#fff','#333');
     }
 }
 </script>

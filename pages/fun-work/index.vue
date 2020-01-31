@@ -17,6 +17,9 @@
 </style>
 
 <script>
+//mixins
+import everypage from '~/mixins/everypage';
+
 // components
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
@@ -50,8 +53,10 @@ export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        workItem
+        workItem,
+        Logo
     },
+    mixins: [everypage],
     apollo: {
         entries: {
             query: posts,
@@ -61,6 +66,12 @@ export default {
                 "relatedTo": 25
             }
         }
+    },
+    mounted(){
+        everypage.setColors('#fff', '#00b5e9');
+    },
+    destroyed(){
+        everypage.setColors('#fff', '3333');
     }
 }
 </script>

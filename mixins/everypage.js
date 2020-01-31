@@ -6,5 +6,9 @@ export default {
                 $(this).attr('target','_blank');
             });
         },1000); // todo: find out how to get rid of set timeout to get working
+    },
+    setColors: function(color, tint){
+        document.documentElement.style.setProperty('--color', color);
+        document.documentElement.style.setProperty('--tint-color', tint);
     }
 }

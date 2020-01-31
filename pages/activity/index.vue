@@ -68,6 +68,10 @@ export default {
     },
     mounted: function(){
         everypage.externalLinks();
+        everypage.setColors('#fff', '#df0049');
+    }, 
+    destroyed(){
+        everypage.setColors('#fff', '#333');
     }
 }
 </script>

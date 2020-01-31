@@ -84,8 +84,8 @@
                 addTo: baeFace,
                 width: 40,
                 height: 40,
-                color: '#36abff',
-                fill: '#36abff',
+                color: '#00b5e9',
+                fill: '#00b5e9',
                 translate: {y:-195, z: 100, x:-30}
             });
 

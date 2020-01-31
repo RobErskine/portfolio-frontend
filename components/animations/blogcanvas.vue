@@ -34,7 +34,7 @@
                 addTo:erasorGroup,
                 length:80,
                 diameter: 80,
-                color: '#F06292',
+                color: '#ff364e',
                 translate: {z: -50}
             })
 
@@ -42,7 +42,7 @@
                 addTo: blogIllo,
                 length:600,
                 diameter: 80,
-                color: '#FDD835',
+                color: '#ffd665',
                 translate:{z:0},
             });
 
@@ -71,7 +71,6 @@
                 blogIllo.updateRenderGraph();
                 requestAnimationFrame( animate );
             }
-
             animate();
         }
     }
