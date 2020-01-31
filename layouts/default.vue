@@ -147,6 +147,17 @@
   --color: $light;
   --tint-color: $dark;
 }
+::-webkit-scrollbar,
+::-webkit-scrollbar-track-piece  { 
+  background-color:transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:rgba(0,0,0,0.8);
+  background-color:var(--tint-color);
+  border-radius:0.5em;
+  transition:none;
+}
 
 html {
   word-spacing: 1px;
@@ -408,7 +419,7 @@ canvas{
           white-space:nowrap;
           font-size:5vh;
           font-weight:700;
-          color:$primaryLight;
+          color:lighten($primaryDark,5%);
           animation:digits 30s linear infinite;
         }
         &:after{

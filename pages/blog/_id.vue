@@ -141,6 +141,7 @@
     .o_rich-text > div{
         max-width:900px;
         h1,h2,h3,h4,h5,h6{
+            line-height:1.25;
             & + p{
                 margin-top:0.8em;
             }

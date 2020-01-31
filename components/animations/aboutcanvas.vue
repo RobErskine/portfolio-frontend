@@ -6,7 +6,7 @@
 
 <style lang="scss">
 section.section-intro.about{
-    background-color:#2955D9;
+    background-color:#c4aaf6;
 }
 </style>
 
@@ -100,6 +100,11 @@ export default{
         requestAnimationFrame( animate );
         }
         animate();
+
+        document.documentElement.style.setProperty('--color', '#b181ea');
+        document.documentElement.style.setProperty('--tint-color', '#b181ea');
+
+        //TODO. add destroy method to restart css vars
     }
 }
 </script>

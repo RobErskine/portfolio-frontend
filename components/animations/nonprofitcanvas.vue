@@ -4,6 +4,12 @@
     </div>
 </template>
 
+<style lang="scss">
+section.intro.nonprofit{
+    background-color:#e6fbff;
+}
+</style>
+
 <script>
     export default{
         mounted: function(){

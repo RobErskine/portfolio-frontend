@@ -57,15 +57,15 @@ section.intro{
 }
 
 section.intro.for-fun{
-    background-color:#FF4D74;
+    background-color:#ff364e;
 }
 
 section.intro.contact{
-    background-color:#9ac1f5;
+    background-color:#75ddff;
 }
 
 section.intro.blog{
-    background-color:#F5F5F5;
+    background-color:#f4f8fe;
     background-image: repeating-linear-gradient(0deg, transparent, transparent 4vh, #B3E5FC 4vh, #B3E5FC 4.2vh);
     position:relative;
     &:before{

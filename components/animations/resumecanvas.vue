@@ -4,6 +4,12 @@
     </div>
 </template>
 
+<style lang="scss">
+section.resume.intro{
+    background-color:#ffea7f;
+}
+</style>
+
 <script>
     export default{
         mounted: function(){

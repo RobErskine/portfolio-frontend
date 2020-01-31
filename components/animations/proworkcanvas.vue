@@ -4,6 +4,12 @@
     </div>
 </template>
 
+<style lang="scss">
+    section.intro.work{
+        background-color:#00be7e;
+    }
+</style>
+
 <script>
     export default{
         mounted: function(){
@@ -28,8 +34,8 @@
                 translate: { x: -170 },
                 // turn to face left
                 rotate: { y: TAU },
-                color: '#8ec448',
-                fill: '8ec448'
+                color: '#fff',
+                fill: '#fff'
             });
 
             hhcc.copy({

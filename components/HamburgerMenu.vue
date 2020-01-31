@@ -17,16 +17,16 @@ nav.main-nav{
         appearance:none;
         border:0px;
         background-color:$primary;
-        box-shadow:0.33vw 0.5vw 0vw $primaryLight;
+        box-shadow:0.33vw 0.5vw 0vw $primaryDark;
         font-size:1.5em;
-        margin:0.5em;
         letter-spacing:0px;
         color:$light;
         font-weight:800;
         transform:rotate($rotate);
         overflow:hidden;
         transition:all 0.3s ease-in-out;
-        padding:0.4em 1em 0.5em 2em;
+        padding:0.4em 0.75em 0.5em 2em;
+        margin:0px;
         border-radius: 1em;
         cursor:pointer;
         span.copy{
@@ -34,7 +34,7 @@ nav.main-nav{
             left:0em;
         }
         &:active{
-            box-shadow:0.15vw 0.25vw 0vw $primaryLight;
+            box-shadow:0.15vw 0.25vw 0vw $primaryDark;
         }
     }
     span.burger,
@@ -66,6 +66,7 @@ nav.main-nav{
     span.burger{
         top:53.33%;
         left:0.5em;
+        transition:all 0.4s ease-in-out;
     }
     span.copy{
         display:block;
@@ -84,6 +85,7 @@ nav.main-nav{
         }
         span.burger{
             background-color:rgba($light,0);
+            left:0.35em;
         }
         span.burger:before{
             transform:rotate(45deg) translateX(0.3em) translateY(0.2em)

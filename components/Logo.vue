@@ -11,10 +11,10 @@ div.logo{
   transform:translateX(5%) rotate($rotate);
   font-weight:900;
   position:fixed;
-  top:3%;
+  top:10px;
   left:0%;
   font-size:12vw;
-  margin-left:0.239em;
+  margin-left:0.133em;
   z-index:2;
   //color:var(--color);
   width:auto;
@@ -30,8 +30,8 @@ div.logo{
     font-family:$font;
     font-size:inherit;
     position:absolute;
-    top:0.5vw;
-    left:0.5vw;
+    top:0.75vh;
+    left:0.75vh;
     z-index:-1;
     color:var(--tint-color);
     text-align:center;
