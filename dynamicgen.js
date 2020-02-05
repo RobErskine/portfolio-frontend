@@ -24,7 +24,6 @@ fetch(`https://portfolio-staging.roberskine.com/api`, {
     for(i = 0; i < result.data.entries.length; i++ ){
         entries.push(result.data.entries[i].uri);
     }
-    console.log(entries);
     fs.writeFile('./dynamicPages.json', JSON.stringify(entries), err => {
         if (err) {
             console.error('Error writing dynamic pages file', err);

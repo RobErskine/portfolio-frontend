@@ -1,0 +1,34 @@
+query($section:[String]) {
+	entries(section: $section) {
+		... on resume_resume_Entry{
+            skills{
+                ...on skills_skillSection_BlockType{
+                    skillTitle
+                    skillsList
+                }
+            }
+            experiences{
+                ...on experiences_experiences_BlockType{
+                    resumeTitle
+                    dateStart
+                    dateEnd
+                    Description
+                }
+            }
+            awards{
+                ...on awards_award_BlockType{
+                    awardTitle
+                    startDate
+                    description
+                }
+            }
+            passionProjects{
+                ...on passionProjects_passionProject_BlockType{
+                    projectTitle
+                    startDate
+                    description
+                }
+            }
+        }
+    }
+}

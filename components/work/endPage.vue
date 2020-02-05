@@ -27,7 +27,6 @@ export default {
     ],
     mounted (){
         $('body').on('click', 'button.top', function(event){
-            console.log('scroll clicked');
             $('div.panel.detail').animate({scrollTop:-1},1000);
         });
     },

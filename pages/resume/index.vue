@@ -3,13 +3,12 @@
         <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
         <section class="block copy">
-            <h4>Here is resume content!</h4>
+            <h4>here is content</h4>
         </section>
     </div>
 </template>
 
 <style lang="scss">
-
 </style>
 
 <script>
@@ -17,6 +16,9 @@
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import Logo from '~/components/Logo.vue'
+
+// gql query
+import posts from '~/queries/resume/getResume.gql';
 
 // mixins
 import everypage from '~/mixins/everypage';
@@ -47,18 +49,16 @@ export default {
         sectionHeader,
         Logo
     },
-    // apollo: {
-    //     entries: {
-    //         query: posts,
-    //         variables: {
-    //             "section": "work",
-    //             "orderBy": "postdate Desc",
-    //             "relatedTo": 25
-    //         }
-    //     }
-    // },
+    apollo: {
+        entries: {
+            query: posts,
+            variables: {
+                "section": "resume",
+            }
+        }
+    },
     mounted () {
-        everypage.setColors('#fff', '#ffd664    ');
+        everypage.setColors('#fff', '#ffd664');
     },
     destroyed (){
         everypage.setColors('#fff', '#333');

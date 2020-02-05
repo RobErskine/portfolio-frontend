@@ -70,63 +70,65 @@ section.resume.intro{
             })
 
             let sparkle = new Zdog.Shape({
-            addTo: resumeIllo,
-            path: [
-                { x: 0, y: 0 },   // start
-                { arc: [
-                { x:  60, y: 0 }, // corner
-                { x:  60, y: 60 }, // end point
-                ]},
-                { arc: [
-                {x: 60, y: 0},
-                {x: 120, y: 0}
-                ]},
-                { arc: [
-                {x: 60, y: 0},
-                {x: 60, y: -60}
-                ]},
-                {
-                arc: [
-                    {x: 60, y:0},
-                    {x: 0, y: 0}
-                ]
-                }
-            ],
-            closed: true,
-            stroke: 20,
-            fill: true,
-            color: '#fff',
-            translate: {y: -215, x: -160, z: 100},
-            scale:0.5
+                addTo: resumeIllo,
+                path: [
+                    { x: 0, y: 0 },   // start
+                    { arc: [
+                    { x:  60, y: 0 }, // corner
+                    { x:  60, y: 60 }, // end point
+                    ]},
+                    { arc: [
+                    {x: 60, y: 0},
+                    {x: 120, y: 0}
+                    ]},
+                    { arc: [
+                    {x: 60, y: 0},
+                    {x: 60, y: -60}
+                    ]},
+                    {
+                    arc: [
+                        {x: 60, y:0},
+                        {x: 0, y: 0}
+                    ]
+                    }
+                ],
+                closed: true,
+                stroke: 20,
+                fill: true,
+                color: '#fff',
+                translate: {y: -215, x: -160, z: 100},
+                scale:0.5
             });
 
             let sparkle2 = sparkle.copy({
-            scale: 0.7,
-            translate: {y: -120, x: -20, z: 210}
+                scale: 0.7,
+                translate: {y: -120, x: 10, z: 210}
             });
 
             let sparkle3 = sparkle.copy({
-            scale: 0.35,
-            translate: {y: 10, x: -120, z: 100}
+                scale: 0.35,
+                translate: {y: 10, x: -120, z: 100}
             });
 
             let sparkle4 = sparkle.copy({
-            scale:0.7,
-            translate: {y: -60, x: 20, z: -100}
+                scale:0.7,
+                translate: {y: -60, x: 20, z: -100}
             });
 
-            // let sparkle5 = sparkle.copy({
-            
-            // });
-
-
-            var goingUp1 = true;
-            var goingUp2 = false;
-            var goingUp3 = true;
-            var goingUp4 = false;
+            let sparkle5 = sparkle.copy({
+                scale: 0.5,
+                translate: {y: -120, x: -120, z: -120 }
+            });
 
             function animate() {
-                //resumeIllo.rotate.y += 0.01;
+                resumeIllo.rotate.y += 0.01;
+                
+                sparkle.rotate.y +=0.01;
+                sparkle2.rotate.y +=0.009;
+                sparkle3.rotate.y +=0.008;
+                sparkle4.rotate.y +=0.015;
+                sparkle5.rotate.y +=0.01;
+                
                 resumeIllo.updateRenderGraph();
                 requestAnimationFrame( animate );
             }

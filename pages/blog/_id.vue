@@ -251,10 +251,8 @@ export default {
         
             if (! $('header.o_article-header button').hasClass('active')){
                 $('header.o_article-header button').addClass('active');
-                console.log('video on');
             } else {
                 $('header.o_article-header button').removeClass('active');
-                console.log('video off');
             }
         });
 
