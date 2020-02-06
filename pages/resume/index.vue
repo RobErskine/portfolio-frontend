@@ -2,14 +2,14 @@
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
-        <section class="block copy">
+        <section class="block copy resume">
             <aside>
                 <div v-for="skill in entries[0].skills">
                     <h3>{{skill.skillTitle}}</h3>
                     <div v-html="skill.skillsList"></div>
                 </div>
             </aside>
-            <div>
+            <div class="meat">
                 <div>
                     <h2>Experiences</h2>
                     <div v-for="experience in entries[0].experiences">
@@ -36,10 +36,54 @@
                 </div>
             </div>
         </section>
+        <Footer/>
     </div>
 </template>
 
 <style lang="scss">
+    section.resume{
+        aside,div.meat{
+            div{
+                margin-bottom:0.5em;
+                padding-bottom:1em;
+                border-bottom:1px solid lighten($dark,75%);
+                &:last-of-type{
+                    margin-bottom:0px;
+                    padding-bottom:0px;
+                    border-bottom:none;
+                }
+            }
+            p{
+                &:last-of-type{
+                    margin-bottom:0px;
+                }
+            }
+        }
+        aside{
+            margin-bottom:2em;
+            padding-bottom:2em;
+            border-bottom:1px solid lighten($dark,70%);
+        }
+    }
+
+    @media all and (min-width: 700px){
+        section.resume{
+            display:flex;
+            justify-content: space-around;
+            margin:0 auto;
+            aside{
+                width:20%;
+                border-bottom:none;
+            }
+            div.meat{
+                width:75%;
+                p{
+                    max-width: $max-width;
+                    max-width:80ch;
+                }
+            }
+        }
+    }
 </style>
 
 <script>
@@ -47,6 +91,7 @@
 import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import Logo from '~/components/Logo.vue'
+import Footer from '~/components/Footer.vue'
 
 // gql query
 import posts from '~/queries/resume/getResume.gql';
@@ -82,7 +127,8 @@ export default {
     components: {
         HamburgerMenu,
         sectionHeader,
-        Logo
+        Logo,
+        Footer
     },
     apollo: {
         entries: {

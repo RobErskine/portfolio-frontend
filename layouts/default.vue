@@ -42,7 +42,7 @@
             <!-- Top Center -->
             <div class="panel has-content" data-x-pos="0" data-y-pos="1">
               <nuxt-link to="/resume"><span class="aria-hidden">Go to the Resume Page</span></nuxt-link>
-              <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
+              <sectionHeader post-title="s" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
             </div>
 
             <!-- Top Left -->
@@ -626,7 +626,13 @@ body{
 }
 
 section.intro + section{
-  padding-top:6em;
+  padding-top:4em;
+}
+
+@media all and (min-width: 700px){
+  section.intro + section{
+    padding-top:5em;
+  }
 }
 </style>
 
