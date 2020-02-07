@@ -42,7 +42,7 @@
             <!-- Top Center -->
             <div class="panel has-content" data-x-pos="0" data-y-pos="1">
               <nuxt-link to="/resume"><span class="aria-hidden">Go to the Resume Page</span></nuxt-link>
-              <sectionHeader post-title="s" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
+              <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
             </div>
 
             <!-- Top Left -->
