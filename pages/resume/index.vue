@@ -4,7 +4,7 @@
         <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
         <section class="block copy resume">
             <aside>
-                <div v-for="skill in resume[0].skills">
+                <div v-for="skill in entries[0].skills">
                     <h3>{{skill.skillTitle}}</h3>
                     <div v-html="skill.skillsList"></div>
                 </div>
@@ -12,7 +12,7 @@
             <div class="meat">
                 <div>
                     <h2>Experiences</h2>
-                    <div v-for="experience in resume[0].experiences">
+                    <div v-for="experience in entries[0].experiences">
                         <h3>{{experience.resumeTitle}}</h3>
                         <time>{{experience.dateStart}} - {{experience.dateEnd}}</time>
                         <div v-html="experience.description"></div>
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <h2>Awards</h2>
-                    <div v-for="award in resume[0].awards">
+                    <div v-for="award in entries[0].awards">
                         <h3>{{award.awardTitle}}</h3>
                         <time>{{award.dateStart}}</time>
                         <div v-html="award.description"></div>
@@ -28,7 +28,7 @@
                 </div>
                 <div>
                     <h2>Passion Projects</h2>
-                    <div v-for="project in resume[0].passionProjects">
+                    <div v-for="project in entries[0].passionProjects">
                         <h3>{{project.projectTitle}}</h3>
                         <time>{{project.dateStart}}</time>
                         <div v-html="project.description"></div>
@@ -131,7 +131,7 @@ export default {
         Footer
     },
     apollo: {
-        resume: {
+        entries: {
             query: resume,
             variables: {
                 "section": "resume",
