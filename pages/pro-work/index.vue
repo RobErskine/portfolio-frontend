@@ -2,7 +2,7 @@
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
-        <section class="block copy">
+        <section class="block">
             <h4>I'm currently working at Hill Holliday as VP, Lead Creative Technologist.</h4>
             <p>I head up our creative technology practice for our Healthcare and Retail teams, working for brands like Novartis, Party City, and Frontier.</p>
         </section>
