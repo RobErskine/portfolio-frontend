@@ -3,7 +3,7 @@
         <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
         <section class="block copy resume">
-            <aside>
+            <aside class="copy">
                 <div v-for="skill in entries[0].skills">
                     <h3>{{skill.skillTitle}}</h3>
                     <div v-html="skill.skillsList"></div>
@@ -43,16 +43,6 @@
 <style lang="scss">
     section.resume{
         aside,div.meat{
-            div{
-                margin-bottom:0.5em;
-                padding-bottom:1em;
-                border-bottom:1px solid lighten($dark,75%);
-                &:last-of-type{
-                    margin-bottom:0px;
-                    padding-bottom:0px;
-                    border-bottom:none;
-                }
-            }
             p{
                 &:last-of-type{
                     margin-bottom:0px;
@@ -63,6 +53,14 @@
             margin-bottom:2em;
             padding-bottom:2em;
             border-bottom:1px solid lighten($dark,70%);
+            h3{
+                margin-bottom:0.25em;
+            }
+            li{
+                margin-bottom:0.25em;
+            }
+            display:flex;
+            justify-content:space-between;
         }
     }
 
@@ -74,12 +72,23 @@
             aside{
                 width:20%;
                 border-bottom:none;
+                display:block;
             }
             div.meat{
                 width:75%;
                 p{
                     max-width: $max-width;
                     max-width:80ch;
+                }
+            }
+            div{
+                margin-bottom:0.5em;
+                padding-bottom:1em;
+                border-bottom:1px solid lighten($dark,75%);
+                &:last-of-type{
+                    margin-bottom:0px;
+                    padding-bottom:0px;
+                    border-bottom:none;
                 }
             }
         }
@@ -105,10 +114,6 @@ export default {
             title: 'Resume | Rob Erskine - Creative Developer',
             description: 'Resume for Rob Erskine, including advertising, marketing, user experience, design, and development work.',
             image: 'https://placehold.it/1200x630?text=TODO',
-            // awards: entries[0].awards,
-            // experiences: entries[0].experiences,
-            // passionProjects: entries[0].passionProjects,
-            // skills: entries[0].skills
         }
     },
     head (){
@@ -130,6 +135,13 @@ export default {
         Logo,
         Footer
     },
+    mounted () {
+        everypage.externalLinks();
+        everypage.setColors('#fff', '#ffd664');
+    },
+    destroyed (){
+        everypage.setColors('#fff', '#333');
+    },
     apollo: {
         entries: {
             query: resume,
@@ -137,12 +149,6 @@ export default {
                 "section": "resume",
             }
         }
-    },
-    mounted () {
-        everypage.setColors('#fff', '#ffd664');
-    },
-    destroyed (){
-        everypage.setColors('#fff', '#333');
     }
 }
 </script>

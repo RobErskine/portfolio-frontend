@@ -229,7 +229,7 @@ p,pre{
   }
 }
 
-p,pre,blockquote{
+p, pre, blockquote, .copy li{
   a:not(.button){
     color:inherit;
     display:inline-block;

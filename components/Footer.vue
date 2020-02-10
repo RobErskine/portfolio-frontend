@@ -22,7 +22,7 @@
 <style lang="scss">
 footer.main-footer{
     padding-top:0em;
-    padding-bottom:3em;
+    padding-bottom:5em;
     margin-top:3em;
     position:relative;
     font-size:1.2em;
