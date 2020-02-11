@@ -25,7 +25,7 @@
                     <img :src="block.image[0].url" alt="">
                 </div>
                 <div class="engine-block o_code" v-else-if="block.__typename === 'contentEngine_code_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
-                    <prism :language="block.language">{{block.code}}</prism>
+                    <client-only><prism language="js">{{block.code}}</prism></client-only>
                 </div>
                 <div v-else>
                     block does not exist
@@ -296,7 +296,6 @@ export default {
 
         setTimeout(function(){
             $('div.panel.detail').on('scroll', function(event){
-                console.log('scrolling');
                 $('.engine-block').each(function() {
                     var $el = $(this);
                     if ($el.visible(false)) {
