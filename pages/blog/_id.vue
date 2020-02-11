@@ -24,6 +24,9 @@
                 <div class="engine-block o_image" v-else-if="block.__typename === 'contentEngine_image_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
                     <img :src="block.image[0].url" alt="">
                 </div>
+                <div class="engine-block o_code" v-else-if="block.__typename === 'contentEngine_code_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+                    <prism :language="block.language">{{block.code}}</prism>
+                </div>
                 <div v-else>
                     block does not exist
                 </div>
@@ -163,6 +166,38 @@
         display:block;
         margin:0 auto;
         text-align:center;
+    }
+
+    .o_code{
+        max-width: 1200px;
+        display:block;
+        margin:0 auto;
+        a{
+            text-decoration: none;
+        }
+        code{
+            margin: 1em;
+            display:block;
+            width:calc(100% - 2em);
+            border-radius:1em 2em;
+            overflow:auto;
+        }
+        pre[class*="language-"]{
+            background-color:var(--tint-color);
+            transition:all 1s ease-in-out;
+        }
+        .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin{
+            color: var(--tint-color);
+            transition:all 1s ease-in-out;
+        }
+    }
+
+    @media all and (min-width: 700px){
+        .o_code{
+            code{
+                padding: 1em;
+            }
+        }
     }
 
     .o_image img{

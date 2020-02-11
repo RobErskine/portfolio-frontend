@@ -46,6 +46,14 @@ query($section:[String], $slug:[String]) {
                     attribution,
                     attributionLink
                 }
+                ...on contentEngine_code_BlockType{
+                    __typename,
+                    id,
+                    backgroundColor,
+                    fontColor,
+                    language,
+                    code
+                }
             }
         }
     }
