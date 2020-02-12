@@ -47,6 +47,29 @@
                 &:last-of-type{
                     margin-bottom:0px;
                 }
+            } 
+        }
+        div.meat{
+            & > div > div{
+                margin-bottom:1em;
+                padding-bottom:1.5em;
+                border-bottom:1px solid lighten($dark,75%);
+                &:last-of-type{
+                    border-bottom:0px;
+                    padding-bottom:0px;
+                    margin-bottom:0px;
+                }
+            }
+            & > div{
+                margin-bottom:2em;
+                padding-bottom:2em;
+            }
+            time{
+                display:block;
+                padding:0.45em 0px 0.35em;
+            }
+            h2{
+                margin-bottom:0.5em;
             }
         }
         aside{
@@ -85,6 +108,15 @@
                 margin-bottom:0.5em;
                 padding-bottom:1em;
                 border-bottom:1px solid lighten($dark,75%);
+                position:relative;
+                time{
+                    position:absolute;
+                    top:0px;
+                    left:0px;
+                    transform: rotate(-90deg) translateX(-40%) translateY(-250%);
+                    color:lighten($dark,50%);
+                    font-size:0.85em;
+                }
                 &:last-of-type{
                     margin-bottom:0px;
                     padding-bottom:0px;
