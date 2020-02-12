@@ -41,7 +41,7 @@
 </template>
 
 <style lang="scss">
-    section.resume{
+    section.block.resume{
         aside,div.meat{
             p{
                 &:last-of-type{
@@ -88,7 +88,7 @@
     }
 
     @media all and (min-width: 700px){
-        section.resume{
+        section.block.resume{
             display:flex;
             justify-content: space-around;
             margin:0 auto;
