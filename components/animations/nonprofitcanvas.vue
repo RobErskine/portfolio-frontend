@@ -13,17 +13,58 @@ section.intro.nonprofit{
 <script>
     export default{
         mounted: function(){
+            // Made with Zdog
+
             const TAU = Zdog.TAU;
 
-            let nonprofitIllo = new Zdog.Illustration({
+            let probonoIllo = new Zdog.Illustration({
                 element: '.nonprofit-canvas',
                 dragRotate: true,
-                rotate: {y: -TAU/14, x: -TAU/30},
-                scale: 0.75
+                rotate: {x: TAU / 30}
             });
 
+            var logoGroup = new Zdog.Group({
+                addTo: probonoIllo,
+            });
+
+            let circle1 = new Zdog.Ellipse({
+                addTo: logoGroup,
+                diameter: 450,
+                stroke: 25,
+                color: '#00be7e',
+            });
+
+            circle1.copy({
+                rotate: {x: TAU / 4}
+            });
+
+            circle1.copy({
+                rotate: {x: TAU / 4},
+                translate: {y: -100},
+                diameter: 400
+            })
+
+            circle1.copy({
+                rotate: {x: TAU / 4},
+                translate: {y: 100},
+                diameter: 400
+            })
+
+            circle1.copy({
+                rotate: {y: TAU / 4}
+            });
+
+            circle1.copy({
+                rotate: {y: TAU / 8}
+            })
+
+            circle1.copy({
+                rotate: {y: -TAU / 8}
+            })
+
             function animate() {
-                nonprofitIllo.updateRenderGraph();
+                probonoIllo.rotate.y += 0.01;
+                probonoIllo.updateRenderGraph();
                 requestAnimationFrame( animate );
             }
 
