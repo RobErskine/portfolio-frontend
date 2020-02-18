@@ -255,7 +255,7 @@ p, blockquote, .copy li{
       background-size:contain;
       margin-right:2px;
       position:absolute;
-      top:3px;
+      top:0.2em;
       left:3px;
     }
     &:hover{

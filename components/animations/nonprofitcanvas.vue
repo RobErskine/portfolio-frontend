@@ -63,6 +63,7 @@ section.intro.nonprofit{
             })
 
             function animate() {
+                probonoIllo.rotate.x += 0.01;
                 probonoIllo.rotate.y += 0.01;
                 probonoIllo.updateRenderGraph();
                 requestAnimationFrame( animate );
