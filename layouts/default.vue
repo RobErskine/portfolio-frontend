@@ -662,6 +662,24 @@ export default {
   },
   mixins: [everypage],
   mounted: function(){
+
+      $(window).on("blur focus", function(e) {
+    var prevType = $(this).data("prevType");
+
+    if (prevType != e.type) { //  reduce double fire issues
+      switch (e.type) {
+        case "blur":
+          $('head link[rel="icon"]').attr('href', '/favicon-inactive.png');
+          break;
+        case "focus":
+          $('head link[rel="icon"]').attr('href', '/favicon.png');
+          break;
+      }
+    }
+
+    $(this).data("prevType", e.type);
+  });
+
     $.fn.visible = function(partial) {
       var $t = $('body').find($(this)),
       $w = $(window),
