@@ -62,6 +62,22 @@ div.biographies{
     div.active{
         display:block;
     }
+    img{
+        width:100%;
+        padding:2em;
+        max-width: 350px;
+        margin:0 auto;
+        display:block;
+    }
+}
+
+@media all and (min-width: 700px){
+    div.biographies img{
+        float:left;
+        width:100%;
+        max-width: 350px;
+        padding:0.25em 2em 1em 0em; 
+    }
 }
 
 figure{
