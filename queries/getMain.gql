@@ -1,0 +1,13 @@
+query($section:[String]) {
+    entries(section: $section) {
+        id,
+        title,
+        sectionId,
+        ...on work_work_Entry{
+            workType {
+                id,
+                title
+            }
+        }
+    }
+}

@@ -17,6 +17,7 @@ h2.heading{
     margin:0px;
     color:$light;
     font-weight:900;
+    line-height:1;
     span{
         position:relative;
         z-index:2;
@@ -38,6 +39,7 @@ h2.heading{
     h2.heading{
         font-size:6vw;
         width:auto;
+        line-height:1.375;
     }
 }
 </style>

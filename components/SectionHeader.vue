@@ -18,6 +18,7 @@ section.intro{
         left:50%;
         width:100%;
         height:100%;
+        max-width:100%;
         z-index:8;
         transform:translateX(-50%) translateY(-50%);
     }
@@ -98,7 +99,7 @@ section.intro.section-intro{
         &:after{
             content:"";
             width:100%;
-            padding-top:100%;
+            padding-top:150%;
         }
     }
 }
@@ -107,7 +108,7 @@ section.intro.section-intro{
     .panel.has-content{
         section.intro.section-intro{
             &:after{
-                padding-top:35%;
+                padding-top:30%;
             }
         }
     }

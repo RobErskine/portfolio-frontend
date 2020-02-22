@@ -2,6 +2,8 @@
   <div>
     <HamburgerMenu />
     <nuxt></nuxt>
+    <script type="text/javascript" v-html="`var counts =` + JSON.stringify(entries)">
+    </script>
     <div class="container">
       <div class="site-wrap">
         <div class="panel-wrap animate--shrink">
@@ -43,35 +45,35 @@
             <div class="panel has-content" data-x-pos="0" data-y-pos="1">
               <nuxt-link to="/resume"><span class="aria-hidden">Go to the Resume Page</span></nuxt-link>
               <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
+              <section class="block copy description">
+                <h3>Experience &amp; Accolades</h3>
+              </section>
             </div>
 
             <!-- Top Left -->
             <div class="panel has-content" data-x-pos="-1" data-y-pos="1">
               <nuxt-link to="/about"><span class="aria-hidden">Go to the About Page</span></nuxt-link>
               <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
+              <section class="block copy description">
+                <h3>Bios &amp; Photos</h3>
+              </section>
             </div>
 
             <!-- Top Right -->
-            <div class="panel has-content" data-x-pos="1" data-y-pos="1">
+            <div class="panel has-content pro-work-panel" data-x-pos="1" data-y-pos="1">
               <nuxt-link to="/pro-work"><span class="aria-hidden">Go to the Professional Work Page</span></nuxt-link>
               <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
-              <section class="block copy">
-                <h4>I'm currently working at Hill Holliday as VP, Lead Creative Technologist.</h4>
-                <p>I head up our creative technology practice for our Healthcare and Retail teams, working for brands like Novartis, Party City, and Frontier.</p>
+              <section class="block copy description">
+                <h3><span class="count"></span> Case Studies</h3>
               </section>
-              <section class="buffer"></section>
-              <section class="buffer"></section>
-              <section class="buffer"></section>
-              <section class="buffer"></section>
-              <section class="buffer"></section>
             </div>
 
             <!-- Center Left -->
-            <div class="panel has-content" data-x-pos="-1" data-y-pos="0">
+            <div class="panel has-content articles-panel" data-x-pos="-1" data-y-pos="0">
               <nuxt-link to="/blog"><span class="aria-hidden">Go to the Blog Page</span></nuxt-link>
               <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
-              <section class="block copy">
-                <!-- <blog-item post-title="test"> -->
+              <section class="block copy description">
+                <h3><span class="count"></span> Articles</h3>
               </section>
             </div>
 
@@ -79,59 +81,36 @@
             <div class="panel has-content" data-x-pos="-1" data-y-pos="-1">
               <nuxt-link to="/contact"><span class="aria-hidden">Go to the Contact Page</span></nuxt-link>
               <sectionHeader post-title="Contact" class-name="contact" canvas="./animations/contactcanvas"></sectionHeader>
-              <section class="block copy" aria-hidden="true">
-                <div class="slim-block">
-                  <p><strong>I'd love to hear from you!</strong> I'm interested in freelance work, new opportunities, and friendship.</p>
-                  <p><strong>If you're interested in my code</strong>, you can find me on <a href="https://github.com/roberskine" target="_blank">GitHub</a>, <a href="https://codepen.io/roberskine" target="_blank">Codepen</a>, <a href="https://glitch.com/@RobErskine" target="_blank">Glitch</a>, and <a href="https://stackoverflow.com/users/1047958/rob-erskine" target="_blank">StackOverflow</a>.</p>
-                  <p><strong>If you're interested in me personally</strong>, you can connect with me on <a href="https://linkedin.com/in/roberskine" target="_blank">LinkedIn</a>, <a href="https://twitter.com/erskinerob">Twitter</a>, and <a href="https://open.spotify.com/user/roberskine" target="_blank">Spotify</a>.</p>
-                </div>
+              <section class="block copy description">
+                <h3>Social &amp; Contact Form</h3>
               </section>
             </div>
 
             <!-- Center Right -->
-            <div class="panel has-content" data-x-pos="1" data-y-pos="0">
+            <div class="panel has-content non-profit-panel" data-x-pos="1" data-y-pos="0">
               <nuxt-link to="/nonprofit-work"><span class="aria-hidden">Go to the Non-Profit Work Page</span></nuxt-link>
               <sectionHeader post-title="Non-Profit Work" class-name="nonprofit" canvas="./animations/nonprofitcanvas"></sectionHeader>
+              <section class="block copy description">
+                <h3><span class="count"></span> Case Studies</h3>
+              </section>
             </div>
 
             <!-- Bottom Center -->
-            <div class="panel has-content" data-x-pos="0" data-y-pos="-1">
+            <div class="panel has-content activity-panel" data-x-pos="0" data-y-pos="-1">
               <nuxt-link to="/activity"><span class="aria-hidden">Go to the Activity Page</span></nuxt-link>
               <sectionHeader post-title="Activity" class-name="activity" canvas="./animations/activitycanvas"></sectionHeader>
+              <section class="block copy description">
+                <h3><span class="count"></span> Updates</h3>
+              </section>
             </div>
 
             <!-- Bottom Right -->
-            <div class="panel has-content" data-x-pos="1" data-y-pos="-1">
+            <div class="panel has-content fun-work-panel" data-x-pos="1" data-y-pos="-1">
               <nuxt-link to="/fun-work"><span class="aria-hidden">Go to the For-Fun Page</span></nuxt-link>
               <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
-              <section class="block copy">
-                <ul class="work-list">
-                  <li>
-                    <div class="m_work-list-item">
-                      <a href="/fun-work/death-is-certain-bot" class="">
-                        <img src="https://storage.googleapis.com/robs_portfolio/certaindeathbot.jpg" alt="" class="thumbnail"> 
-                        <h4 style="color:#ffffff;">Death is Certain Bot</h4> 
-                        <div>
-                          <img src="https://storage.googleapis.com/robs_portfolio/logos/certain-death-icon.jpg" alt="" class="logo"> 
-                          <time style="color:#ffffff;border-top-color:#ffffff;">January 17th 2020</time>
-                        </div>
-                      </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="m_work-list-item">
-                        <a href="/fun-work/baebot-biz" class="">
-                          <img src="https://storage.googleapis.com/robs_portfolio/baebot.jpg" alt="" class="thumbnail"> 
-                          <h4 style="color:#ffffff;">Baebot.biz</h4> 
-                          <div>
-                            <img src="https://storage.googleapis.com/robs_portfolio/logos/baebot-logo.jpg" alt="" class="logo"> 
-                            <time style="color:#ffffff;border-top-color:#ffffff;">November 21st 2019</time>
-                          </div>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </section>
+              <section class="block copy description">
+                <h3><span class="count"></span> Case Studies</h3>
+              </section>
             </div>
         </div>
       </div>
@@ -294,6 +273,19 @@ section.block{
   }
 }
 
+section.description h3{
+  font-size:5vh;
+  text-align:center;
+  padding-top:0.5em;
+  color:lighten($dark, 50%);
+}
+
+@media all and (min-width:700px){
+  section.description h3{
+    font-size:5vw;
+  }
+}
+
 .aria-hidden{
   display:none;
 }
@@ -395,7 +387,10 @@ canvas{
 }
 
 // intro design
-.intro-design{
+section.intro.intro-design{
+  canvas{
+    max-width:none;
+  }
   div.code{
     background-color:$primaryDark;
     position:relative;
@@ -498,7 +493,7 @@ body{
 
 .show-all .panel.detail{
   z-index:-1;
-  opacity:0.5;
+  opacity:0.25;
 }
 
 .site-wrap {
@@ -509,7 +504,7 @@ body{
   transform:translateZ(0);
 }
 .show-all .site-wrap {
-  transform: rotateY(0deg) rotateX(0deg) scale(0.25) translateX(8vw) translateZ(0);
+  transform: rotateY(0deg) rotateX(0deg) scale(0.30) translateX(0vw) translateZ(0);
   overflow:visible;
   transition:all 0.3s linear;
   .panel-wrap{
@@ -528,7 +523,16 @@ body{
     }
   }
   h2.heading{
-    transform:scale(1.5) translate(-50%, -50%) rotate($rotate);
+    transform:scale(1.45) translate(-50%, -50%) rotate($rotate);
+  }
+}
+
+@media all and (min-width: 800px){
+  .show-all .site-wrap {
+    transform: rotateY(0deg) rotateX(0deg) scale(0.30) translateX(0vw) translateZ(0);
+    h2.heading{
+      transform:scale(1.75) translate(-50%, -50%) rotate($rotate);
+    }
   }
 }
 
@@ -649,10 +653,21 @@ import heading2 from '~/components/headings/heading2.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import customButton from '~/components/customButton.vue'
 
+// gql query
+import counts from '~/queries/getMain.gql';
+
 //mixins
 import everypage from '~/mixins/everypage';
 
 export default {
+  apollo: {
+    entries: {
+      query: counts,
+      variables: {
+        "section": ["blog", "work", "activity"],
+      }
+    }
+  },
   components: {
       Logo,
       HamburgerMenu,
@@ -662,6 +677,38 @@ export default {
   },
   mixins: [everypage],
   mounted: function(){ 
+    console.log(window.counts);
+    var activityCount = [],
+        proWorkCount = [],
+        proBonoCount = [],
+        forFunCount = [],
+        blogCount = [],
+        item;
+
+    for(var i=0; i< window.counts.length; i++){
+      item = window.counts[i];
+
+      if(item.sectionId == 2){ // work item
+        console.log(item.workType[0].id);
+        if(item.workType[0].id == 26){ // probono
+          proBonoCount.push(item);
+        } else if(item.workType[0].id == 24){ // pro
+          proWorkCount.push(item);
+        } else if(item.workType[0].id == 25){ // for fun
+          forFunCount.push(item);
+        }
+      } else if(item.sectionId == 3){ // activity item
+        activityCount.push(item);
+      } else if(item.sectionId == 1){ // blog item
+        blogCount.push(item);
+      }
+    }
+
+    $('.activity-panel span.count').html(activityCount.length);
+    $('.fun-work-panel span.count').html(forFunCount.length);
+    $('.pro-work-panel span.count').html(proWorkCount.length);
+    $('.non-profit-panel span.count').html(proBonoCount.length);
+    $('.articles-panel span.count').html(blogCount.length);
 
     console.log('%c 01110111 01101000 01100001 01110100 01110101 01110000', 'border-top:3px solid #00d9f9; padding-top:15px; margin-top:10px;');
     console.log('%c Hey there!', 'font-family: helvetica; font-weight: bold; font-size: 44px;color: #00d9f9; text-shadow: 1px 1px 0 #00b5e9 , 2px 2px 0 #0098d4');

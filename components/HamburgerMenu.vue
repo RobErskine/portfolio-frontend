@@ -203,17 +203,17 @@ if(process.client){
         tiltPos.y = Math.floor((currentMousePos.y - half.y) / 30);
 
         //$el.attr('style','transform: rotateY('+tiltPos.x+'deg) rotateX('+tiltPos.y+'deg) scale(0.25) translateX(12vw) translateZ(0)');
-        $el.attr('style', 'transform: rotateY('+tiltPos.x+'deg) rotateX('+tiltPos.y+'deg) scale(0.25) translate3d(12vw,0,0)');
+        $el.attr('style', 'transform: rotateY('+tiltPos.x+'deg) rotateX('+tiltPos.y+'deg) scale(0.25) translate3d(0vw,2vh,0)');
     }
 
-    $(document).mousemove(function(event) {
-        currentMousePos.x = event.pageX;
-        currentMousePos.y = event.pageY;
+    // $(document).mousemove(function(event) {
+    //     currentMousePos.x = event.pageX;
+    //     currentMousePos.y = event.pageY;
 
-        if($body.hasClass('menu-open')){
-            hover($site);
-        }
-    });
+    //     if($body.hasClass('menu-open')){
+    //         hover($site);
+    //     }
+    // });
 
 
     // zoom in to selected position
