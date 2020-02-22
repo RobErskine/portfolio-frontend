@@ -3,8 +3,11 @@
         <Logo size="size-small" position="position-left"/>
         <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
         <section class="block">
-            <h4>I'm currently working at Hill Holliday as VP, Lead Creative Technologist.</h4>
-            <p>I head up our creative technology practice for our Healthcare and Retail teams, working for brands like Novartis, Party City, and Frontier.</p>
+            <ul class="work-list">
+                <li v-for="post in entries">
+                    <workItem :post="post"></workItem>
+                </li>
+            </ul>
         </section>
     </div>
 </template>
@@ -59,7 +62,7 @@ export default {
             variables: {
                 "section": "work",
                 "orderBy": "postdate Desc",
-                "relatedTo": 25
+                "relatedTo": 24
             }
         }
     },

@@ -122,7 +122,8 @@
             }
             time{
                 text-align:right;
-                padding-left:0px;
+                padding-right:0px;
+                padding-left:3em;
                 width:auto;
                 font-size:1.4em;
             }

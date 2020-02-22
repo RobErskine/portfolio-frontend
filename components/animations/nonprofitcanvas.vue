@@ -13,8 +13,6 @@ section.intro.nonprofit{
 <script>
     export default{
         mounted: function(){
-            // Made with Zdog
-
             const TAU = Zdog.TAU;
 
             let probonoIllo = new Zdog.Illustration({

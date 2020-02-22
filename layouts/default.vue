@@ -661,24 +661,28 @@ export default {
       customButton
   },
   mixins: [everypage],
-  mounted: function(){
+  mounted: function(){ 
 
-      $(window).on("blur focus", function(e) {
-    var prevType = $(this).data("prevType");
+    console.log('%c 01110111 01101000 01100001 01110100 01110101 01110000', 'border-top:3px solid #00d9f9; padding-top:15px; margin-top:10px;');
+    console.log('%c Hey there!', 'font-family: helvetica; font-weight: bold; font-size: 44px;color: #00d9f9; text-shadow: 1px 1px 0 #00b5e9 , 2px 2px 0 #0098d4');
+    console.log('Thanks for peaking under the hood! Code on this site is super minified and concatenated, so it might not be the best to read.');
+    console.log('You\'re in luck though! My site is completely open source and available on GitHub: https://github.com/RobErskine/portfolio-frontend');
+    console.log('%c 01110111 01101000 01100001 01110100 01110101 01110000', 'border-bottom:3px solid #00d9f9; padding-bottom:15px; margin-bottom:10px;');
 
-    if (prevType != e.type) { //  reduce double fire issues
-      switch (e.type) {
-        case "blur":
-          $('head link[rel="icon"]').attr('href', '/favicon-inactive.png');
-          break;
-        case "focus":
-          $('head link[rel="icon"]').attr('href', '/favicon.png');
-          break;
+    $(window).on("blur focus", function(e) {
+      var prevType = $(this).data("prevType");
+      if (prevType != e.type) { //  reduce double fire issues
+        switch (e.type) {
+          case "blur":
+            $('head link[rel="icon"]').attr('href', '/favicon-inactive.png');
+            break;
+          case "focus":
+            $('head link[rel="icon"]').attr('href', '/favicon.png');
+            break;
+        }
       }
-    }
-
-    $(this).data("prevType", e.type);
-  });
+      $(this).data("prevType", e.type);
+    });
 
     $.fn.visible = function(partial) {
       var $t = $('body').find($(this)),
