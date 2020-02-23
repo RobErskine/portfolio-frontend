@@ -19,6 +19,7 @@ section.intro{
         width:100%;
         height:100%;
         max-width:100%;
+        max-height:
         z-index:8;
         transform:translateX(-50%) translateY(-50%);
     }
@@ -84,7 +85,7 @@ section.intro.blog{
 
 section.intro.section-intro{
     canvas{
-        height:100% !important;
+        height:auto !important; //todo remove !importants
         width:auto !important;
         margin:0 auto;
         cursor:grab;
