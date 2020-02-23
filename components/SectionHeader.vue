@@ -19,7 +19,7 @@ section.intro{
         width:100%;
         height:100%;
         max-width:100%;
-        max-height:
+        max-height:100%;
         z-index:8;
         transform:translateX(-50%) translateY(-50%);
     }
