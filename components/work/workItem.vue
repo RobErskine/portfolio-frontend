@@ -24,8 +24,10 @@
         ul.work-list{
             display:flex;
             justify-content: space-between;
+            flex-wrap:wrap;
             li{
                 width:48%;
+                margin-bottom:3em;
             }
         }
     }

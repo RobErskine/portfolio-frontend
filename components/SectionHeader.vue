@@ -119,8 +119,8 @@ section.intro.section-intro{
     }
 
     .show-all .panel.has-content section.intro.section-intro:after{
-    padding-top:30%;
-}
+        padding-top:30%;
+    }
 }
 
 @media all and (min-width: 700px){
