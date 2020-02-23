@@ -100,9 +100,13 @@ section.intro.section-intro{
         &:after{
             content:"";
             width:100%;
-            padding-top:150%;
+            padding-top:75%;
         }
     }
+}
+
+.show-all .panel.has-content section.intro.section-intro:after{
+    padding-top:150%;
 }
 
 @media all and (min-width:600px){
