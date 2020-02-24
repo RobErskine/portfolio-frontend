@@ -47,6 +47,7 @@
               <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
               <section class="block copy description">
                 <h3>Experience &amp; Accolades</h3>
+                <h4>Ten years and going strong</h4></h4>
               </section>
             </div>
 
@@ -56,6 +57,7 @@
               <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3>Bios &amp; Photos</h3>
+                <h4>A story to rival the Marvel cinematic universe</h4>
               </section>
             </div>
 
@@ -65,6 +67,7 @@
               <sectionHeader post-title="Pro Work" class-name="work" canvas="./animations/proworkcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3><span class="count"></span> Case Studies</h3>
+                <h4></h4>
               </section>
             </div>
 
@@ -74,6 +77,7 @@
               <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3><span class="count"></span> Articles</h3>
+                <h4>Latest: <span></span></h4>
               </section>
             </div>
 
@@ -83,6 +87,7 @@
               <sectionHeader post-title="Contact" class-name="contact" canvas="./animations/contactcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3>Social &amp; Contact Form</h3>
+                <h4>Slide into my DMs :)</h4>
               </section>
             </div>
 
@@ -92,6 +97,7 @@
               <sectionHeader post-title="Non-Profit Work" class-name="nonprofit" canvas="./animations/nonprofitcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3><span class="count"></span> Case Studies</h3>
+                <h4></h4>
               </section>
             </div>
 
@@ -101,6 +107,7 @@
               <sectionHeader post-title="Activity" class-name="activity" canvas="./animations/activitycanvas"></sectionHeader>
               <section class="block copy description">
                 <h3><span class="count"></span> Updates</h3>
+                <h4>Latest: <span></span></h4>
               </section>
             </div>
 
@@ -110,6 +117,7 @@
               <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3><span class="count"></span> Case Studies</h3>
+                <h4></h4>
               </section>
             </div>
         </div>
@@ -273,16 +281,44 @@ section.block{
   }
 }
 
-section.description h3{
-  font-size:5vh;
-  text-align:center;
-  padding-top:0.5em;
-  color:lighten($dark, 50%);
+section.description{
+  h3,h4{
+    color:lighten($dark, 50%);
+    text-align:center;
+  }
+  h3{
+    font-size:5vh;
+    padding-top:0.25em;
+  }
+  h4{
+    display:block;
+    padding-top:0.2em;
+    color:lighten($dark, 60%);
+    max-width:90vw;
+    opacity:0;
+    transition:all 0.35s ease-in-out;
+    transform: translateY(3em);
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+  }
 }
 
 @media all and (min-width:700px){
-  section.description h3{
-    font-size:5vw;
+  section.description{
+    h3{
+      font-size:5vw;
+    }
+    h4{
+      font-size:3vw;
+      margin:0 auto;
+    }
+  }
+  div.panel:hover section.description{
+    h4{
+      opacity:1;
+      transform: translateY(0em);
+    }
   }
 }
 
@@ -705,10 +741,14 @@ export default {
     }
 
     $('.activity-panel span.count').html(activityCount.length);
+    $('.activity-panel h4 span').html(activityCount[0].title);
+
     $('.fun-work-panel span.count').html(forFunCount.length);
     $('.pro-work-panel span.count').html(proWorkCount.length);
     $('.non-profit-panel span.count').html(proBonoCount.length);
+    
     $('.articles-panel span.count').html(blogCount.length);
+    $('.articles-panel h4 span').html(blogCount[0].title);
 
     console.log('%c 01110111 01101000 01100001 01110100 01110101 01110000', 'border-top:3px solid #00d9f9; padding-top:15px; margin-top:10px;');
     console.log('%c Hey there!', 'font-family: helvetica; font-weight: bold; font-size: 44px;color: #00d9f9; text-shadow: 1px 1px 0 #00b5e9 , 2px 2px 0 #0098d4');

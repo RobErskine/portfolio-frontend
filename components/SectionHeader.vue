@@ -43,11 +43,11 @@ section.intro{
             font-size:16px;
             display:block;
             margin:0 auto;
-            text-shadow: 0.25vw 0.25vw 0vw #000;
+            text-shadow: 0.3vw 0.3vw 0vw #000;
             font-weight:700;
             transition:all 0.3s ease-in-out;
             &::selection{
-            text-shadow: 0.25vw 0.25vw 0vw $secondary;
+                text-shadow: 0.25vw 0.25vw 0vw $secondary;
             }
         }
     }
@@ -129,6 +129,7 @@ section.intro.section-intro{
             p{
                 font-size:3.5vw;
                 max-width:80vw;
+                line-height:1.1;
             }
         }
     }
