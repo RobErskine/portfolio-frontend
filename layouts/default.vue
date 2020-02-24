@@ -57,7 +57,7 @@
               <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3>Bios &amp; Photos</h3>
-                <h4>A story to rival the Marvel cinematic universe</h4>
+                <h4>A story to rival the Star Wars cinematic universe</h4>
               </section>
             </div>
 
@@ -740,14 +740,23 @@ export default {
       }
     }
 
+    // Latest activity content
     $('.activity-panel span.count').html(activityCount.length);
     $('.activity-panel h4 span').html(activityCount[0].title);
 
+    // fun work content
     $('.fun-work-panel span.count').html(forFunCount.length);
-    $('.pro-work-panel span.count').html(proWorkCount.length);
-    $('.non-profit-panel span.count').html(proBonoCount.length);
+    $('.fun-work-panel h4').append(forFunCount[0].title + ', ' + forFunCount[1].title + ', and ' + (forFunCount.length - 2) + ' others');
     
-    $('.articles-panel span.count').html(blogCount.length);
+    // pro work content
+    $('.pro-work-panel span.count').html(proWorkCount.length);
+    //$('.pro-work-panel h4').append(proWorkCount[0].title + ', ' + proWorkCount[1].title + ', and ' + (proWorkCount.length - 2) + ' others'); //todo once content is all set, uncomment this line
+    
+    // non profit work content
+    $('.non-profit-panel span.count').html(proBonoCount.length);
+    //$('.non-profit-panel h4').append(proBonoCount[0].title + ', ' + proBonoCount[1].title + ', and ' + (proBonoCount.length - 2) + ' others'); //todo once content is all set, uncomment this line
+    
+    $('.articles-panel span.count').html(blogCount.length); 
     $('.articles-panel h4 span').html(blogCount[0].title);
 
     console.log('%c 01110111 01101000 01100001 01110100 01110101 01110000', 'border-top:3px solid #00d9f9; padding-top:15px; margin-top:10px;');

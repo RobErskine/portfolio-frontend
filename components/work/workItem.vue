@@ -27,7 +27,7 @@
             flex-wrap:wrap;
             li{
                 width:48%;
-                margin-bottom:3em;
+                margin-bottom:4em;
             }
         }
     }
@@ -102,7 +102,7 @@
         div.m_work-list-item{
             h4{
                 font-size:2.8em;
-                padding:0.3em 0.5em 0.25em;
+                padding:0.34em 0.5em 0.25em;
                 transform: translateZ(140px) translateY(-151.5px) scale(0.075);
                 transform-origin:bottom;
             }
@@ -111,16 +111,18 @@
                 transform-origin:center;
             }
             img.logo{
-                max-width:10vw;
+                max-width:220px;
                 transform-origin:center;
-                transform:translateZ(30px) scale(0.7);
-                bottom:1em;
-                left:1em;
+                transform:translateZ(50px) scale(0.4);
+                bottom:-1em;
+                left:0em;
             }
             div{
                 display:flex;
                 align-items:flex-end;
                 justify-content: flex-end;
+                transform-style: preserve-3d;
+                -webkit-transform-style: preserve-3d;
             }
             time{
                 text-align:right;
