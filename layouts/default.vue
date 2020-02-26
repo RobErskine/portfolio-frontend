@@ -755,11 +755,11 @@ export default {
     
     // pro work content
     $('.pro-work-panel span.count').html(proWorkCount.length);
-    //$('.pro-work-panel h4').append(proWorkCount[0].title + ', ' + proWorkCount[1].title + ', and ' + (proWorkCount.length - 2) + ' others'); //todo once content is all set, uncomment this line
+    $('.pro-work-panel h4').append(proWorkCount[0].title + ', ' + proWorkCount[1].title + ', ' + proWorkCount[2].title + ', ' + proWorkCount[3].title + ', and ' + (proWorkCount.length - 4) + ' others');
     
     // non profit work content
     $('.non-profit-panel span.count').html(proBonoCount.length);
-    $('.non-profit-panel h4').append(proBonoCount[0].title + ', ' + proBonoCount[1].title + ', and ' + (proBonoCount.length - 2) + ' others'); //todo once content is all set, uncomment this line
+    $('.non-profit-panel h4').append(proBonoCount[0].title + ', ' + proBonoCount[1].title + ', and ' + (proBonoCount.length - 2) + ' others');
     
     $('.articles-panel span.count').html(blogCount.length); 
     $('.articles-panel h4 span').html(blogCount[0].title);
