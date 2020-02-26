@@ -9,6 +9,7 @@
                 </li>
             </ul>
         </section>
+        <Footer/>
     </div>
 </template>
 
@@ -24,6 +25,7 @@ import everypage from '~/mixins/everypage';
 
 // components
 import sectionHeader from '~/components/SectionHeader.vue'
+import Footer from '~/components/Footer';
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import workItem from '~/components/work/workItem.vue'
 import Logo from '~/components/Logo.vue'
@@ -56,7 +58,8 @@ export default {
         HamburgerMenu,
         sectionHeader,
         workItem,
-        Logo
+        Logo,
+        Footer
     },
     mixins: [everypage],
     apollo: {

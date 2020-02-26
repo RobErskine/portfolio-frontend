@@ -177,6 +177,10 @@ body{
     background-color:darken($light,5%);
 }
 
+body.non-interactable{
+  pointer-events:none;
+}
+
 // @media (prefers-color-scheme: dark) {
 //     body{
 //         background-color: lighten($dark,10%);
@@ -549,6 +553,7 @@ body{
   .panel{
     cursor:pointer;
     transform:scale(0.975, 0.95);
+    border-radius: 4em 8em;
     & > a{
         position:absolute;
         top:0px;
@@ -754,7 +759,7 @@ export default {
     
     // non profit work content
     $('.non-profit-panel span.count').html(proBonoCount.length);
-    //$('.non-profit-panel h4').append(proBonoCount[0].title + ', ' + proBonoCount[1].title + ', and ' + (proBonoCount.length - 2) + ' others'); //todo once content is all set, uncomment this line
+    $('.non-profit-panel h4').append(proBonoCount[0].title + ', ' + proBonoCount[1].title + ', and ' + (proBonoCount.length - 2) + ' others'); //todo once content is all set, uncomment this line
     
     $('.articles-panel span.count').html(blogCount.length); 
     $('.articles-panel h4 span').html(blogCount[0].title);
@@ -764,6 +769,35 @@ export default {
     console.log('Thanks for peaking under the hood! Code on this site is super minified and concatenated, so it might not be the best to read.');
     console.log('You\'re in luck though! My site is completely open source and available on GitHub: https://github.com/RobErskine/portfolio-frontend');
     console.log('%c 01110111 01101000 01100001 01110100 01110101 01110000', 'border-bottom:3px solid #00d9f9; padding-bottom:15px; margin-bottom:10px;');
+
+
+    // todo: open up 
+    // var navOpen = false;
+    // if(window.location.pathname === '/' && navOpen == false){
+    //   $('body').on('mousewheel DOMMouseScroll', function(e){
+    //     if(typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
+    //       if(e.originalEvent.detail > 0) {
+    //         $('body').addClass('non-interactable');
+    //         $('button.js-zoom').click();
+    //         navOpen = true;
+          
+    //         setInterval(function(){
+    //           $('body').removeClass('non-interactable');
+    //         },500);
+    //       }
+    //     } else if (typeof e.originalEvent.wheelDelta == 'number') {
+    //       if(e.originalEvent.wheelDelta < 0) {
+    //         $('body').addClass('non-interactable');
+    //         $('button.js-zoom').click();
+    //         navOpen = true;
+          
+    //         setInterval(function(){
+    //           $('body').removeClass('non-interactable');
+    //         },500);
+    //       }
+    //     }
+    //   });
+    // }
 
     $(window).on("blur focus", function(e) {
       var prevType = $(this).data("prevType");

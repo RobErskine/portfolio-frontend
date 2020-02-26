@@ -9,6 +9,7 @@
                 </li>
             </ul>
         </section>
+        <Footer/>
     </div>
 </template>
 
@@ -22,6 +23,7 @@ import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import workItem from '~/components/work/workItem.vue'
 import Logo from '~/components/Logo.vue'
+import Footer from '~/components/Footer.vue'
 
 // query
 import posts from '~/queries/work/getWork.gql';
@@ -54,7 +56,8 @@ export default {
         HamburgerMenu,
         sectionHeader,
         workItem,
-        Logo
+        Logo,
+        Footer
     },
     apollo: {
         entries: {

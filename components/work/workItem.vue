@@ -75,6 +75,7 @@
             opacity:1;
             padding:0.5em 1em;
             transition:all 0.3s ease-in-out;
+            cursor:pointer;
             &:hover{
                 text-decoration: none;
             }

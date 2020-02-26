@@ -8,7 +8,6 @@
                     <nav class="toggle-nav">
                         <ul>
                             <li v-for="(item,index) in entries[0].toggleList">
-                                <!-- :class="{ 'activ' : letter == selectedLetter}" -->
                                 <button v-bind:class="{'active':(index===1)}" class="button tertiary">{{item.toggleTitle}}</button>
                             </li>
                         </ul>
