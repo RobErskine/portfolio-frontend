@@ -85,7 +85,7 @@ section.intro.blog{
 
 section.intro.section-intro{
     canvas{
-        height:auto !important; //todo remove !importants
+        height:auto !important;
         width:auto !important;
         margin:0 auto;
         cursor:grab;

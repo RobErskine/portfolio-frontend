@@ -534,6 +534,7 @@ body{
 .show-all .panel.detail{
   z-index:-1;
   opacity:0.25;
+  filter:blur(2px);
 }
 
 .site-wrap {
