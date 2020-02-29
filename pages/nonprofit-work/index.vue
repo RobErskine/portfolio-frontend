@@ -36,8 +36,8 @@ import posts from '~/queries/work/getWork.gql';
 export default {
     data (){
         return {
-            title: 'Fun Work | Rob Erskine - Creative Developer',
-            description: 'Fun personal design and development side projects from Rob Erskine. Chat and twitter bots, IoT, hacks, and more.',
+            title: 'Non-Profit Work | Rob Erskine - Creative Developer',
+            description: 'Work that I\'ve done where I didn\'t earn a cent, but still had a ton of fun and helped make a positive impact.',
             image: 'https://placehold.it/1200x630?text=TODO'
         }
     },
