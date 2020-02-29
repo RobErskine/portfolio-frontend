@@ -1,0 +1,60 @@
+query($section:[String], $slug:[String]) {
+    entries(section: $section, slug: $slug) {
+        id,
+        title,
+        uri,
+        postDate,
+        dateUpdated,
+		... on work_work_Entry{
+            readingTime,
+            suggestListeningTitle,
+            suggestListeningArtist,
+            suggestedListeningEmbed,
+            suggestedListeningRationale,
+            seoDescription,
+            seoImage{
+                id,
+                url
+            },
+            contentEngine{
+                __typename,
+                ...on contentEngine_richText_BlockType{
+                    __typename,
+                    id,
+                    richText,
+                    fontColor,
+                    backgroundColor
+                }
+                ...on contentEngine_image_BlockType{
+                    __typename,
+                    id,
+                    backgroundColor,
+                    fontColor,
+                    imageWidth,
+                    image {
+                        id,
+                        url
+                    }
+                }
+                ...on contentEngine_pullQuote_BlockType{
+                    __typename,
+                    id,
+                    backgroundColor,
+                    fontColor,
+                    quote,
+                    quoteSize,
+                    attribution,
+                    attributionLink
+                }
+                ...on contentEngine_code_BlockType{
+                    __typename,
+                    id,
+                    backgroundColor,
+                    fontColor,
+                    language,
+                    code
+                }
+            }
+        }
+    }
+}
