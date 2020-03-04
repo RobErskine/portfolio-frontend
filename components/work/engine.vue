@@ -22,8 +22,11 @@
                 <div v-if="block.twitterType === 'tweet'">
                     <Tweet :id="block.twitterID" :options="{ theme: 'dark' }" error-message-class="aria-hidden"></Tweet>
                 </div>
-                <div v-if-else="block.twitterType === 'timeline'">    
+                <div v-else-if="block.twitterType === 'timeline'">    
                     <Timeline :id="block.twitterID" sourceType="profile" :options="{ tweetLimit: '3' }" error-message-class="aria-hidden"/>
+                </div>
+                <div v-else>
+                    Twitter Block does not exist
                 </div>
             </div>
             <div v-else>

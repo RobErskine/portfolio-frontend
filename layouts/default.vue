@@ -209,14 +209,26 @@ pre{
   }
 }
 
+h2,h3,h4,h5,h6{
+  margin-bottom:10px;
+}
+
+h2{
+  font-size:1.8em;
+}
+
+h3{
+  font-size:1.5em;
+}
+
 p,pre{
   margin-bottom:1.2em;
-  line-height:1.375;
+  line-height:1.5;
 }
 
 @media all and (min-width: 700px){
   p,pre{
-    font-size:1.2em;
+    font-size:1.4em;
   }
 }
 
@@ -246,7 +258,7 @@ p, blockquote, .copy li{
       background-size:contain;
       margin-right:2px;
       position:absolute;
-      top:0.2em;
+      top:0.4em;
       left:3px;
     }
     &:hover{

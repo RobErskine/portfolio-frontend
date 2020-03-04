@@ -87,6 +87,7 @@
             width:100%;
             text-align:center;
             padding:0.3em 0.5em 0.25em;
+            margin-bottom:0px;
         }
         time{
             display:inline-block;

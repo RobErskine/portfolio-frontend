@@ -87,11 +87,8 @@
         p{
             width:100%;
             display:block;
-            font-size:1.5em;
-            line-height:1.375;
-        }
-        p{
-            font-size:1.6em;
+            font-size:1.4em;
+            line-height:1.4;
             line-height:1.1;
             transition:all 0.3s ease-in-out;
             transform: translateZ(66px) translateY(10px) scale(0.565);
