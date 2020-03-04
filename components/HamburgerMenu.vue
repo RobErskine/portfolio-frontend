@@ -10,9 +10,9 @@
 <style lang="scss">
 nav.main-nav{
     position:fixed;
-    top:1em;
-    right:1em;
-    z-index:99999;
+    top:2em;
+    right:2em;
+    z-index:10;
     button.button{
         appearance:none;
         border:0px;

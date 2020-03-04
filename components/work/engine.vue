@@ -1,3 +1,5 @@
+
+
 <template>
     <div>
         <div v-for="(block,index) in engine">
@@ -15,6 +17,14 @@
             </div>
             <div :id="`id-`+index" class="engine-block o_code" v-else-if="block.__typename === 'contentEngine_code_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
                 <client-only><prism language="js">{{block.code}}</prism></client-only>
+            </div>
+            <div :id="`id-`+index" class="engine-block o_twitter" v-else-if="block.__typename === 'contentEngine_twitter_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+                <div v-if="block.twitterType === 'tweet'">
+                    <Tweet :id="block.twitterID" :options="{ theme: 'dark' }" error-message-class="aria-hidden"></Tweet>
+                </div>
+                <div v-if-else="block.twitterType === 'timeline'">    
+                    <Timeline :id="block.twitterID" sourceType="profile" :options="{ tweetLimit: '3' }" error-message-class="aria-hidden"/>
+                </div>
             </div>
             <div v-else>
                 block does not exist
@@ -193,6 +203,22 @@
         width:100%;
     }
 
+    .o_twitter{
+        iframe{
+            width:100%;
+            max-width:600px;
+            margin:0 auto;
+            display:block;
+        }
+        .twitter-timeline{
+            max-width:600px !important;
+            display: block !important;
+        }
+        twitter-widget{
+            margin:0 auto !important;
+        }
+    }
+
     .o_pullquote{
         max-width:750px;
         text-align:center;
@@ -203,7 +229,12 @@
         blockquote{
             font-style:italic;
             span.author{
-                font-size:16px;
+                font-size:0.7em;
+                position:relative;
+                top:-0.15em;
+                &:before{
+                    content:' —',
+                }
             }
         }
         &.quote-size-small blockquote{
@@ -232,8 +263,15 @@
 </style>
 
 <script>
+import { Tweet, Moment, Timeline } from 'vue-tweet-embed'
+
 export default {
     name: "Engine",
+    components: {
+        Tweet,
+        Moment,
+        Timeline
+    },
     props: [
         'engine'
     ],

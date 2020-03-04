@@ -11,7 +11,7 @@ div.logo{
   transform:translateX(5%) rotate($rotate);
   font-weight:900;
   position:fixed;
-  top:10px;
+  top:0px;
   left:0%;
   font-size:12vw;
   margin-left:0.133em;

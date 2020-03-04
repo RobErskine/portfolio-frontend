@@ -719,7 +719,6 @@ export default {
   },
   mixins: [everypage],
   mounted: function(){ 
-    console.log(window.counts);
     var activityCount = [],
         proWorkCount = [],
         proBonoCount = [],
@@ -731,7 +730,6 @@ export default {
       item = window.counts[i];
 
       if(item.sectionId == 2){ // work item
-        console.log(item.workType[0].id);
         if(item.workType[0].id == 26){ // probono
           proBonoCount.push(item);
         } else if(item.workType[0].id == 24){ // pro

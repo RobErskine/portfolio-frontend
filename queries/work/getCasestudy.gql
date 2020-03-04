@@ -54,6 +54,14 @@ query($section:[String], $slug:[String]) {
                     language,
                     code
                 }
+                ...on contentEngine_twitter_BlockType{
+                    __typename,
+                    id,
+                    backgroundColor,
+                    fontColor,
+                    twitterID,
+                    twitterType
+                }
             }
         }
     }
