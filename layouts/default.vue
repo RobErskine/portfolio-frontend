@@ -47,7 +47,7 @@
               <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
               <section class="block copy description">
                 <h3>Experience &amp; Accolades</h3>
-                <h4>Ten years and going strong</h4></h4>
+                <h4>Over Ten years and going strong</h4></h4>
               </section>
             </div>
 
@@ -57,7 +57,7 @@
               <sectionHeader post-title="About Me" class-name="about" canvas="./animations/aboutcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3>Bios &amp; Photos</h3>
-                <h4>A story to rival the Star Wars cinematic universe</h4>
+                <h4>A story to rival the Star Wars universe</h4>
               </section>
             </div>
 
@@ -269,6 +269,10 @@ p, blockquote, .copy li{
       padding-left:20px;
     }
   }
+}
+
+.copy li a:not(.button) span{
+  top:0px;
 }
 
 ul,ol{
