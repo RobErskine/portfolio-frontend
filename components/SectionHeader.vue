@@ -40,12 +40,13 @@ section.intro{
             line-height:0;
         }
         p{
-            font-size:16px;
+            font-size:20px;
             display:block;
             margin:0 auto;
             text-shadow: 0.3vw 0.3vw 0vw #000;
             font-weight:700;
             transition:all 0.3s ease-in-out;
+            line-height:1.2;
             &::selection{
                 text-shadow: 0.25vw 0.25vw 0vw $secondary;
             }

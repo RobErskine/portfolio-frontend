@@ -8,7 +8,7 @@ button.button{
     display:inline-block;
     color:$light;
     text-decoration:none;
-    font-size:1.2em;
+    font-size:1em;
     padding:0.4em 1em 0.5em;
     border-radius:1em;
     margin:1em;
