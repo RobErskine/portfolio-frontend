@@ -62,6 +62,7 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/apollo',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Apollo graphql wrapper

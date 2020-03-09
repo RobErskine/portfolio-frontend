@@ -10,8 +10,8 @@
 <style lang="scss">
 nav.main-nav{
     position:fixed;
-    top:2em;
-    right:2em;
+    top:1em;
+    right:1em;
     z-index:10;
     button.button{
         appearance:none;
@@ -98,6 +98,8 @@ nav.main-nav{
 
 @media all and (min-width: 700px){
     nav.main-nav{
+        top:2em;
+        right:2em;
         button.button{
             font-size:1.6em;
         }
