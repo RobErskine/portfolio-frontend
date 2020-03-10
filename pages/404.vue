@@ -1,23 +1,30 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <Logo size="size-small" position="position-left"/>
-        <!-- <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader> -->
-        <section class="block">
-            <h1>Not Found :(</h1>
+        <sectionHeader post-title="four oh four" class-name="fourohfour" canvas="./animations/404canvas"></sectionHeader>
+        <section class="block copy text-align-center">
+            <div class="block copy block-width copy">
+                <h1>Ah shoot. The page you requested could not be found.</h1>
+                <p style="padding-top:1em; max-width: 800px; margin:0 auto;">Sorry about that. Why not bounce back to the <a href="/">homepage</a>, check out <a href="/resume">my resume</a>, or visit <a href="/contact">my contact page</a> to tell me about your error.</p>
+            </div>
         </section>
     </div>
 </template>
 
 <style lang="scss">
-
+    section.intro.fourohfour{
+        background-color:#e6fbff;
+    }
 </style>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo.vue';
+import sectionHeader from '~/components/SectionHeader.vue';
     
 export default{
     components: {
-        Logo
+        Logo,
+        sectionHeader
     },
     data (){
         return {
@@ -39,5 +46,8 @@ export default{
             ]
         }
     },
+    mounted: function(){
+        
+    }
 }
 </script>

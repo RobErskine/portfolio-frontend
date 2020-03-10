@@ -101,5 +101,8 @@ module.exports = {
   },
   generate: {
     routes: pages
+  },
+  sitemap: {
+    hostname: 'https://roberskine.com',
   }
 }

@@ -271,6 +271,10 @@ p, blockquote, .copy li{
   }
 }
 
+.text-align-center{
+  text-align:center;
+}
+
 .copy li a:not(.button) span{
   top:0px;
 }
