@@ -7,6 +7,8 @@
 <script>
     export default{
         mounted: function(){
+            alert('wow');
+
             const TAU = Zdog.TAU;
 
             const offWhite = '#FED';
@@ -15,22 +17,22 @@
             const eggplant = '#0476D9';
 
             var illo = new Zdog.Illustration({
-            element: '.fourohfour-canvas',
-            zoom: 40,
-            //rotate: { y: -TAU/8 },
-            rotate: {x: TAU / 14},
-            dragRotate: true,
+                element: '.fourohfour-canvas',
+                zoom: 40,
+                //rotate: { y: -TAU/8 },
+                rotate: {x: TAU / 14},
+                dragRotate: true,
             });
 
             // ----- model ----- //
 
             var head = new Zdog.Hemisphere({
-            addTo: illo,
-            diameter: 12,
-            false: 12,
-            translate: { y: 0 },
-            rotate: {x: -TAU/6},
-            color: gold,
+                addTo: illo,
+                diameter: 12,
+                false: 12,
+                translate: { y: 0 },
+                rotate: {x: -TAU/6},
+                color: gold,
             });
 
             head.copy({
@@ -40,75 +42,75 @@
             });
 
             var pompom = new Zdog.Shape({
-            addTo: head,
-            stroke: 3,
-            color: garnet,
-            translate: {y:-2, z:-8},
-            rotate: {x: TAU/3 }
+                addTo: head,
+                stroke: 3,
+                color: garnet,
+                translate: {y:-2, z:-8},
+                rotate: {x: TAU/3 }
             })
 
             var eye = new Zdog.Ellipse({
-            addTo: head,
-            diameter: 2,
-            quarters: 2,
-            translate: { x: -2, y: -5.5, z: 4.25 },
-            rotate: { z: TAU/4, x: TAU / 10 },
-            color: '#333',
-            stroke: 0.5,
-            backface: false,
+                addTo: head,
+                diameter: 2,
+                quarters: 2,
+                translate: { x: -2, y: -5.5, z: 4.25 },
+                rotate: { z: TAU/4, x: TAU / 10 },
+                color: '#333',
+                stroke: 0.5,
+                backface: false,
             });
 
             eye.copy({
-            translate: { x: 2, y: -5.5, z: 4.25 },
+                translate: { x: 2, y: -5.5, z: 4.25 },
             });
 
             // right eye glass
             eye.copy({
-            diameter: 3,
-            quarters: 4,
-            translate: {x:-2, y:-6, z:5.25},
-            rotate: {x: TAU/9},
-            color: '#fff'
+                diameter: 3,
+                quarters: 4,
+                translate: {x:-2, y:-6, z:5.25},
+                rotate: {x: TAU/9},
+                color: '#fff'
             });
 
             eye.copy({
-            diameter: 3,
-            quarters: 4,
-            translate: {x:2, y:-6, z:5.25},
-            rotate: {x: TAU/9},
-            color: '#fff'
+                diameter: 3,
+                quarters: 4,
+                translate: {x:2, y:-6, z:5.25},
+                rotate: {x: TAU/9},
+                color: '#fff'
             });
 
             eye.copy({
-            diameter: 2,
-            quarters: 2,
-            translate: {x:0, y:-6, z:5.25},
-            color: '#fff',
-            scale: {x:1, y: 0.5},
-            rotate: { z: -TAU/4 },
+                diameter: 2,
+                quarters: 2,
+                translate: {x:0, y:-6, z:5.25},
+                color: '#fff',
+                scale: {x:1, y: 0.5},
+                rotate: { z: -TAU/4 },
             })
 
             // smile
             var smile = new Zdog.Ellipse({
-            addTo: head,
-            diameter: 3,
-            quarters: 2,
-            translate: { y: -0.25, z: 5.25 },
-            rotate: { z: -33 , x: TAU/9},
-            closed: true,
-            color: '#f06262',
-            stroke: 0.5,
-            fill: true,
-            backface: false,
+                addTo: head,
+                diameter: 3,
+                quarters: 2,
+                translate: { y: -0.25, z: 5.25 },
+                rotate: { z: -33 , x: TAU/9},
+                closed: true,
+                color: '#f06262',
+                stroke: 0.5,
+                fill: true,
+                backface: false,
             });
 
             //---- mustache hehe ---- //
             smile.copy({
-            translate: { y: -2.55, z: 5.5 },
-            rotate: {z: -33, x: TAU/9},
-            diameter: 5,
-            scale: { x: 0.5, y: 1.2 },
-            color: '#F2AE30'
+                translate: { y: -2.55, z: 5.5 },
+                rotate: {z: -33, x: TAU/9},
+                diameter: 5,
+                scale: { x: 0.5, y: 1.2 },
+                color: '#F2AE30'
             });
 
             var shaking = true;
