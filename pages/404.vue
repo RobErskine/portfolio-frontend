@@ -11,6 +11,7 @@
                 <p style="padding-top:1em; max-width: 800px; margin:0 auto;">Sorry about that. Why not bounce back to the <a href="/">homepage</a>, check out <a href="/resume">my resume</a>, or visit <a href="/contact">my contact page</a> to tell me about your error.</p>
             </div>
         </section>
+        <Footer/>
     </div>
 </template>
 
@@ -24,12 +25,14 @@
 import Logo from '~/components/Logo.vue';
 import sectionHeader from '~/components/SectionHeader.vue';
 import heading2 from '~/components/headings/heading2';
+import Footer from '~/components/Footer';
     
 export default{
     components: {
         Logo,
         sectionHeader,
-        heading2
+        heading2,
+        Footer
     },
     data (){
         return {
@@ -52,8 +55,6 @@ export default{
         }
     },
     mounted: function(){
-        alert('404 page!');
-
         const TAU = Zdog.TAU;
 
         const offWhite = '#FED';
@@ -81,9 +82,9 @@ export default{
         });
 
         head.copy({
-        rotate: {x: TAU/3 },
-        transform: {y:10},
-        color:eggplant
+            rotate: {x: TAU/3 },
+            transform: {y:10},
+            color:eggplant
         });
 
         var pompom = new Zdog.Shape({
@@ -158,27 +159,28 @@ export default{
             color: '#F2AE30'
         });
 
-        var shaking = true;
-        function animate() {
-            if( shaking === true){
-                illo.rotate.y -= 0.02;
-                if (illo.rotate.y < -0.68){
-                    shaking = false;
-                }
+    var shaking = true;
+    function animate() {
+        if( shaking === true){
+            illo.rotate.y -= 0.02;
+            if (illo.rotate.y < -0.68){
+                shaking = false;
             }
-
-            if( shaking === false){
-                illo.rotate.y += 0.02;
-                if (illo.rotate.y > 0.68){
-                    shaking = true;
-                }
-            }
-            
-            //illo.rotate.x -= 0.0005;
-            illo.updateRenderGraph();
-            requestAnimationFrame( animate );
         }
-        animate();
+
+        if( shaking === false){
+            illo.rotate.y += 0.02;
+            if (illo.rotate.y > 0.68){
+                shaking = true;
+            }
+        }
+        
+        //illo.rotate.x -= 0.0005;
+        illo.updateRenderGraph();
+        requestAnimationFrame( animate );
+    }
+
+    animate();
     }
 }
 </script>
