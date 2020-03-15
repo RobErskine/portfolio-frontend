@@ -100,7 +100,8 @@ module.exports = {
     ]
   },
   generate: {
-    routes: pages
+    routes: pages,
+    fallback: true
   },
   sitemap: {
     hostname: 'https://roberskine.com',
