@@ -96,7 +96,7 @@ export default {
     },
     head (){
         return {
-            title: (this.entries ? `${this.entries[0].title}` + ' | Rob Erskine - Creative Developer' : 'Loading...'),
+            title: (this.entries[0] ? `${this.entries[0].title}` + ' | Rob Erskine - Creative Developer' : 'Loading...'),
             meta: [
                 {hid: 'og:title', name: 'og:title', content:(this.entries ? `${this.entries[0].title}` : 'Loading...')},
                 {hid: 'twitter:title', name: 'twitter:title', content:(this.entries ? `${this.entries[0].title}` : 'Loading...')},

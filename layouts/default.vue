@@ -1,7 +1,7 @@
 <template>
   <div>
     <HamburgerMenu />
-    <nuxt></nuxt>
+    <nuxt class="nuxt-wrapper"></nuxt>
     <script type="text/javascript" v-html="`var counts =` + JSON.stringify(entries)">
     </script>
     <div class="container">
@@ -353,12 +353,6 @@ section.description{
 //////////////////
 // transition styles
 //////////////////
-.page-enter-active, .page-leave-active {
-  transition: opacity 0.66s;
-}
-.page-enter, .page-leave-to {
-  opacity: 0;
-}
 
 //////////////////
 // homepage styles

@@ -1,6 +1,6 @@
 <template>
   <div class="logo" :class="[position,size]">
-    <nuxt-link to="/"><span aria-hidden="true">Rob!</span><span class="aria-hidden">Return to home</span></nuxt-link>
+    <a href="/"><span aria-hidden="true">Rob!</span><span class="aria-hidden">Return to home</span></a>
   </div>
 </template>
 

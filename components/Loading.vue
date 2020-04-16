@@ -1,6 +1,6 @@
 <template>
     <div class="loading">
-        <span>{{message}}</span>
+        <span>Now loading...</span>
     </div>
 </template>
 

@@ -37,7 +37,12 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#0098d4' },
+  loading: { 
+    color: '#0098d4', 
+    height: '6px',
+    throttle: 0
+  },
+  //loading: '~/components/Loading.vue',
 
   /*
   ** Global CSS

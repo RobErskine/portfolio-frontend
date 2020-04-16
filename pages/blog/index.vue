@@ -12,9 +12,6 @@
             </section>
         </div>
     </div>
-    <div v-else>
-        <Loading message="Loading all articles..."/>
-    </div>
 </template>
 
 <style lang="scss">

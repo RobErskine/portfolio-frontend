@@ -68,7 +68,11 @@ footer.main-footer{
             flex-direction: row;
             justify-content: space-between;
             position:relative;
-            right:-1em;
+            align-items:center;
+            //right:-1em;
+            & > div{
+                right:2em;
+            }
         }
         ul{
             display:flex;

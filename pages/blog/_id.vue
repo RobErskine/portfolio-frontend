@@ -8,9 +8,6 @@
             <Footer/>
         </div>
     </div>
-    <div v-else>
-        <Loading message="Loading your article..." />
-    </div>
 </template>
 
 <style lang="scss">
