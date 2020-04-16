@@ -1,14 +1,19 @@
 <template>
-    <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
-        <Logo size="size-small" position="position-left"/>
-        <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
-        <section class="block">
-            <ul class="blog-list">
-                <li v-for="post in entries">
-                    <blogItem :post="post"></blogItem>
-                </li>
-            </ul>
-        </section>
+    <div v-if="entries">
+        <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
+            <Logo size="size-small" position="position-left"/>
+            <sectionHeader post-title="Writing" class-name="blog" canvas="./animations/blogcanvas"></sectionHeader>
+            <section class="block">
+                <ul class="blog-list">
+                    <li v-for="post in entries">
+                        <blogItem :post="post"></blogItem>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div v-else>
+        <Loading message="Loading all articles..."/>
     </div>
 </template>
 
@@ -22,6 +27,7 @@ import sectionHeader from '~/components/SectionHeader.vue'
 import HamburgerMenu from '~/components/HamburgerMenu.vue'
 import blogItem from '~/components/blog/listItem.vue'
 import Logo from '~/components/Logo.vue'
+import Loading from '~/components/Loading.vue'
 
 // query
 import posts from '~/queries/blog/getArticles.gql';
@@ -55,7 +61,8 @@ export default {
         HamburgerMenu,
         sectionHeader,
         blogItem,
-        Logo
+        Logo,
+        Loading
     },
     apollo: {
         entries: {

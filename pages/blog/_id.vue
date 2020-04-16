@@ -8,6 +8,9 @@
             <Footer/>
         </div>
     </div>
+    <div v-else>
+        <Loading message="Loading your article..." />
+    </div>
 </template>
 
 <style lang="scss">
@@ -20,6 +23,7 @@ import Footer from '~/components/Footer';
 import DetailHeader from '~/components/detailHeader';
 import Engine from '~/components/work/engine';
 import EndPage from '~/components/work/endPage';
+import Loading from '~/components/Loading';
 
 // query
 import posts from '~/queries/blog/getArticle.gql';
@@ -33,7 +37,8 @@ export default {
         Footer,
         DetailHeader,
         EndPage, 
-        Engine
+        Engine,
+        Loading
     },
     mixins: [everypage],
     apollo: {
