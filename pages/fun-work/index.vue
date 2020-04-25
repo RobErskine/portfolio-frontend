@@ -1,7 +1,7 @@
 <template>
     <div class="panel has-content detail" data-x-pos="0" data-y-pos="0">
         <Logo size="size-small" position="position-left"/>
-        <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
+        <sectionHeader post-title="For Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
         <section class="block">
             <ul class="work-list">
                 <li v-for="post in entries">

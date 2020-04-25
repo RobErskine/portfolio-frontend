@@ -114,7 +114,7 @@
             <!-- Bottom Right -->
             <div class="panel has-content fun-work-panel" data-x-pos="1" data-y-pos="-1">
               <nuxt-link to="/fun-work"><span class="aria-hidden">Go to the For-Fun Page</span></nuxt-link>
-              <sectionHeader post-title="For-Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
+              <sectionHeader post-title="For Fun" class-name="for-fun" canvas="./animations/baebotcanvas"></sectionHeader>
               <section class="block copy description">
                 <h3><span class="count"></span> Case Studies</h3>
                 <h4></h4>
