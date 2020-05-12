@@ -715,6 +715,8 @@ import counts from '~/queries/getMain.gql';
 //mixins
 import everypage from '~/mixins/everypage';
 
+import {Howl, Howler} from 'howler';
+
 export default {
   apollo: {
     entries: {
@@ -733,6 +735,16 @@ export default {
   },
   mixins: [everypage],
   mounted: function(){ 
+
+    var bubble = new Howl({
+        src: ["/audio/bubble.mp3"],
+        volume: 0.2
+    })
+
+    $('body').on('click','div.block .button', function(){
+      bubble.play();
+    });
+
     var activityCount = [],
         proWorkCount = [],
         proBonoCount = [],
