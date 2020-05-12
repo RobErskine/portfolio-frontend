@@ -172,12 +172,12 @@ if(process.client){
 
     var zoomOut = new Howl({
         src: ["/audio/zoom-out.mp3"],
-        volume: 0.1
+        volume: 0.075
     })
 
     var zoomIn = new Howl({
         src: ["/audio/zoom-in.mp3"],
-        volume: 0.4
+        volume: 0.25
     })
     
     $zoom.on('click', function(event){

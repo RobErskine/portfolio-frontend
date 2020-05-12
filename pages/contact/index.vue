@@ -306,7 +306,7 @@ export default {
 
         var fanfare = new Howl({
             src: ["/audio/fanfare.mp3"],
-            volume: 0.33,
+            volume: 0.1,
         });
     
         $("form").submit(function(e) {
