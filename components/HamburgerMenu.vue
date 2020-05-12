@@ -112,6 +112,8 @@ export default {
 
 }
 
+import {Howl, Howler} from 'howler';
+
 if(process.client){
     const $body = $('body');
     var doc = document;
@@ -167,6 +169,16 @@ if(process.client){
         pos_y--;
         setPos();
     }
+
+    var zoomOut = new Howl({
+        src: ["/audio/zoom-out.mp3"],
+        volume: 0.1
+    })
+
+    var zoomIn = new Howl({
+        src: ["/audio/zoom-in.mp3"],
+        volume: 0.4
+    })
     
     $zoom.on('click', function(event){
         setTimeout(function(){
@@ -174,6 +186,12 @@ if(process.client){
             $site.toggleClass('animating');
             $body.toggleClass('menu-open');
             $site.attr('style','transform: rotateY(deg) rotateX(0deg) scale(1) translateX(12vw) translateZ(0)');
+            zoomOut.play();
+            if($('body').hasClass('show-all')){
+                zoomOut.play();
+            } else {
+                zoomIn.play();
+            }
         },100);
 
         $panel.each(function(){
@@ -226,20 +244,24 @@ if(process.client){
         setPos(x,y);
     }
 
+
     function closeZoom(){
         $('body').removeClass('show-all');
         $site.removeClass('show-all').attr('style','transform: rotateY(deg) rotateX(0deg) scale(1) translateX(12vw) translateZ(0)');
         $body.removeClass('menu-open');
+        zoomIn.play();
     }
 
     // when a panel is clicked, do the thing
     $('body').on('click', '.site-wrap .panel', function(event){
-        event.preventDefault();
-        var x = $(this).data('x-pos');
-        var y = $(this).data('y-pos');
+        if($('body').hasClass('show-all')){
+            event.preventDefault();
+            var x = $(this).data('x-pos');
+            var y = $(this).data('y-pos');
 
-        closeZoom();
-        setPanelAndZoom(x,y);
+            closeZoom();
+            setPanelAndZoom(x,y);
+        }
     });
 }
 </script>

@@ -47,7 +47,7 @@
               <sectionHeader post-title="Résumé" class-name="resume" canvas="./animations/resumecanvas"></sectionHeader>
               <section class="block copy description">
                 <h3>Experience &amp; Accolades</h3>
-                <h4>Over Ten years and going strong</h4></h4>
+                <h4>Over ten years and going strong</h4></h4>
               </section>
             </div>
 

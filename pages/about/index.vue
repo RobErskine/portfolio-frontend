@@ -159,6 +159,8 @@ import customButton from '~/components/customButton.vue'
 import Footer from '~/components/Footer.vue'
 import Logo from '~/components/Logo.vue'
 
+import {Howl, Howler} from 'howler';
+
 // query
 import page from '~/queries/about/index.gql';
 
@@ -213,6 +215,11 @@ export default {
             });
         });
 
+        var bubble = new Howl({
+            src: ["/audio/bubble.mp3"],
+            volume: 0.2
+        })
+
         // toggle for about lengths
         $('body').on('click','nav.toggle-nav li', function(event){
             var position = ($(this).index()) + 1;
@@ -220,6 +227,7 @@ export default {
             $('div.biographies div').each( function(){ $(this).removeClass('active')});
             $(this).find('button').addClass('active');
             $('div.biographies div:nth-child('+position+')').addClass('active');
+            bubble.play();
         });
 
         everypage.setColors('#b181ea', '#b181ea');
