@@ -57,7 +57,12 @@ module.exports = {
   */
   buildModules: [
     '@nuxtjs/moment',
+    '@nuxtjs/gtm'
   ],
+  gtm: {
+    id: 'GTM-WVX2KTG',
+    pageTracking: true
+  },
   /*
   ** Nuxt.js modules
   */

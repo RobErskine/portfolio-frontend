@@ -250,7 +250,9 @@ p, blockquote, .copy li{
     transition:all 0.25s ease-in-out;
     overflow:visible;
     padding-left:2px;
+    padding-right:3px;
     position:relative;
+    transition:all 0.3s ease-in-out;
     span{
       display:inline-block;
       height:16px;
@@ -262,7 +264,7 @@ p, blockquote, .copy li{
       left:3px;
     }
     &:hover{
-        background-size:  120% 100%;
+        background-size:  115% 100%;
         color:#fff;
     }
     &[href^="http"]{
@@ -738,7 +740,7 @@ export default {
 
     var bubble = new Howl({
         src: ["/audio/bubble.mp3"],
-        volume: 0.2
+        volume: 0.15
     })
 
     $('body').on('click','div.block .button', function(){
