@@ -3,7 +3,12 @@
 <template>
     <div>
         <div v-for="(block,index) in engine">
-            <div :id="`id-`+index" class="engine-block o_rich-text" v-if="block.__typename === 'contentEngine_richText_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+            <div :id="`id-`+index" class="engine-block o_video" v-if="block.__typename === 'contentEngine_video_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+                <div class="m_video-frame block">
+                    <iframe :src="`https://www.youtube.com/embed/` + block.videoEmbedId" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div :id="`id-`+index" class="engine-block o_rich-text" v-else-if="block.__typename === 'contentEngine_richText_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
                 <div v-html="block.richText" />
             </div>
             <div :id="`id-`+index" class="engine-block o_pullquote" :class="`quote-size-`+block.quoteSize" v-else-if="block.__typename === 'contentEngine_pullQuote_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
@@ -124,9 +129,7 @@
     div.m_video-frame{
         position:relative;
         width:100%;
-        max-width:500px;
         margin:0 auto;
-        display:none;
         iframe{
             position:absolute;
             width:100%;
@@ -141,6 +144,10 @@
             display:block;
             padding-top:56.25%;
         }
+    }
+
+    .o_rich-text{
+
     }
     
     .o_rich-text > div{

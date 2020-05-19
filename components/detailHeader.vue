@@ -5,14 +5,18 @@
             <span>Posted: <time>{{$moment(entry.postDate).format("MMMM Do YYYY")}}</time> Reading Time: {{entry.readingTime}}</span>
             <div v-if="entry.suggestedListeningEmbed">
                 <button>Suggested Listening: {{entry.suggestListeningTitle}} by {{entry.suggestListeningArtist}}</button>
-                <div class="m_video-frame"><iframe :data-id="entry.suggestedListeningEmbed" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="m_video-frame intro-video"><iframe :data-id="entry.suggestedListeningEmbed" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </div>
         </header>
     </div>
 </template>
 
 <style lang="scss">
-
+    .intro-video{
+        display:none;
+        max-width:500px;
+        margin:0 auto;
+    }
 </style>
 
 <script>

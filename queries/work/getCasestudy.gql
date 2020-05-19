@@ -18,6 +18,14 @@ query($section:[String], $slug:[String]) {
             },
             contentEngine{
                 __typename,
+                ...on contentEngine_video_BlockType{
+                    __typename,
+                    id,
+                    videoTitle,
+                    videoEmbedId,
+                    fontColor,
+                    backgroundColor
+                }
                 ...on contentEngine_richText_BlockType{
                     __typename,
                     id,
