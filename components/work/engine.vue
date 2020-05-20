@@ -17,7 +17,7 @@
                     <span class="author" v-if="block.attribution">{{block.attribution}}</span>
                 </blockquote>
             </div>
-            <div :id="`id-`+index" class="engine-block o_image" v-else-if="block.__typename === 'contentEngine_image_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+            <div :id="`id-`+index" class="engine-block o_image" :class="block.imageWidth" v-else-if="block.__typename === 'contentEngine_image_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
                 <img :src="block.image[0].url" alt="">
             </div>
             <div :id="`id-`+index" class="engine-block o_code" v-else-if="block.__typename === 'contentEngine_code_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
@@ -42,7 +42,6 @@
 </template>
 
 <style lang="scss">
-    .o_article-header,
     .o_rich-text,
     .o_image,
     .o_blockquote{
@@ -51,78 +50,9 @@
             display:block;
             margin:0 auto;
         }
-    }
-
-    .o_article-header{
-        text-align:center;
-        padding:10em 1em 3em;
-        h1{
-            font-size:2.25em;
-            line-height:1.1;
-        }
-        span,
-        button{
-            appearance:none;
-            display:inline-block;
-            padding:1em;
-            background-color:transparent;
-            color:inherit;
-            border:none;
-            text-align:center;
-        }
-        button{
-            width:100%;
-            display:block;
-            cursor:pointer;
-            text-align:center;
-            font-size:1em;
-            padding:0.25em 0.5em;
-            margin-bottom:0.5em;
-            outline:none;
-            color:inherit;
-            &:after{
-                content:"⇣";
-                display:inline-block;
-                padding-left:0.5em;
-            }
-            &.active{
-                &:after{
-                    content:"⇡";
-                }
-                & + div{
-                    display:block;
-                }
-            }
-        }
-        time{
-            display:block;
-            margin-bottom:0.5em;
-        }
-        span{
-            display:block;
-        }
-    }
-
-    @media all and (min-width:600px){
-        .o_article-header{
-            h1{
-                font-size:3.5em;
-            }
-            time{
-                display:inline-block;
-                padding-right:1.25em;
-                margin-right:1em;
-                border-right:1px solid;
-            }
-        }
-    }
-
-    @media all and (min-width: 900px){
-        .o_article-header{
-            padding:9em 3em 2em;
-            max-width:75em;
+        &.half-width{
+            max-width:600px;
             margin:0 auto;
-
         }
     }
 
@@ -130,6 +60,8 @@
         position:relative;
         width:100%;
         margin:0 auto;
+        overflow:hidden;
+        border-radius:8px;
         iframe{
             position:absolute;
             width:100%;
@@ -146,9 +78,6 @@
         }
     }
 
-    .o_rich-text{
-
-    }
     
     .o_rich-text > div{
         max-width:900px;
@@ -167,6 +96,30 @@
             margin-bottom:1em;
             font-size:1.2em;
             padding-left:0.5em;
+        }
+        ul,ol{
+            padding-left:1em;
+            margin-left:1em;
+            li{
+                margin-bottom:1em;
+            }
+            li{
+                font-size:1.2em;
+            }
+        }
+        ul{
+            li{
+                position:relative;
+                &:before{
+                    content:url('/images/shiny.svg');
+                    position:absolute;
+                    top:-0.1em;
+                    left:-1em;
+                    height:0.6em;
+                    width:0.6em;
+                    color:inherit;
+                }
+            }
         }
     }
 

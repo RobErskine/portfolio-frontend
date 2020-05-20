@@ -1,7 +1,7 @@
 <template>
     <div v-if="entries">
         <Logo size="size-small" position="position-left"/>
-        <div class="panel detail" :style="`color:`+entry.contentEngine[0].fontColor+`; background-color:`+entry.contentEngine[0].backgroundColor">   
+        <div class="panel detail article-content" :style="`color:`+entry.contentEngine[0].fontColor+`; background-color:`+entry.contentEngine[0].backgroundColor">   
             <DetailHeader :entry="entry" />
             <Engine :engine="entry.contentEngine"/>
             <EndPage destination="fun-work" label="Fun Work 🤖"/>

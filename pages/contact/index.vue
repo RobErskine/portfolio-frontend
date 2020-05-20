@@ -4,9 +4,9 @@
         <sectionHeader post-title="Contact" class-name="contact" canvas="./animations/contactcanvas"></sectionHeader>
         <section class="block copy">
             <div class="slim-block">
-                <p><strong>I'd love to hear from you!</strong> I'm interested in freelance work, new opportunities, and friendship.</p>
-                <p><strong>If you're interested in my code</strong>, you can find me on <a href="https://github.com/roberskine" target="_blank">GitHub</a>, <a href="https://codepen.io/roberskine" target="_blank">Codepen</a>, <a href="https://glitch.com/@RobErskine" target="_blank">Glitch</a>, and <a href="https://stackoverflow.com/users/1047958/rob-erskine" target="_blank">StackOverflow</a>.</p>
-                <p><strong>If you're interested in me personally</strong>, you can connect with me on <a href="https://linkedin.com/in/roberskine" target="_blank">LinkedIn</a>, <a href="https://twitter.com/erskinerob">Twitter</a>, and <a href="https://open.spotify.com/user/roberskine" target="_blank">Spotify</a>.</p>
+                <p><strong>I’d love to hear from you!</strong> I’m interested in freelance work, new opportunities, and friendship.</p>
+                <p><strong>If you’re interested in my code</strong>, you can find me on <a href="https://github.com/roberskine" target="_blank">GitHub</a>,<a href="https://codepen.io/roberskine" target="_blank">Codepen</a>, <a href="https://glitch.com/@RobErskine" target="_blank">Glitch</a>, and <a href="https://stackoverflow.com/users/1047958/rob-erskine" target="_blank">StackOverflow</a>.</p>
+                <p><strong>If you’re interested in me personally</strong>, you can connect with me on <a href="https://linkedin.com/in/roberskine" target="_blank">LinkedIn</a>, <a href="https://twitter.com/erskinerob">Twitter</a>, and <a href="https://open.spotify.com/user/roberskine" target="_blank">Spotify</a>.</p><p>I'd also love to see your island in Animal Crossing! My <a href="https://www.nintendo.com/switch/" target="_blank">Nintendo Switch</a> friend code is SW-4030-6844-7525.</p>
                 <br/>
                 
                 <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">

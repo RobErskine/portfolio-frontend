@@ -173,6 +173,13 @@ h1,h2,h3,h4,h5,h6, p, span, time, li, blockquote{
     font-family: $font;
 }
 
+h1,h2,h3,h4,h5,h6{
+  a{
+    color:inherit;
+    cursor:pointer;
+  }
+}
+
 body{
     background-color:darken($light,5%);
 }
@@ -349,8 +356,28 @@ section.description{
 }
 
 .aria-hidden{
-  display:none;
+  display:none !important;
 }
+
+// shinys
+// strong{
+//   display:inline-block;
+//   position:relative;
+//   &:before,
+//   &:after{
+//     content: '⟡';
+//     position:absolute;
+//     top:-0.5em;
+//     left:-0.25em;
+//     color:#f5c542;
+//     font-size:1.2em;
+//   }
+//   &:after{
+//     top:-0.25em;
+//     left:auto;
+//     right:-0.25em;
+//   }
+// }
 
 //////////////////
 // transition styles
