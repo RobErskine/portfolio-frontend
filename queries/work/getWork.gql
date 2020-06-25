@@ -7,6 +7,9 @@ query($section:[String], $orderBy:String, $relatedTo:[Int]) {
         ... on work_work_Entry{
             fontColor,
             backgroundColor,
+            contentEngine{
+                __typename,
+            },
             logo {
                 url
             },

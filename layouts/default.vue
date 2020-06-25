@@ -252,14 +252,16 @@ p, blockquote, .copy li{
     text-decoration:none;
     background-size:  100% 10%;
     background-repeat: repeat-x;
-    background-position: left 0% bottom 2px;
-    background-image: linear-gradient(110deg, $primary 0%, $secondary 50%);
+    background-position: left 0% bottom 0px;
+    background-image: linear-gradient(110deg, $primary 0%, $secondary 100%);
     transition:all 0.25s ease-in-out;
     overflow:visible;
     padding-left:2px;
     padding-right:3px;
     position:relative;
     transition:all 0.3s ease-in-out;
+    border-radius: 0.25em 0.5em 0.25em 0.5em;
+    line-height:1.5;
     span{
       display:inline-block;
       height:16px;

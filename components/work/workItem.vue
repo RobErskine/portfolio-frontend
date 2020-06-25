@@ -1,5 +1,5 @@
 <template>
-    <div class="m_work-list-item" v-bind:style="{ backgroundColor: post.backgroundColor }">
+    <div class="m_work-list-item" :class="{ 'inactive' : post.contentEngine[0] == undefined}" v-bind:style="{ backgroundColor: post.backgroundColor }">
         <nuxt-link :to="post.uri">
             <img lazy class="thumbnail" v-bind:src="post.thumbnail[0].url" alt="">
             <h4 v-bind:style="{ color: post.fontColor }">{{post.title}}</h4>
@@ -45,6 +45,27 @@
         img{
             transition:all 0.3s ease-in-out;
         }
+        &.inactive{
+            pointer-events:none;
+            &:before{
+                content:"Case Study Coming Soon :)";
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:100%;
+                transform:translateX(-50%) translateY(-50%) rotate(-3deg) translateZ(120px) scale(0.25);
+                text-align:center;
+                font-size:2em;
+                padding:1em;
+                z-index:9999;
+                text-shadow: 0px 0px 5px rgba(0,0,0,0.33);
+                color:#fff;
+                font-weight: 700;
+            }
+            h4, img.thumbnail, img.logo, time{
+                opacity:0.5;
+            }
+        }
         &:hover{
             box-shadow:0 0 3vw rgba(0,0,0,0.2);
             h4{
@@ -61,6 +82,8 @@
             border-radius: 1em 2em;
             margin-top:0.25em;
             width:100%;
+            position:relative;
+            z-index:-1;
         }
         img.logo{
             max-width:80px;
