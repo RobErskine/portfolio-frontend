@@ -23,7 +23,7 @@
                     <img src="~/assets/images/fenway-park.jpg" alt="" class="background">
                 </figure>
                 <figcaption>
-                    <span>Me, having the best time, watching the Boston Red Sox lose <em>(I am a hardcore  Phillies phan)</em>.</span>
+                    <span>Me, having the best time, watching the Boston Red Sox lose <em>(I am a <a href="https://twitter.com/ErskineRob/status/1164036560276336641" target="_blank">hardcore Philadelphia Phillies phan</a>)</em>.</span>
                 </figcaption>
             </div>
         </div>
