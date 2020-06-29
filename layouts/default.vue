@@ -260,7 +260,7 @@ p, blockquote, .copy li, figcaption{
     padding-right:3px;
     position:relative;
     transition:all 0.3s ease-in-out;
-    border-radius: 0.25em 0.5em 0.25em 0.5em;
+    border-radius: 0em;
     line-height:1.5;
     span{
       display:inline-block;
@@ -275,6 +275,7 @@ p, blockquote, .copy li, figcaption{
     &:hover{
         background-size:  115% 100%;
         color:#fff;
+        border-radius:0.25em 0.5em 0.25em 0.5em;
     }
     &[href^="http"]{
       padding-left:20px;
