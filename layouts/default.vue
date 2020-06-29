@@ -245,7 +245,7 @@ p,pre{
   }
 }
 
-p, blockquote, .copy li{
+p, blockquote, .copy li, figcaption{
   a:not(.button){
     color:inherit;
     display:inline-block;
