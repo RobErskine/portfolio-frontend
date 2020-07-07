@@ -36,7 +36,9 @@
                   <div class="row"></div>
                 </div>
                 <div class="design">
-                  <div class="window"><div></div></div>
+                  <div class="window">
+                    <div></div>
+                  </div>
                 </div>
               </section>
             </div>
@@ -530,7 +532,7 @@ section.intro.intro-design{
         width:27vw;
         height:17vw;
         background-color:#FFF8E1;
-        border-radius:1.5vw;
+        border-radius:2vw 1vw;
         position:relative;
         animation:window1 15s linear infinite;
         box-shadow:0 1vw 1vw darken($secondary,8%);
@@ -546,15 +548,28 @@ section.intro.intro-design{
           left:0px;
         }
         div{
+          top:1.25vw;
+          left:1.25vw;
+        }
+        div,
+        div:before,
+        div:after{
+          content:"";
           background-color:#FFAB91;
           display:block;
           height:1.5vw;
           width:1.5vw;
           position:absolute;
-          top:1.25vw;
-          left:1.25vw;
           border-radius:50%;
           cursor:pointer;
+        }
+        div:before{
+          background-color:#ffd664;
+          left:2vw;
+        }
+        div:after{
+          left:4vw;
+          background-color:#00eea1;
         }
     }
   }
