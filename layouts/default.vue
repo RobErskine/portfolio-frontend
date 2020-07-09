@@ -532,7 +532,7 @@ section.intro.intro-design{
         width:27vw;
         height:17vw;
         background-color:#FFF8E1;
-        border-radius:2vw 1vw;
+        border-radius:1vw 2.5vw;
         position:relative;
         animation:window1 15s linear infinite;
         box-shadow:0 1vw 1vw darken($secondary,8%);

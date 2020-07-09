@@ -103,10 +103,15 @@
             outline:none;
             border-radius:0px;
             border:none;
+            border-radius:0.5em 1em;
+        }
+        select{
+            border-radius:0px;
         }
         input,div.select-wrapper,textarea{
             border:2px solid darken($light,15%);
             width:100%;
+            border-radius:0.5em 1em;
             &:focus,
             &:active{
                 border:2px solid darken($light,25%);

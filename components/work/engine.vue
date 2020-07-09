@@ -61,7 +61,7 @@
         width:100%;
         margin:0 auto;
         overflow:hidden;
-        border-radius:8px;
+        border-radius:1em 2em;
         iframe{
             position:absolute;
             width:100%;
