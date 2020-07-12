@@ -168,6 +168,8 @@
     }
 
     .o_twitter{
+        display:block;
+        margin:0 auto;
         iframe{
             width:100%;
             max-width:600px;
@@ -178,8 +180,10 @@
             max-width:600px !important;
             display: block !important;
         }
-        twitter-widget{
+        twitter-widget,
+        .twitter-tweet{
             margin:0 auto !important;
+            border-radius:1em 3em;
         }
     }
 
