@@ -14,7 +14,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-      { rel: 'stylesheet', href: 'https://use.typekit.net/xbq1sji.css'}
+      { rel: 'preload', as: 'style', href: 'https://use.typekit.net/xbq1sji.css&display=swap'}
+      { rel: 'stylesheet', href: 'https://use.typekit.net/xbq1sji.css&display=swap'}
     ],
     script: [
       {
