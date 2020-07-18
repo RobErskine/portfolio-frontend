@@ -25,6 +25,10 @@ h2.heading{
     &:after{
         content:attr(data-title);
         background: -webkit-linear-gradient(45deg, $primary, $secondary);
+        background: conic-gradient(
+            $primary,
+            $secondary
+        ) fixed;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         position:absolute;

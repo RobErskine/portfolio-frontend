@@ -11,6 +11,9 @@
                     <nuxt-link to="/about">About</nuxt-link>
                 </li>
                 <li>
+                    <nuxt-link to="/colophon">Colophon</nuxt-link>
+                </li>
+                <li>
                     <nuxt-link to="/contact">Contact</nuxt-link>
                 </li>
             </ul>

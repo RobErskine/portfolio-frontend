@@ -197,6 +197,7 @@ export default {
         Footer,
         Logo
     },
+    mixins: [everypage],
     apollo: {
         entries: {
             query: page,
