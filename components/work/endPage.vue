@@ -2,7 +2,7 @@
     <div class="block">
         <nav class="m_end-page">
             <button class="button inline top primary">Back to top 🔝</button>
-            <nuxt-link :to="`/`+destination+`/`" class="button inline primary">Back to {{label}}</nuxt-link>
+            <nuxt-link :to="destination" class="button inline primary">Back to {{label}}</nuxt-link>
         </nav>
     </div>
 </template>

@@ -4,7 +4,7 @@
         <div class="panel detail article-content" :style="`color:`+entry.contentEngine[0].fontColor+`; background-color:`+entry.contentEngine[0].backgroundColor">   
             <DetailHeader :entry="entry" />
             <Engine :engine="entry.contentEngine"/>
-            <EndPage destination="pro-work" label="Professional Work 🤹‍♂️"/>
+            <EndPage destination="/pro-work" label="Professional Work 🤹‍♂️"/>
             <Footer/>
         </div>
     </div>
