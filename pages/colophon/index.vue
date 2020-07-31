@@ -42,7 +42,7 @@ export default{
         return {
             title: 'Colophon | Rob Erskine - Creative Developer',
             description: 'How was this site built? What was it built with? I\'ll tell you!',
-            image: 'https://placehold.it/1200x630?text=TODO'
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/colophon.jpg'
         }
     },
     head (){
@@ -60,13 +60,15 @@ export default{
     },
     mounted: function(){
         everypage.externalLinks();
-
+    
         const TAU = Zdog.TAU;
 
         const offWhite = '#FED';
         const gold = '#F29B9B';
         const garnet = '#22B7F2';
         const eggplant = '#0476D9';
+
+        everypage.setColors(eggplant, garnet);
 
         var illo = new Zdog.Illustration({
             element: '.colophon-canvas',
@@ -187,6 +189,9 @@ export default{
     }
 
     animate();
+    },
+    destroyed (){
+        everypage.setColors('#fff', '#333');
     }
 }
 </script>
