@@ -7,9 +7,9 @@
         </section>
         <section class="block copy">
             <div class="block" style="max-width:70ch;">
-                <p>This site was designed entirely in the browser, no traditional design tools needed. Written in VS Code using <a target="_blank" href="https://nuxtjs.org">Nuxt</a>, Vue, Sass, Webpack, and and Babel tasks for compilation and deployment to <a target="_blank" href="https://netlify.com">Netlify</a>. JAMstack powered by <a target="_blank" href="https://craftcms.com">Craft CMS</a>, GraphQL, and Axios. Version controlled on GitHub. The typeface all around is <a target="_blank" href="https://fonts.adobe.com/fonts/filson">Filson Pro</a>.</p>
+                <p>This site was designed entirely in the browser, no traditional design tools needed. Written in VS Code using <a target="_blank" href="https://nuxtjs.org">Nuxt</a>, Vue, Sass, Webpack, and and Babel tasks for compilation and deployment to <a target="_blank" href="https://netlify.com">Netlify</a>. JAMstack powered by <a target="_blank" href="https://craftcms.com">Craft CMS</a>, GraphQL, and Axios. Version controlled on <a href="https://github.com/RobErskine/portfolio-frontend/" target="_blank" title="visit my portfolio code on GitHub">GitHub</a>. The typeface all around is <a target="_blank" href="https://fonts.adobe.com/fonts/filson">Filson Pro</a>.</p>
                 <p>Countless <a title="Link to my latest homebrew on Twitter" target="_blank" href="https://twitter.com/ErskineRob/status/1212114179290730496">beers</a> and hours of <a target="_blank" href="https://twitter.com/ErskineRob/status/1156762012535406592">Phillies Baseball</a> on in the background were consumed during the development of this website.</p>
-                <p>Want to make something cool together? <nuxt-link to="/contact">Hit me up</nuxt-link></p>
+                <p>Want to build something together? <nuxt-link to="/contact">Hit me up</nuxt-link>.</p>
             </div>
         </section>
         <Footer/>
@@ -168,14 +168,14 @@ export default{
     var shaking = true;
     function animate() {
         if( shaking === true){
-            illo.rotate.x -= 0.02;
+            illo.rotate.x -= 0.01;
             if (illo.rotate.x < -0.08){
                 shaking = false;
             }
         }
 
         if( shaking === false){
-            illo.rotate.x += 0.02;
+            illo.rotate.x += 0.01;
             if (illo.rotate.x > 0.70){
                 shaking = true;
             }
