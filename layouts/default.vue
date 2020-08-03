@@ -19,7 +19,7 @@
               <canvas class="intro-canvas" width="960" height="960"></canvas>
                 <span class="copy">
                   <h1 class="heading">Hey there,</h1>
-                  <p>I’m a creative designer and developer obsessed with solving complex problems</p>
+                  <p>I’m a creative designer, developer, and leader obsessed with solving complex problems</p>
                   <p><customButton class-name="tertiary js-zoom large" destination="#" title="Check this Nerd Out!"></customButton></p>
                 </span>
                 <div class="code">
