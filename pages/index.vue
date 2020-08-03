@@ -20,7 +20,8 @@ export default {
                 { hid: 'description', name: 'description', content: 'Creative designer and developer obsessed with solving complex digital problems.' },
                 { hid: 'og:description', name: 'og:description', content: 'Hey there 👋. I\'m a Creative designer and developer obsessed with solving complex digital problems' },
                 { hid: 'og:image', name: 'og:image', content: 'https://roberskine.com/images/homepage-share.png' },
-                { hid: 'twitter:image', name: 'twitter:image', content: 'https://roberskine.com/images/homepage-share.png' }
+                { hid: 'twitter:card', name:"twitter:card", content:"summary_large_image"},
+                { hid: 'twitter:image', name: 'twitter:image', content: 'https://roberskine.com/images/homepage-twitter-share.jpg' }
             ]
         }
     },
