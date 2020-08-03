@@ -21,7 +21,7 @@ export default {
                 { hid: 'og:description', name: 'og:description', content: 'Hey there 👋 I’m a creative designer, developer, and leader obsessed with solving complex problems' },
                 { hid: 'og:image', name: 'og:image', content: 'https://roberskine.com/images/homepage-share.png' },
                 { hid: 'twitter:card', name:"twitter:card", content:"summary_large_image"},
-                { hid: 'twitter:image', name: 'twitter:image', content: 'https://roberskine.com/images/homepage-twitter-share.jpg' }
+                { hid: 'twitter:image', name: 'twitter:image', content: 'https://roberskine.com/images/homepage-twitter-share.png' }
             ]
         }
     },
