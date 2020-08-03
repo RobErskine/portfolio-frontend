@@ -17,10 +17,10 @@ export default {
             meta: [
                 { hid: 'og:title', name: 'og:title', content: 'Rob Erskine - Creative Developer' },
                 { hid: 'twitter:title', name: 'twitter:title', content: 'Rob Erskine - Creative Developer' },
-                { hid: 'description', name: 'description', content: 'Hey there 👋. I\'m Creative designer and developer obsessed with solving complex digital problems.' },
-                { hid: 'og:description', name: 'og:description', content: 'Creative designer and developer obsessed with solving complex digital problems' },
+                { hid: 'description', name: 'description', content: 'Creative designer and developer obsessed with solving complex digital problems.' },
+                { hid: 'og:description', name: 'og:description', content: 'Hey there 👋. I\'m a Creative designer and developer obsessed with solving complex digital problems' },
                 { hid: 'og:image', name: 'og:image', content: 'https://roberskine.com/images/homepage-share.png' },
-                { hid: 'twitter:image', name: 'og:image', content: 'https://roberskine.com/images/homepage-share.png' }
+                { hid: 'twitter:image', name: 'twitter:image', content: 'https://roberskine.com/images/homepage-share.png' }
             ]
         }
     },
