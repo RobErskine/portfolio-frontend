@@ -171,8 +171,9 @@ html,body{
   margin: 0;
 }
 
-h1,h2,h3,h4,h5,h6, p, span, time, li, blockquote{ 
+h1,h2,h3,h4,h5,h6, p, span, time, li, blockquote,button{ 
     font-family: $font;
+    font-display: optional;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -361,7 +362,15 @@ section.description{
 }
 
 .aria-hidden{
-  display:none !important;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
 // shinys
