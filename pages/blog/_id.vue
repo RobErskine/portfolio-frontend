@@ -60,6 +60,19 @@ export default {
         // on scroll change colors
         var blocks = document.querySelectorAll('.engine-block');
 
+        $.fn.visible = function(partial) {
+            var $t = $('body').find($(this)),
+            $w = $(window),
+            viewTop = $w.scrollTop(),
+            viewBottom = viewTop + $w.height(),
+            _top = $t.offset().top,
+            _bottom = _top + $t.height(),
+            compareTop = partial === true ? _bottom : _top,
+            compareBottom = partial === true ? _top : _bottom;
+
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        };
+
         setTimeout(function(){
             $('div.panel.detail').on('scroll', function(event){
                 $('.engine-block').each(function() {
