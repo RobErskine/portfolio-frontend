@@ -145,7 +145,7 @@ export default {
         return {
             title: 'Resume | Rob Erskine - Creative Developer',
             description: 'Resume for Rob Erskine, including advertising, marketing, user experience, design, and development work.',
-            image: 'https://placehold.it/1200x630?text=TODO',
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/resume.jpg',
         }
     },
     head (){

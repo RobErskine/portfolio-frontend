@@ -119,11 +119,13 @@ export default {
         }
     },
     mounted: function(){
-        $('div.m_activity-list-item').each(function(){
-            $(this).tilt({
-                maxTilt: 10
+        setTimeout(function(){
+            $('div.m_activity-list-item').each(function(){
+                $(this).tilt({
+                    maxTilt: 10
+                });
             });
-        });
+        }, 1000);
     }
 }
 </script>

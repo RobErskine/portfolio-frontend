@@ -38,7 +38,7 @@ export default {
         return {
             title: 'Fun Work | Rob Erskine - Creative Developer',
             description: 'Fun personal design and development side projects from Rob Erskine. Chat and twitter bots, IoT, hacks, and more.',
-            image: 'https://placehold.it/1200x630?text=TODO'
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/funwork.jpg'
         }
     },
     head (){

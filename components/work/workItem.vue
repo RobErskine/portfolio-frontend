@@ -168,11 +168,13 @@ export default {
         }
     },
     mounted: function(){
-        $('div.m_work-list-item').each(function(){
-            $(this).tilt({
-                maxTilt: 5
+        setTimeout(function(){
+            $('div.m_work-list-item').each(function(){
+                $(this).tilt({
+                    maxTilt: 5
+                });
             });
-        });
+        }, 1000);
     }
 }
 </script>

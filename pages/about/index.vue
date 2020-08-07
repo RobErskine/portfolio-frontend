@@ -173,7 +173,7 @@ export default {
             entries:{},
             title: 'About | Rob Erskine - Creative Developer',
             description: 'Rob Erskine is a creative designer and developer obsessed with solving complex problems in collaborative environments',
-            image: 'https://placehold.it/1200x630?text=TODO'
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/about.jpg'
         }
     },
     head (){

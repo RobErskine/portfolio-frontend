@@ -37,7 +37,7 @@ export default {
         return {
             title: 'Blog | Rob Erskine - Creative Developer',
             description: 'The latest writing from Rob Erskine about design, development, cooking, and other musings',
-            image: 'https://placehold.it/1200x630?text=TODO'
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/blog.jpg'
         }
     },
     head (){

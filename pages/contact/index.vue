@@ -282,7 +282,7 @@ export default {
         return {
             title: 'Contact | Rob Erskine - Creative Developer',
             description: 'Get in contact with Rob Erskine for design, development, or other technical needs. Interested in freelance, new opportunities, and friendship, of course :)',
-            image: 'https://placehold.it/1200x630?text=TODO'
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/contact.jpg'
         }
     },
     head (){

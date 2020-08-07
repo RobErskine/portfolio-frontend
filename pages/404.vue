@@ -38,7 +38,7 @@ export default{
         return {
             title: 'Not Found :( | Rob Erskine - Creative Developer',
             description: 'Unfortunately the page you requests was not found. I am sorry. So sorry.',
-            image: 'https://placehold.it/1200x630?text=TODO'
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/404.jpg'
         }
     },
     head (){

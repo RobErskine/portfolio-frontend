@@ -97,9 +97,11 @@ export default {
         }
     },
     mounted: function(){
-        $('div.m_blog-list-item').tilt({
-            maxTilt: 10
-        });
+        setTimeout(function(){
+            $('div.m_blog-list-item').tilt({
+                maxTilt: 10
+            });
+        }, 1000);
     }
 }
 </script>

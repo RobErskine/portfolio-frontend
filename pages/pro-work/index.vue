@@ -36,7 +36,7 @@ export default {
         return {
             title: 'Professional Work | Rob Erskine - Creative Developer',
             description: 'Professional Work for Rob Erskine, including advertising, marketing, user experience, design, and development work.',
-            image: 'https://placehold.it/1200x630?text=TODO'
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/prowork.jpg'
         }
     },
     head (){
