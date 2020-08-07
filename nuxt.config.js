@@ -32,7 +32,7 @@ module.exports = {
       {
         src: "/js/tilt.min.js",
         type: "text/javascript",
-        body: true
+        body: false
       }
     ],
   },
