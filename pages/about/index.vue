@@ -210,11 +210,13 @@ export default {
         everypage.externalLinks();
 
         // about me tilt
-        // $('div.about-me figure').each(function(){
-        //     $(this).tilt({
-        //         maxTilt: 10
-        //     });
-        // });
+        setTimeout(function(){
+            $('div.about-me figure').each(function(){
+                $(this).tilt({
+                    maxTilt: 10
+                });
+            });
+        },2000);
 
         // toggle for about lengths
         $('body').on('click','nav.toggle-nav li', function(event){

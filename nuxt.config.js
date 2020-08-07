@@ -22,7 +22,7 @@ module.exports = {
       {
         src: "/js/jquery.min.js",
         type: "text/javascript",
-        body: true
+        body: false
       },
       {
         src: "/js/zdog.min.js",
