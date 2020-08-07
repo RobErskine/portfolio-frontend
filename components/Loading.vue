@@ -32,7 +32,7 @@ export default {
         'message'
     ],
     mounted(){
-        console.log('loading active');
+        //console.log('loading active');
     }
 }
 </script>

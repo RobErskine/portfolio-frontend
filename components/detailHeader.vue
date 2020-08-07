@@ -124,10 +124,8 @@ export default {
             const wordsPerMinute = 200; // Average case.
             let result;
             let text = $('div.article-content').text();
-            console.log(text);
 
             let textLength = text.split(" ").length; // Split by words
-            console.log(textLength);
             if(textLength > 0){
                 let value = Math.ceil(textLength / wordsPerMinute);
                 result = `~${value} minutes`;

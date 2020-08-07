@@ -52,7 +52,7 @@ export default {
     },
     mounted (){
         // testing
-        console.log('Mounted!');
+        //('Mounted!');
 
         // function for every page
         everypage.externalLinks();
@@ -98,7 +98,7 @@ export default {
         colors($('div.panel.detail header + div > div'));
     },
     destroyed (){
-        console.log('destroyed!');
+        //console.log('destroyed!');
         $('body').off('click', 'header.o_article-header button');
         $('div.panel.detail').off('scroll');
         document.documentElement.style.setProperty('--color', '#fff');

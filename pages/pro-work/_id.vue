@@ -50,7 +50,7 @@ export default {
     },
     mounted (){
         // testing
-        console.log('Mounted!');
+        //console.log('Mounted!');
 
         // function for every page
         everypage.externalLinks();
