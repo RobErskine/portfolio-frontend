@@ -790,7 +790,20 @@ export default {
       customButton
   },
   mixins: [everypage],
-  mounted: function(){ 
+  mounted: function(){
+
+    $.fn.visible = function(partial) {
+      var $t = $('body').find($(this)),
+      $w = $(window),
+      viewTop = $w.scrollTop(),
+      viewBottom = viewTop + $w.height(),
+      _top = $t.offset().top,
+      _bottom = _top + $t.height(),
+      compareTop = partial === true ? _bottom : _top,
+      compareBottom = partial === true ? _top : _bottom;
+
+      return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+    };
 
     var bubble = new Howl({
         src: ["/audio/bubble.mp3"],
@@ -894,19 +907,6 @@ export default {
       }
       $(this).data("prevType", e.type);
     });
-
-    $.fn.visible = function(partial) {
-      var $t = $('body').find($(this)),
-      $w = $(window),
-      viewTop = $w.scrollTop(),
-      viewBottom = viewTop + $w.height(),
-      _top = $t.offset().top,
-      _bottom = _top + $t.height(),
-      compareTop = partial === true ? _bottom : _top,
-      compareBottom = partial === true ? _top : _bottom;
-
-      return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-    };
     
     const TAU = Zdog.TAU;
 
