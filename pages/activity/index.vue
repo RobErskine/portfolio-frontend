@@ -34,7 +34,7 @@ export default {
         return {
             title: 'Activity | Rob Erskine - Creative Developer',
             description: 'A small simple micro-feed of what Rob Erskine is up to. Playing vidya games, learning web dev, going on vacation, you name it.',
-            image: 'https://placehold.it/1200x630?text=TODO'
+            image: 'https://storage.googleapis.com/robs_portfolio/seo/activity.jpg'
         }
     },
     head (){
