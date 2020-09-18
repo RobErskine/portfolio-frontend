@@ -57,13 +57,13 @@ module.exports = {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-    '@nuxtjs/gtm'
-  ],
-  gtm: {
-    id: 'GTM-WVX2KTG',
-    pageTracking: true
-  },
+  // buildModules: [
+  //   '@nuxtjs/gtm'
+  // ],
+  // gtm: {
+  //   id: 'GTM-WVX2KTG',
+  //   pageTracking: true
+  // },
   /*
   ** Nuxt.js modules
   */
