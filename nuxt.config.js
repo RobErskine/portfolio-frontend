@@ -58,7 +58,6 @@ module.exports = {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/moment',
     '@nuxtjs/gtm'
   ],
   gtm: {

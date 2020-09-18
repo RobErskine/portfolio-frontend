@@ -2,7 +2,7 @@
     <div>
         <header class="o_article-header text-align-center">
             <h1 class="m_headline">{{entry.title}}</h1>
-            <span>Posted: <time>{{$moment(entry.postDate).format("MMMM Do YYYY")}}</time> Reading Time: <time class="reading-time"></time></span>
+            <span>Posted: <time>{{entry.postDate}}</time> Reading Time: <time class="reading-time"></time></span>
             <div v-if="entry.suggestedListeningEmbed">
                 <button>Suggested Listening: {{entry.suggestListeningTitle}} by {{entry.suggestListeningArtist}} <span class="aria-hidden">Click to open video player</span></button>
                 <div class="m_video-frame intro-video"><iframe :data-id="entry.suggestedListeningEmbed" src="" frameborder="0" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>

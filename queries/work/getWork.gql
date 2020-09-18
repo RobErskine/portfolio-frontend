@@ -3,7 +3,7 @@ query($section:[String], $orderBy:String, $relatedTo:[Int]) {
         title,
         uri,
         slug,
-        postDate,
+        postDate @formatDateTime (format: "F jS Y"),
         ... on work_work_Entry{
             fontColor,
             backgroundColor,

@@ -3,8 +3,8 @@ query($section:[String], $slug:[String]) {
         id,
         title,
         uri,
-        postDate,
-        dateUpdated,
+        postDate @formatDateTime (format: "F jS Y"),
+        dateUpdated @formatDateTime (format: "F jS Y"),
 		... on blog_blog_Entry{
             readingTime,
             suggestListeningTitle,

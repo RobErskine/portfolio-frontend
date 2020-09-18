@@ -1,7 +1,7 @@
 <template>
 <footer class="main-footer">
     <div class="block">
-        <span>&copy;{{$moment(new Date()).format("YYYY")}} Rob Erskine!</span>
+        <span>2020 Rob Erskine!</span>
         <div>
             <ul>
                 <li>

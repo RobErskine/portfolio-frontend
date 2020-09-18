@@ -5,7 +5,7 @@
             <h4 v-bind:style="{ color: post.fontColor }">{{post.title}}</h4>
             <div>
                 <img lazy class="logo" v-bind:src="post.logo[0].url" alt="">
-                <time v-bind:style="{ color: post.fontColor, borderTopColor: post.fontColor }">{{$moment(post.postDate).format("MMMM Do YYYY")}}</time>
+                <time v-bind:style="{ color: post.fontColor, borderTopColor: post.fontColor }">{{post.postDate}}</time>
             </div>
         </nuxt-link>
     </div>

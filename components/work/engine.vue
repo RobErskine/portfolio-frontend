@@ -231,13 +231,12 @@
 </style>
 
 <script>
-import { Tweet, Moment, Timeline } from 'vue-tweet-embed'
+import { Tweet, Timeline } from 'vue-tweet-embed'
 
 export default {
     name: "Engine",
     components: {
         Tweet,
-        Moment,
         Timeline
     },
     props: [

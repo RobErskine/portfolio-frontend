@@ -2,7 +2,7 @@ query($section:[String], $orderBy:String) {
   entries(section: $section, orderBy: $orderBy) {
     title,
     uri,
-    postDate,
+    postDate @formatDateTime (format: "F jS Y"),
     ... on blog_blog_Entry{
       fontColor,
       backgroundColor 

@@ -1,7 +1,7 @@
 <template>
     <div class="m_activity-list-item" v-bind:style="{ backgroundColor: post.backgroundColor }">
         <div v-bind:style="{ color: post.fontColor}" v-html="post.richText"></div>
-        <time v-bind:style="{ color: post.fontColor, borderTopColor: post.fontColor }">{{$moment(post.postDate).format("MMMM Do YYYY")}}</time>
+        <time v-bind:style="{ color: post.fontColor, borderTopColor: post.fontColor }" data-time="">{{post.postDate}}</time>
     </div>
 </template>
 
