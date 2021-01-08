@@ -28,7 +28,7 @@
   "devDependencies": {
     "@graphql-codegen/cli": "^1.11.2",
     "@nuxtjs/date-fns": "^1.1.0",
-    "@nuxtjs/gtm": "^2.2.3",
+    "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@storybook/vue": "^5.3.9",
     "babel-preset-vue": "^2.0.2",
