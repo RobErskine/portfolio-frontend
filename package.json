@@ -13,7 +13,7 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^4.0.0-rc17",
+    "@nuxtjs/apollo": "^4.0.0-rc19",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.3.4",
     "@nuxtjs/sitemap": "^2.0.1",
