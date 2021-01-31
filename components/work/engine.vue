@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <div v-for="(block,index) in engine">
