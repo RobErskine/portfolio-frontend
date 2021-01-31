@@ -1,7 +1,7 @@
 <template>
 <footer class="main-footer">
     <div class="block">
-        <span>2020 Rob Erskine!</span>
+        <span>&copy; {{getYear()}} Rob Erskine!</span>
         <div>
             <ul>
                 <li>
@@ -98,6 +98,11 @@ export default {
         
     ],
     computed: {
+    },
+    methods: {
+        getYear() {
+            return new Date().getFullYear()
+        }
     }
 }
 </script>

@@ -38,8 +38,6 @@
     "graphql-tag": "^2.11.0",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7",
-    "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
     "sass-loader": "^10.1.0",
     "sass-resources-loader": "^2.1.1"
   }
