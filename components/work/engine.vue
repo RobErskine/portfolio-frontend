@@ -119,6 +119,15 @@
                 }
             }
         }
+        ol {
+            li {
+                list-style-type: italic;
+                
+                a {
+                    color: inherit;
+                }
+            }
+        }
     }
 
     .o_image img{
