@@ -83,6 +83,7 @@
         }
         a{
             color:inherit;
+            line-height: auto;
         }
         p{
             width:100%;
@@ -91,7 +92,7 @@
             line-height:1.4;
             line-height:1.1;
             transition:all 0.3s ease-in-out;
-            transform: translateZ(66px) translateY(10px) scale(0.565);
+            transform: translateZ(66px) translateY(-5px) scale(1);
         }
         time{
             display:block;

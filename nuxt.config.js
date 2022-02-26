@@ -75,6 +75,15 @@ module.exports = {
     '@nuxtjs/apollo',
     '@nuxtjs/sitemap'
   ],
+  pwa: {
+    manifest: {
+      name: 'Rob Erskine App'
+    },
+    meta: {
+      appleStatusBarStyle: 'black-translucent',
+      theme_color: '#ffbb53'
+    }
+  },
   /*
   ** Apollo graphql wrapper
   */

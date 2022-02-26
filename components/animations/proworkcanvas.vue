@@ -60,7 +60,7 @@
             });
 
             function animate() {
-                hhccIllo.rotate.y += 0.03;
+                hhccIllo.rotate.y += 0.01;
                 hhccIllo.updateRenderGraph();
                 requestAnimationFrame( animate );
             }

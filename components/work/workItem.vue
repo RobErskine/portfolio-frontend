@@ -128,21 +128,21 @@
             h4{
                 font-size:2.8em;
                 padding:0.34em 0.5em 0.25em;
-                transform: translateZ(140px) translateY(-151.5px) scale(0.075);
+                // transform: translateZ(140px) translateY(-151.5px);
                 transform-origin:bottom;
             }
             img.thumbnail{
-                transform:translateZ(119px) translateY(57px) scale(0.2);
+                // transform:translateZ(119px) translateY(57px) scale(0.2);
                 transform-origin:center;
             }
             img.logo{
-                max-width:220px;
+                max-width:100px;
                 transform-origin:center;
-                transform:translateZ(50px) scale(0.4);
                 bottom:-1em;
-                left:0em;
+                left:-2em;
             }
             div{
+                position: relative;
                 display:flex;
                 align-items:flex-end;
                 justify-content: flex-end;

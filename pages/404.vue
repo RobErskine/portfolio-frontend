@@ -7,7 +7,7 @@
         </section>
         <section class="block copy text-align-center">
             <div class="block copy block-width copy">
-                <h1>Ah shoot. The page you requested could not be found.</h1>
+                <h1>Ah, shoot. The page you requested could not be found.</h1>
                 <p style="padding-top:1em; max-width: 800px; margin:0 auto;">Sorry about that. Why not bounce back to the <a href="/">homepage</a>, check out <a href="/resume">my resume</a>, or visit <a href="/contact">my contact page</a> to tell me about your error.</p>
             </div>
         </section>
@@ -162,14 +162,14 @@ export default{
     var shaking = true;
     function animate() {
         if( shaking === true){
-            illo.rotate.y -= 0.02;
+            illo.rotate.y -= 0.005;
             if (illo.rotate.y < -0.68){
                 shaking = false;
             }
         }
 
         if( shaking === false){
-            illo.rotate.y += 0.02;
+            illo.rotate.y += 0.005;
             if (illo.rotate.y > 0.68){
                 shaking = true;
             }

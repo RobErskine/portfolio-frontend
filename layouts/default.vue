@@ -1095,8 +1095,8 @@ export default {
     });
 
     function animate() {
-      illo.rotate.y += 0.03;
-      illo.rotate.x -= 0.0005;
+      illo.rotate.y += 0.01;
+      illo.rotate.x -= 0.0002;
       illo.updateRenderGraph();
       requestAnimationFrame( animate );
     }

@@ -121,7 +121,7 @@ section.resume.intro{
             });
 
             function animate() {
-                resumeIllo.rotate.y += 0.01;
+                resumeIllo.rotate.y += 0.001;
                 
                 sparkle.rotate.y +=0.01;
                 sparkle2.rotate.y +=0.009;

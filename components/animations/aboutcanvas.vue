@@ -95,7 +95,7 @@ export default{
         let isSpinning = true;
 
         function animate() {
-            aboutIllo.rotate.x += isSpinning ? 0.045 : 0;
+            aboutIllo.rotate.x += isSpinning ? 0.01 : 0;
             //aboutIllo.rotate.y += isSpinning ? 0.01 : 0;
             aboutIllo.updateRenderGraph();
             requestAnimationFrame( animate );
