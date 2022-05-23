@@ -33,7 +33,7 @@
     "nodemon": "^2.0.7",
     "nuxt": "^2.14.12",
     "prismjs": "^1.23.0",
-    "sass-loader": "^10.1.0",
+    "sass-loader": "^13.0.0",
     "sass-resources-loader": "^2.1.1",
     "vue-prism-component": "^1.2.0",
     "vue-tweet-embed": "^2.4.0"
