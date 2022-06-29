@@ -164,6 +164,10 @@ html,body{
     width:100%;
 }
 
+body {
+  overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
