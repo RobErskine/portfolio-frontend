@@ -12,7 +12,11 @@
             <div :id="`id-`+index" class="engine-block o_pullquote" :class="`quote-size-`+block.quoteSize" v-else-if="block.__typename === 'contentEngine_pullQuote_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
                 <blockquote>
                     {{block.quote}}
-                    <span class="author" v-if="block.attribution">{{block.attribution}}</span>
+                    <span class="author" v-if="block.attribution">
+                        <a v-if="block.attributionLink" :href="block.attributionLink">
+                            {{block.attribution}}
+                        </a>
+                    </span>
                 </blockquote>
             </div>
             <div :id="`id-`+index" class="engine-block o_image" :class="block.imageWidth" v-else-if="block.__typename === 'contentEngine_image_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
