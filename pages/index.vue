@@ -25,6 +25,10 @@ export default {
                 { hid: 'og:url', 'name': 'og:url', content: 'https://roberskine.com'},
                 { hid: 'twitter:card', name:"twitter:card", content:"summary_large_image"},
                 { hid: 'twitter:image', name: 'twitter:image', content: 'https://roberskine.com/images/homepage-twitter-share.png?v2' }
+            ],
+            link: [
+                { rel: 'canonical', href: 'https://roberskine.com' },
+                { rel: 'me', href: 'https://social.bfmw.co/@roberskine' }
             ]
         }
     },
