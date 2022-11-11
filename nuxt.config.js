@@ -16,7 +16,7 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
       { rel: 'preload', as: 'style', href: 'https://use.typekit.net/xbq1sji.css'},
-      { rel: 'stylesheet', href: 'https://use.typekit.net/xbq1sji.css'}
+      { rel: 'stylesheet', href: 'https://use.typekit.net/xbq1sji.css'},
       { rel: 'me', href: 'https://social.bfmw.co/@roberskine' }
     ],
     script: [
