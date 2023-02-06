@@ -12,7 +12,7 @@
     "pages": "node dynamicgen.js"
   },
   "dependencies": {
-    "@graphql-codegen/cli": "^1.20.0",
+    "@graphql-codegen/cli": "^3.0.0",
     "@nuxtjs/apollo": "^4.0.0-rc19",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/date-fns": "^1.4.3",
