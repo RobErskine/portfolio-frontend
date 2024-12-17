@@ -24,8 +24,7 @@
 
 <style lang="scss">
 footer.main-footer{
-    padding-top:0em;
-    padding-bottom:5em;
+    padding: 0 1em 5em;
     margin-top:3em;
     position:relative;
     font-size:1.2em;

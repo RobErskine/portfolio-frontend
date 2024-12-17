@@ -6,7 +6,7 @@ const fragmentMatcher = new IntrospectionFragmentMatcher({
 
 export default() => {
     return {
-        httpEndpoint: 'https://portfolio-staging.roberskine.com/api', // live,,
+        httpEndpoint: 'https://portfolio-staging.roberskine.com/api', // live
         cache: new InMemoryCache({fragmentMatcher})
     }
 }

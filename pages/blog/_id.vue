@@ -110,18 +110,18 @@ export default {
             return this.entries[0];
         }
     },
-    head (){
-        return {
-            title: (this.entries ? `${this.entries[0].title}` + ' | Rob Erskine - Creative Developer' : 'Loading...'),
-            meta: [
-                {hid: 'og:title', name: 'og:title', content:(this.entries ? `${this.entries[0].title}` : 'Loading...')},
-                {hid: 'twitter:title', name: 'twitter:title', content:(this.entries ? `${this.entries[0].title}` : 'Loading...')},
-                {hid: 'description', name: 'description', content:(this.entries ? `${this.entries[0].seoDescription}` : 'Loading...')},
-                {hid: 'og:description', name: 'og:description', content:(this.entries ? `${this.entries[0].seoDescription}` : 'Loading...')},
-                {hid: 'og:image', name: 'og:image', content: (this.entries ? `${this.entries[0].seoImage[0].url}` : '')},
-                {hid: 'twitter:image', name: 'og:image', content: (this.entries ? `${this.entries[0].seoImage[0].url}` : '') }
-            ]
-        }
+    head() {
+    return {
+        title: (this.entries ? `${this.entries[0].title}` + ' | Rob Erskine - Creative Developer' : 'Loading...'),
+        meta: [
+            {hid: 'og:title', name: 'og:title', content: (this.entries ? `${this.entries[0].title}` : 'Loading...')},
+            {hid: 'twitter:title', name: 'twitter:title', content: (this.entries ? `${this.entries[0].title}` : 'Loading...')},
+            {hid: 'description', name: 'description', content: (this.entries ? `${this.entries[0].seoDescription}` : 'Loading...')},
+            {hid: 'og:description', name: 'og:description', content: (this.entries ? `${this.entries[0].seoDescription}` : 'Loading...')},
+            {hid: 'og:image', name: 'og:image', content: this.entries?.[0]?.seoImage?.[0]?.url || ''},
+            {hid: 'twitter:image', name: 'og:image', content: this.entries?.[0]?.seoImage?.[0]?.url || ''}
+        ]
     }
+}
 }
 </script>

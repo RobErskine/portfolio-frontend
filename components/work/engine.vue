@@ -6,6 +6,22 @@
                     <iframe :src="`https://www.youtube.com/embed/` + block.videoEmbedId" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
+            <div :id="`id-`+index" class="engine-block o_side-by-side" :class="'desktop-'+block.desktopDirection + ' ' + 'mobile-'+ block.mobileDirection" v-else-if="block.__typename === 'contentEngine_sideBySide_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
+                <div v-html="block.richText" />
+                <div>
+                    <template v-for="(media, mediaIndex) in block.media" :key="mediaIndex">
+                        <template v-if="isVideoFile(media)">
+                            <video controls muted autoplay loop>
+                                <source :src="media.url" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </template>
+                        <template v-else>
+                            <img :src="media.url" :alt="media.title || ''">
+                        </template>
+                    </template>
+                </div>
+            </div>
             <div :id="`id-`+index" class="engine-block o_rich-text" v-else-if="block.__typename === 'contentEngine_richText_BlockType'" :data-color="block.fontColor" :data-background="block.backgroundColor">
                 <div v-html="block.richText" />
             </div>
@@ -37,7 +53,7 @@
                 </div>
             </div>
             <div v-else>
-                block does not exist
+                block "{{block.__typename}}", does not exist
             </div>
         </div>
     </div>
@@ -46,7 +62,8 @@
 <style lang="scss">
     .o_rich-text,
     .o_image,
-    .o_blockquote{
+    .o_blockquote,
+    .o_side-by-side{
         padding:2em 1em;
         & > div{
             display:block;
@@ -55,6 +72,34 @@
         &.half-width{
             max-width:600px;
             margin:0 auto;
+        }
+    }
+
+    .o_side-by-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        div{
+            img, video {
+                width: 100%;
+            }
+        }
+        &.mobile-column-reverse {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @media all and (min-width: 700px){
+        .o_side-by-side{
+            flex-direction: row;
+            div {
+                width: 48%;
+            }
+            &.desktop-row-reverse {
+                flex-direction: row-reverse;
+            }
         }
     }
 
@@ -250,8 +295,16 @@ export default {
         Tweet,
         Timeline
     },
-    props: [
-        'engine'
-    ],
+    props: {
+        engine: {
+            type: Array,
+            required: true
+        }
+    },
+    methods: {
+        isVideoFile(media) {
+            return media && typeof media === 'string' && media.includes('.mp4')
+        }
+    }
 }
 </script>

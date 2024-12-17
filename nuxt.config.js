@@ -113,6 +113,11 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    },
+    loaders: {
+      sass: {
+        implementation: require('sass')
+      }
     }
   },
   styleResources: {

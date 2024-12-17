@@ -18,6 +18,19 @@ query($section:[String], $slug:[String]) {
             },
             contentEngine{
                 __typename,
+                ...on contentEngine_sideBySide_BlockType{
+                    __typename,
+                    id,
+                    backgroundColor,
+                    fontColor,
+                    richText,
+                    media{
+                        id,
+                        url
+                    }
+                    desktopDirection,
+                    mobileDirection
+                }
                 ...on contentEngine_richText_BlockType{
                     __typename,
                     id,
