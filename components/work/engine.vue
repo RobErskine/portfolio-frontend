@@ -100,6 +100,9 @@
             &.desktop-row-reverse {
                 flex-direction: row-reverse;
             }
+            &.mobile-column-reverse.desktop-row{
+                flex-direction: row;
+            }
         }
     }
 
