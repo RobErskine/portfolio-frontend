@@ -1,5 +1,5 @@
-query($section:[String], $orderBy:String, $relatedTo:[Int]) {
-    entries(section: $section, orderBy: $orderBy, relatedTo: $relatedTo) {
+query($section:[String], $orderBy:String) {
+    entries(section: $section, orderBy: $orderBy) {
         title,
         uri,
         slug,
