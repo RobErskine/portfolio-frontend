@@ -67,8 +67,7 @@ export default {
             query: posts,
             variables: {
                 "section": "work",
-                "orderBy": "postdate Desc",
-                "relatedTo": [25]
+                "orderBy": "postdate Desc"
             }
         }
     },

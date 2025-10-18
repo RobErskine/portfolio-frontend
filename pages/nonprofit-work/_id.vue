@@ -1,7 +1,7 @@
 <template>
     <div v-if="entries">
         <Logo size="size-small" position="position-left"/>
-        <div class="panel detail article-content" :style="`color:`+entry.contentEngine[0].fontColor+`; background-color:`+entry.contentEngine[0].backgroundColor">   
+        <div class="panel detail article-content" :style="`color:`+(entry.contentEngine && entry.contentEngine[0] ? entry.contentEngine[0].fontColor : '#333')+`; background-color:`+(entry.contentEngine && entry.contentEngine[0] ? entry.contentEngine[0].backgroundColor : '#fff')">   
             <DetailHeader :entry="entry" />
             <Engine :engine="entry.contentEngine"/>
             <EndPage destination="/nonprofit-work" label="Non-Profit Work 🌐"/>
