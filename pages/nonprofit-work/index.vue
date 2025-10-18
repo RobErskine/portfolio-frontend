@@ -68,7 +68,7 @@ export default {
             variables: {
                 "section": "work",
                 "orderBy": "postdate Desc",
-                "relatedTo": 26
+                "relatedTo": [26]
             }
         }
     },
