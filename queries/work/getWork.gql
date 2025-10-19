@@ -1,4 +1,4 @@
-query($section:[String], $orderBy:String, $relatedTo:[Int]) {
+query($section:[String], $orderBy:String, $relatedTo:[QueryArgument]) {
     entries(section: $section, orderBy: $orderBy, relatedTo: $relatedTo) {
         title,
         uri,
