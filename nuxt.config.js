@@ -2,6 +2,7 @@ var pages = require('./dynamicPages.json')
 
 module.exports = {
   mode: 'universal',
+  target: 'static', // Optimize for static generation
   /*
   ** Headers of the page
   */

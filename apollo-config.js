@@ -7,6 +7,9 @@ const fragmentMatcher = new IntrospectionFragmentMatcher({
 export default() => {
     return {
         httpEndpoint: 'https://portfolio-staging.roberskine.com/api', // live
-        cache: new InMemoryCache({fragmentMatcher})
+        cache: new InMemoryCache({fragmentMatcher}),
+        defaultHttpLink: false, // Disable HTTP link on client side
+        // Only fetch during SSR/static generation, not on client navigation
+        fetchPolicy: process.client ? 'cache-only' : 'cache-first'
     }
 }
